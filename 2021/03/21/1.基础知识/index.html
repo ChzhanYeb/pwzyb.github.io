@@ -161,26 +161,30 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><table>
+	<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">类别</th>
+<th style="text-align:left">类别</th>
 <th></th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">英文字母</td>
+<tbody>
+<tr>
+<td style="text-align:left">英文字母</td>
 <td>A-Za-z</td>
 </tr>
 <tr>
-<td align="left">数字</td>
+<td style="text-align:left">数字</td>
 <td>0-9</td>
 </tr>
 <tr>
-<td align="left">22个特殊字符</td>
+<td style="text-align:left">22个特殊字符</td>
 <td><code>:=+*/(),.&#39;&quot;!%&amp;;&lt;&gt;?$_</code>以及空格</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>编译器默认大写，大小写不区分。</p>
 <p><strong>注意：</strong></p>
 <ul>
@@ -189,35 +193,40 @@ var _hmt = _hmt || [];
 </ul>
 <h3 id="书面格式"><a href="#书面格式" class="headerlink" title="书面格式"></a>书面格式</h3><p><strong>Free Fortran (自由格式)</strong> 和 <strong>Fixed Format (固定格式)</strong>.</p>
 <p>固定格式是Fortran77的写法，有很多限制，通常后缀为<code>.f</code>或者<code>.for</code>.</p>
-<h4 id="Fixed-Format"><a href="#Fixed-Format" class="headerlink" title="Fixed Format"></a>Fixed Format</h4><table>
+<h4 id="Fixed-Format"><a href="#Fixed-Format" class="headerlink" title="Fixed Format"></a>Fixed Format</h4><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">每行的第几个字符</th>
-<th align="left">说明</th>
+<th style="text-align:left">每行的第几个字符</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">第1个字符</td>
-<td align="left">如果是字母<code>C</code>,<code>c</code>或星号<code>*</code>，这一行的文本就会当作注释，不会被编译；<br>如果在第一列上出现的不是数字、空格或C和*的字符，编译时按出错处理。</td>
+<tbody>
+<tr>
+<td style="text-align:left">第1个字符</td>
+<td style="text-align:left">如果是字母<code>C</code>,<code>c</code>或星号<code>*</code>，这一行的文本就会当作注释，不会被编译；<br>如果在第一列上出现的不是数字、空格或C和*的字符，编译时按出错处理。</td>
 </tr>
 <tr>
-<td align="left">标号区：第1-5个字符</td>
-<td align="left">可以写l至5位整数。也可以没有标号。<br/>    标号区中的空格不起作用。<br/>标号应是无符号整数(无正负号或小数点)。<br/>如果是数字，就是这一行代码的代号，否则只能是空格</td>
+<td style="text-align:left">标号区：第1-5个字符</td>
+<td style="text-align:left">可以写l至5位整数。也可以没有标号。<br/>    标号区中的空格不起作用。<br/>标号应是无符号整数(无正负号或小数点)。<br/>如果是数字，就是这一行代码的代号，否则只能是空格</td>
 </tr>
 <tr>
-<td align="left">续行区：第6个字符</td>
-<td align="left">如果是<code>0</code>和空格以外的任何字符，表示这一行会接续上一行。<br/>F77允许一个语句有19个续行(即一个语句最多可以写成20行)。</td>
+<td style="text-align:left">续行区：第6个字符</td>
+<td style="text-align:left">如果是<code>0</code>和空格以外的任何字符，表示这一行会接续上一行。<br/>F77允许一个语句有19个续行(即一个语句最多可以写成20行)。</td>
 </tr>
 <tr>
-<td align="left">语句区：第7-72个字符</td>
-<td align="left">fortran程序的编写区域。<br/>可以从第7列以后（72列以前）的任何一列开始写，但一行只能写一个语句。<br/>超出语句区的字符会引起难以排查、意料不到的错误。<br/><br/>PS：引号内的字符串中所包括的空格是有效的，不能忽略。</td>
+<td style="text-align:left">语句区：第7-72个字符</td>
+<td style="text-align:left">fortran程序的编写区域。<br/>可以从第7列以后（72列以前）的任何一列开始写，但一行只能写一个语句。<br/>超出语句区的字符会引起难以排查、意料不到的错误。<br/><br/>PS：引号内的字符串中所包括的空格是有效的，不能忽略。</td>
 </tr>
 <tr>
-<td align="left">注释区：第73-80个字符</td>
-<td align="left">不使用超出部分会被忽略<br/>PS：在卡片输入法时代，程序员利用此区查找程序行。</td>
+<td style="text-align:left">注释区：第73-80个字符</td>
+<td style="text-align:left">不使用超出部分会被忽略<br/>PS：在卡片输入法时代，程序员利用此区查找程序行。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="Free-Format"><a href="#Free-Format" class="headerlink" title="Free Format"></a>Free Format</h4><p>自由格式是Fortran90之后的写法。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -225,7 +234,8 @@ var _hmt = _hmt || [];
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>行</td>
 <td>每行可以编写132个字符<br/>可以有复数条程序语句，语句间用分号“;”分开<br/>语句没有位置规定。</td>
 </tr>
@@ -241,7 +251,9 @@ var _hmt = _hmt || [];
 <td>空格</td>
 <td>在语句名和变量名中间不能有空格。<br/>需要空格的地方必须有一个以上空格<br/>        （GOTO和GO TO，ELSEIF和ELSE IF，END构造名 (构造名有：DO, PROGRAM, FUNCTION, MODULE, SUBROUTINE) 等有两种写法的除外）</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="文件扩展名"><a href="#文件扩展名" class="headerlink" title="文件扩展名"></a>文件扩展名</h3><ul>
 <li>固定格式： .for 或 .f</li>
 <li>自由格式： .f90</li>
@@ -323,7 +335,7 @@ var _hmt = _hmt || [];
 <li><p>可以用<code>IMPLICIT</code>语句将某一字母开头的全部变量指定为所需的类型，还可以用一个IMPLICIT语句同时指定几种类型</p>
 </li>
 <li><p>例子：</p>
-<pre><code class="fortran">IMPLICIT INTEGER (A，C，T-V)
+<pre><code class="lang-fortran">IMPLICIT INTEGER (A，C，T-V)
 IMPLICIT REAL (I，J)
 IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 </code></pre>
@@ -334,7 +346,7 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <p>PS:</p>
 <ul>
 <li>类型说明语句最优先，IMPLICIT语句次之，“I—N规则”的隐含约定级别最低。</li>
-<li> 类型说明语句和IMPLICIT语句是<strong>非执行语句</strong></li>
+<li>类型说明语句和IMPLICIT语句是<strong>非执行语句</strong></li>
 <li>类型说明只在本程序单位内有效</li>
 <li>IMPLICIT语句和类型说明语句应该出现在本程序单位中的所有执行语句之前，其中IMPLICIT语句又应在所有的类型说明语句之前。</li>
 </ul>
@@ -342,7 +354,7 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <li><code>+-*/</code>四则运算</li>
 <li><code>**</code>幂运算，两个星号必须连续</li>
 <li><code>()</code>括号表示运算优先级:<ul>
-<li>① 括号 &gt; ② 函数 &gt; ③ ** &gt; ④ * / &gt; ⑤ ＋ －</li>
+<li>① 括号 &gt; ② 函数 &gt; ③ <em>* &gt; ④ </em> / &gt; ⑤ ＋ －</li>
 <li>同一优先级的两个运算，乘方按“先右后左”，其它按“先左后右”原则</li>
 </ul>
 </li>
@@ -354,8 +366,10 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 </ul>
 </li>
 <li>表达式运算中的类型:<ul>
-<li> 同类型的算术量之间运算的结果仍保持原类型。</li>
+<li>同类型的算术量之间运算的结果仍保持原类型。<ul>
 <li>两个整数相除的商也是整数</li>
+</ul>
+</li>
 <li>如果参加运算的两个算术量为不同类型，则编译系统会自动将它们转换成同一类型后进行运算。<ul>
 <li>规律：将低级类型转换成高级类型</li>
 <li>整型(低)→实型(高)</li>
@@ -371,7 +385,8 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 </ul>
 </li>
 </ul>
-<h3 id="内在函数"><a href="#内在函数" class="headerlink" title="内在函数"></a>内在函数</h3><table>
+<h3 id="内在函数"><a href="#内在函数" class="headerlink" title="内在函数"></a>内在函数</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>函数名</th>
@@ -380,10 +395,13 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <th>相当数学上的运算</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>ABS</td>
 <td>求绝对值</td>
 <td>ABS(X)</td>
+<td>$</td>
+<td>x</td>
 <td>$</td>
 </tr>
 <tr>
@@ -457,6 +475,10 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <td>求符号</td>
 <td>SIGN(Xl，X2)</td>
 <td>$</td>
+<td>x_1</td>
+<td>$ 或 $-</td>
+<td>x_2</td>
+<td>$</td>
 </tr>
 <tr>
 <td>REAL</td>
@@ -476,7 +498,9 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <td>MIN(Xl，X2，X3)</td>
 <td>$min(i_1,i_2,i_3)$</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="执行方法"><a href="#执行方法" class="headerlink" title="执行方法:"></a>执行方法:</h4><p>Fortran将这些内在函数分别编成单个子程序，组成函数库，存在于外部介质(如磁盘)上。</p>
 <p>在完成源程序的编译之后，用LINK命令实现连接，即将已翻译成二进制指令的目标程序与函数库连接。也就是将程序中出现函数名的地方用函数库中相应的一组指令代入之，组成一个统一的“可执行目标块”。</p>
 <h4 id="函数名分为“通用名”和“专用名”"><a href="#函数名分为“通用名”和“专用名”" class="headerlink" title="函数名分为“通用名”和“专用名”"></a>函数名分为“通用名”和“专用名”</h4><p>例如求余函数的“通用名”为MOD，“专用名”有三个(MOD，AMOD，DMOD)。根据自变量的类型就自动确定了函数值的类型，如MOD(8,3)的值为整型，而MOD(8.0,3.0)的值为实型。当调用子程序时如果用内在函数作为自变量(实参)，必须使用该内在函数的专用名。</p>
