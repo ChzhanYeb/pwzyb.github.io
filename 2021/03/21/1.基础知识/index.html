@@ -152,6 +152,15 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/03/25/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+										4.流程控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/03/24/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
 										Turbulent gravitational convection from maintained and instantaneous sources
 									</a>
@@ -172,6 +181,15 @@ var _hmt = _hmt || [];
 								<li class="file">
 									<a href="/2021/03/25/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%85%A2%E5%8C%96%E8%BF%87%E7%A8%8B/">
 										中子的慢化过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
+										中子的扩散过程
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -271,19 +289,19 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td style="text-align:left">标号区：第1-5个字符</td>
-<td style="text-align:left">可以写l至5位整数。也可以没有标号。<br/>    标号区中的空格不起作用。<br/>标号应是无符号整数(无正负号或小数点)。<br/>如果是数字，就是这一行代码的代号，否则只能是空格</td>
+<td style="text-align:left">可以写l至5位整数。也可以没有标号。<br>    标号区中的空格不起作用。<br>标号应是无符号整数(无正负号或小数点)。<br>如果是数字，就是这一行代码的代号，否则只能是空格</td>
 </tr>
 <tr>
 <td style="text-align:left">续行区：第6个字符</td>
-<td style="text-align:left">如果是<code>0</code>和空格以外的任何字符，表示这一行会接续上一行。<br/>F77允许一个语句有19个续行(即一个语句最多可以写成20行)。</td>
+<td style="text-align:left">如果是<code>0</code>和空格以外的任何字符，表示这一行会接续上一行。<br>F77允许一个语句有19个续行(即一个语句最多可以写成20行)。</td>
 </tr>
 <tr>
 <td style="text-align:left">语句区：第7-72个字符</td>
-<td style="text-align:left">fortran程序的编写区域。<br/>可以从第7列以后（72列以前）的任何一列开始写，但一行只能写一个语句。<br/>超出语句区的字符会引起难以排查、意料不到的错误。<br/><br/>PS：引号内的字符串中所包括的空格是有效的，不能忽略。</td>
+<td style="text-align:left">fortran程序的编写区域。<br>可以从第7列以后（72列以前）的任何一列开始写，但一行只能写一个语句。<br>超出语句区的字符会引起难以排查、意料不到的错误。<br><br>PS：引号内的字符串中所包括的空格是有效的，不能忽略。</td>
 </tr>
 <tr>
 <td style="text-align:left">注释区：第73-80个字符</td>
-<td style="text-align:left">不使用超出部分会被忽略<br/>PS：在卡片输入法时代，程序员利用此区查找程序行。</td>
+<td style="text-align:left">不使用超出部分会被忽略<br>PS：在卡片输入法时代，程序员利用此区查找程序行。</td>
 </tr>
 </tbody>
 </table>
@@ -300,7 +318,7 @@ var _hmt = _hmt || [];
 <tbody>
 <tr>
 <td>行</td>
-<td>每行可以编写132个字符<br/>可以有复数条程序语句，语句间用分号“;”分开<br/>语句没有位置规定。</td>
+<td>每行可以编写132个字符<br>可以有复数条程序语句，语句间用分号“;”分开<br>语句没有位置规定。</td>
 </tr>
 <tr>
 <td>注释行</td>
@@ -308,11 +326,11 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td>续行</td>
-<td>允许有39个续行。<br/>在语句行最后加上续行符“&amp;”号。<br/>如果字符串跨2行以上,则在续行的开始位置也要加“&amp;”号。<br/>PS：语句的有效字符是从“&amp;”前和续行符“&amp;”之后的位置算起。</td>
+<td>允许有39个续行。<br>在语句行最后加上续行符“&amp;”号。<br>如果字符串跨2行以上,则在续行的开始位置也要加“&amp;”号。<br>PS：语句的有效字符是从“&amp;”前和续行符“&amp;”之后的位置算起。</td>
 </tr>
 <tr>
 <td>空格</td>
-<td>在语句名和变量名中间不能有空格。<br/>需要空格的地方必须有一个以上空格<br/>        （GOTO和GO TO，ELSEIF和ELSE IF，END构造名 (构造名有：DO, PROGRAM, FUNCTION, MODULE, SUBROUTINE) 等有两种写法的除外）</td>
+<td>在语句名和变量名中间不能有空格。<br>需要空格的地方必须有一个以上空格<br>        （GOTO和GO TO，ELSEIF和ELSE IF，END构造名 (构造名有：DO, PROGRAM, FUNCTION, MODULE, SUBROUTINE) 等有两种写法的除外）</td>
 </tr>
 </tbody>
 </table>
@@ -398,10 +416,7 @@ var _hmt = _hmt || [];
 <li><p>可以用<code>IMPLICIT</code>语句将某一字母开头的全部变量指定为所需的类型，还可以用一个IMPLICIT语句同时指定几种类型</p>
 </li>
 <li><p>例子：</p>
-<pre><code class="lang-fortran">IMPLICIT INTEGER (A，C，T-V)
-IMPLICIT REAL (I，J)
-IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
-</code></pre>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">IMPLICIT</span> <span class="keyword">INTEGER</span> (A，C，T-V)</span><br><span class="line"><span class="keyword">IMPLICIT</span> <span class="keyword">REAL</span> (I，J)</span><br><span class="line"><span class="keyword">IMPLICIT</span> <span class="keyword">INTEGER</span> (A，B)，<span class="keyword">REAL</span>(I,K)，<span class="keyword">INTEGER</span> (X-Z)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
