@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		中子的慢化过程 | 
+	 
+	尼古拉斯冰的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "ChzhanYeb.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">尼古拉斯冰的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="https://github.com/ChzhanYeb" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Fortran语法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/21/Fortran%E8%AF%AD%E6%B3%95/1.%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										1.基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran%E8%AF%AD%E6%B3%95/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
+										2.输入输出基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran%E8%AF%AD%E6%B3%95/3.%E7%B1%BB%E5%9E%8B/">
+										3.类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/Fortran%E8%AF%AD%E6%B3%95/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+										4.流程控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										文献笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										射流理论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/24/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
+										Turbulent gravitational convection from maintained and instantaneous sources
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										旅行
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/15/%E6%97%85%E8%A1%8C/%E6%91%A9%E5%B0%94%E6%9B%BC%E6%96%AF%E5%85%8B%E4%BA%94%E6%97%A5%E8%A1%8C/">
+										摩尔曼斯克五日行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核反应堆物理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+										中子弹性散射碰撞公式及能量概率分布公式推导
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%85%A2%E5%8C%96%E8%BF%87%E7%A8%8B/">
+										中子的慢化过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
+										中子的扩散过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/">
+										核反应堆功率与衰变功率
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	中子的慢化过程
+</h1>
+<div class="article-meta">
+	
+	<span>Chzhan Yeb</span>
+	<span>2021-03-25 13:34:45</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h3 id="弹性散射过程动力学"><a href="#弹性散射过程动力学" class="headerlink" title="弹性散射过程动力学"></a>弹性散射过程动力学</h3><p><img src="C:/Users/29581/AppData/Roaming/Typora/typora-user-images/image-20210325133645263.png" alt="image-20210325133645263" style="zoom:67%;"></p>
+<center>图1. 在实验室(L系)和质心系(C系)内中子与核的弹性散射</center>
+
+<p><strong>公理1</strong>：在C系当中，中子的弹性散射是<strong>各向同性</strong>的，即，中子向各个角度散射的概率是均等的。</p>
+<p>利用该公理，从C系可推导出L系的公式。</p>
+<p>最终得到碰撞前后的<strong>能量公式</strong>为（推导请见附录）</p>
+<script type="math/tex; mode=display">
+E^{\prime}=\frac{1}{2}\left[(1+\alpha)+(1-\alpha) \cos \theta_{\mathrm{c}}\right] E</script><p>其中，$E$ 和 $E^{\prime}$ 分别表示碰撞前后的中子能量，$\theta_{\mathrm{c}}$ 表示C系的中子散射角度。$ \alpha=\left(\frac{A-1}{A+1}\right)^{2} $</p>
+<ul>
+<li><p>当 $\theta<em>{\mathrm{c}}=0^\circ$ 时，$ E^{\prime} \longrightarrow E</em>{\mathrm{max}}^{\prime}=E $ ，没有造成能量损失</p>
+</li>
+<li><p>当 $\theta<em>{\mathrm{c}}=180^\circ$ 时，$ E^{\prime} \longrightarrow E</em>{\mathrm{min}}=αΕ $ ，</p>
+<p>即，$ E^{\prime}\in [αΕ,E] $</p>
+<p>因此一次碰撞中子可能损失的最大能量为 <script type="math/tex">\Delta E_{\max }=(1-\alpha) E</script></p>
+</li>
+</ul>
+<p><strong>L系散射角余弦（不重要）</strong></p>
+<script type="math/tex; mode=display">
+\cos \theta_{l}=\frac{1}{2}\left[(A+1) \sqrt{\frac{E^{\prime}}{E}}-(A-1) \sqrt{\frac{E}{E^{\prime}}}\right]</script><p><strong>平均散射角余弦</strong></p>
+<script type="math/tex; mode=display">
+\overline{\cos \theta_{l}}=\frac{2}{3A}>0</script><p>由平均散射角余弦，可得结论:</p>
+<ul>
+<li>L系散射是各向</li>
+<li>中子向前冲的概率大于反弹的概率（&gt;0），</li>
+<li>是原子核的固有属性（仅是A的函数），</li>
+<li>重量越小，各向异性越强（与A成反比，由此可知各向异性普遍存在）。</li>
+</ul>
+<h3 id="散射后中子能量分布"><a href="#散射后中子能量分布" class="headerlink" title="散射后中子能量分布"></a>散射后中子能量分布</h3><p>能量分布（推导请见附录）需要用到$\theta_{\mathrm{c}}$ 在C系中各向同性的概率</p>
+<script type="math/tex; mode=display">
+f\left(E \rightarrow E^{\prime}\right) \mathrm{d} E^{\prime}=-\frac{\mathrm{d} E^{\prime}}{(1-\alpha) E} \quad \alpha E \leqslant E^{\prime} \leqslant E</script><p>其中，$ \alpha=\left(\frac{A-1}{A+1}\right)^{2} $</p>
+<p>注意，E 落到区间内其他位置的概率是均等的。</p>
+<h3 id="平均对数能降"><a href="#平均对数能降" class="headerlink" title="平均对数能降"></a>平均对数能降</h3><script type="math/tex; mode=display">
+u=\ln \frac{E_{0}}{E}\\
+或\\
+E=E_{0} \mathrm{e}^{-u}</script><p>其中，$E<em>{0}$ 为选定的参考能量，一般取 $E</em>{0}=2 MeV$</p>
+<p><strong>对数能将增量</strong></p>
+<script type="math/tex; mode=display">
+\Delta u=u^{\prime}-u=\ln \frac{E_{0}}{E^{\prime}}-\ln \frac{E_{0}}{E}=\ln \frac{E}{E^{\prime}}</script><p><strong>最大对数能降增量</strong></p>
+<script type="math/tex; mode=display">
+γ=Δu_{max}=\ln \frac{1}{α}</script><p><strong>平均对数能降</strong></p>
+<script type="math/tex; mode=display">
+\xi=\overline{\ln E-\ln E^{\prime}}=\overline{\ln \frac{E}{E^{\prime}}}=\overline{\Delta u}</script><p>在质心系内散射为各向同性的情况下：</p>
+<script type="math/tex; mode=display">
+\int_{E}^{a E}\left(\ln E-\ln E^{\prime}\right) f\left(E \rightarrow E^{\prime}\right) \mathrm{d} E^{\prime}=\int_{a E}^{E} \ln \frac{E}{E} \frac{\mathrm{d} E^{\prime}}{(1-\alpha) E} \\
+=1+\frac{\alpha}{1-\alpha} \ln \alpha=1-\frac{(A-1)^{2}}{2 A} \ln \left(\frac{A+1}{A-1}\right)</script><p>当 A&gt;10 时，可使用近似式</p>
+<script type="math/tex; mode=display">
+\xi \approx \frac{2}{A+\frac{2}{3}}</script><p>又是固有属性。可知道慢化所需碰撞次数。</p>
+<p><strong>平均碰撞次数</strong></p>
+<script type="math/tex; mode=display">
+N_{\mathrm{c}}=\frac{\ln E_{1}-\ln E_{2}}{\xi}=\frac{\ln \frac{E_{1}}{E_{2}}}{\xi}</script><p>因此，原子量越小，所需碰撞次数越少，这就是为什么要用水做慢化剂</p>
+<h3 id="慢化能力"><a href="#慢化能力" class="headerlink" title="慢化能力"></a>慢化能力</h3><script type="math/tex; mode=display">
+ξΣ_{s}</script><h3 id="慢化比"><a href="#慢化比" class="headerlink" title="慢化比"></a>慢化比</h3><script type="math/tex; mode=display">
+\frac{ξΣ_{s}}{Σ_{a}}</script><h3 id="常用慢化剂"><a href="#常用慢化剂" class="headerlink" title="常用慢化剂"></a>常用慢化剂</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>慢化剂</th>
+<th>慢化能力</th>
+<th>热中子吸收截面</th>
+<th>慢化比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>重水</td>
+<td>0.55</td>
+<td>$4.03·10^{-5}$</td>
+<td>5717</td>
+</tr>
+<tr>
+<td>石墨</td>
+<td>0.06</td>
+<td>0.0003</td>
+<td>234</td>
+</tr>
+<tr>
+<td>铍</td>
+<td>0.21</td>
+<td>0.0011</td>
+<td>156</td>
+</tr>
+<tr>
+<td>轻水</td>
+<td>2.06</td>
+<td>0.0224</td>
+<td>92</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>轻水+浓缩铀</li>
+<li>重水+天然铀</li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  中子弹性散射碰撞公式及能量概率分布公式推导
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/">
+                核反应堆功率与衰变功率
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Chzhan Yeb</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
