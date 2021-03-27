@@ -329,7 +329,8 @@ var _hmt = _hmt || [];
 <p>​        文件结束记录是文件的最后一个记录，可以在顺序文件中用ENDFILE语句写出一个文件结束记录。</p>
 </li>
 </ul>
-<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><h4 id="write"><a href="#write" class="headerlink" title="write"></a><code>write</code></h4><h5 id="简化形式："><a href="#简化形式：" class="headerlink" title="简化形式："></a>简化形式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">write</span>(<span class="keyword">UNIT</span>=*, <span class="keyword">FMT</span>=*)</span><br></pre></td></tr></table></figure>
+<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><h4 id="write"><a href="#write" class="headerlink" title="write"></a><code>write</code></h4><h5 id="简化形式："><a href="#简化形式：" class="headerlink" title="简化形式："></a>简化形式：</h5><pre><code class="lang-fortran">write(UNIT=*, FMT=*)
+</code></pre>
 <p><strong>参数说明</strong></p>
 <ul>
 <li>UNIT，输出设备，<code>*</code>表示控制台输出</li>
@@ -337,7 +338,8 @@ var _hmt = _hmt || [];
 </ul>
 <p>（双引号转义：使用两个双引号，比如<code>write(*,*) &quot;My name is &quot;&quot;Alice&quot;&quot;.&quot;</code>）</p>
 <p>（F77 标准只规定了使用单引号封装字符串，虽然多数编译器都支持双引号）</p>
-<h5 id="功能完整形式："><a href="#功能完整形式：" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">WRITE</span>(&#123;[<span class="keyword">UNIT</span>=]单元|*&#125;[,&#123;[<span class="keyword">FMT</span>=]格式说明符|[<span class="keyword">NML</span>=]名称列表组名|*&#125;][，<span class="keyword">REC</span>=记录号][,<span class="keyword">IOSTAT</span>=状态变量名][,ERR＝错误标号]) [I/O列表]</span><br></pre></td></tr></table></figure>
+<h5 id="功能完整形式："><a href="#功能完整形式：" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><pre><code class="lang-fortran">WRITE(&#123;[UNIT=]单元|*&#125;[,&#123;[FMT=]格式说明符|[NML=]名称列表组名|*&#125;][，REC=记录号][,IOSTAT=状态变量名][,ERR＝错误标号]) [I/O列表]
+</code></pre>
 <ul>
 <li><p><strong>单元</strong>：</p>
 <p>​        外部文件时是一个指定设备号的整型表达式，内部文件时是一个字符串、变量、数组、数组元素或非字符数组。</p>
@@ -369,21 +371,36 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <h4 id="print和type"><a href="#print和type" class="headerlink" title="print和type"></a><code>print</code>和<code>type</code></h4><p>PRINT语句向屏幕输出，TYPE语句是PRINT语句的别名</p>
-<h5 id="简化格式："><a href="#简化格式：" class="headerlink" title="简化格式："></a>简化格式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span> *, <span class="string">&quot;Hello world!&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="简化格式："><a href="#简化格式：" class="headerlink" title="简化格式："></a>简化格式：</h5><pre><code class="lang-fortran">print *, &quot;Hello world!&quot;
+</code></pre>
 <ul>
 <li><code>*</code>表示不限定输出格式</li>
 </ul>
-<h5 id="功能完整形式：-1"><a href="#功能完整形式：-1" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PRINT</span> &#123;*|格式&#125;[,I/O列表]</span><br><span class="line">！或</span><br><span class="line"><span class="built_in">PRINT</span> 名称列表</span><br></pre></td></tr></table></figure>
+<h5 id="功能完整形式：-1"><a href="#功能完整形式：-1" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><pre><code class="lang-fortran">PRINT &#123;*|格式&#125;[,I/O列表]
+！或
+PRINT 名称列表
+</code></pre>
 <p>例1：</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">! 下面的语句是等价的</span></span><br><span class="line"><span class="built_in">PRINT</span>     <span class="string">&#x27;(A11)&#x27;</span>, <span class="string">&#x27;Abbottsford&#x27;</span></span><br><span class="line"><span class="built_in">WRITE</span> (*, <span class="string">&#x27;(A11)&#x27;</span>) <span class="string">&#x27;Abbottsford&#x27;</span></span><br><span class="line"><span class="keyword">TYPE</span>      <span class="string">&#x27;(A11)&#x27;</span>, <span class="string">&#x27;Abbottsford&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="lang-fortran">! 下面的语句是等价的
+PRINT     &#39;(A11)&#39;, &#39;Abbottsford&#39;
+WRITE (*, &#39;(A11)&#39;) &#39;Abbottsford&#39;
+TYPE      &#39;(A11)&#39;, &#39;Abbottsford&#39;
+</code></pre>
 <p>例2：</p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CHARACTER</span>::q*<span class="number">1</span>,f*<span class="number">69</span></span><br><span class="line">q=<span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span></span><br><span class="line">f=<span class="string">&quot;(&#x27;CHARACTER::q*1,f*69&#x27;/&#x27;q=&#x27;,4A/&#x27;f=&#x27;,3A/&#x27;PRINT f,q,q,q,q,q,f,q&#x27;/&#x27;END&#x27;)&quot;</span></span><br><span class="line"><span class="built_in">PRINT</span> f,q,q,q,q,q,f,q</span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
-<h4 id="read"><a href="#read" class="headerlink" title="read"></a><code>read</code></h4><h5 id="简化形式：-1"><a href="#简化形式：-1" class="headerlink" title="简化形式："></a>简化形式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">read(<span class="keyword">UNIT</span>=*, <span class="keyword">FMT</span>=*) a</span><br></pre></td></tr></table></figure>
+<pre><code class="lang-fortran">CHARACTER::q*1,f*69
+q=&quot;&quot;&quot;&quot;
+f=&quot;(&#39;CHARACTER::q*1,f*69&#39;/&#39;q=&#39;,4A/&#39;f=&#39;,3A/&#39;PRINT f,q,q,q,q,q,f,q&#39;/&#39;END&#39;)&quot;
+PRINT f,q,q,q,q,q,f,q
+END
+</code></pre>
+<h4 id="read"><a href="#read" class="headerlink" title="read"></a><code>read</code></h4><h5 id="简化形式：-1"><a href="#简化形式：-1" class="headerlink" title="简化形式："></a>简化形式：</h5><pre><code class="lang-fortran">read(UNIT=*, FMT=*) a
+</code></pre>
 <ul>
 <li>UNIT，输入设备，<code>*</code>表示键盘输入</li>
 <li>FMT，输入格式，<code>*</code>不指定格式</li>
 </ul>
-<h5 id="功能完整形式：-2"><a href="#功能完整形式：-2" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">READ(&#123;[<span class="keyword">UNIT</span>=]单元|*&#125;[,&#123;[<span class="keyword">FMT</span>=]格式说明符|[<span class="keyword">NML</span>=]名称列表组名|*&#125;] [，<span class="keyword">REC</span>=记录号][,<span class="keyword">IOSTAT</span>=状态变量名][,ERR＝错误标号][,<span class="keyword">END</span>=文件结束标号][,<span class="keyword">EOR</span>=记录结束标号]) [I/O列表]</span><br></pre></td></tr></table></figure>
+<h5 id="功能完整形式：-2"><a href="#功能完整形式：-2" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><pre><code class="lang-fortran">READ(&#123;[UNIT=]单元|*&#125;[,&#123;[FMT=]格式说明符|[NML=]名称列表组名|*&#125;] [，REC=记录号][,IOSTAT=状态变量名][,ERR＝错误标号][,END=文件结束标号][,EOR=记录结束标号]) [I/O列表]
+</code></pre>
 <ul>
 <li><p><strong>文件结束标号：</strong></p>
 <p>​        读到文件结束记录时把控制传递给标号处的语句。</p>
@@ -392,7 +409,10 @@ var _hmt = _hmt || [];
 <p>​        读完一个记录时把控制传递给标号处的语句。</p>
 </li>
 </ul>
-<h3 id="格式化FORMAT"><a href="#格式化FORMAT" class="headerlink" title="格式化FORMAT"></a>格式化<code>FORMAT</code></h3><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">100</span></span><br><span class="line"><span class="built_in">write</span>(*, <span class="number">100</span>) a <span class="comment">! 使用代码100,</span></span><br><span class="line"><span class="number">100</span> <span class="keyword">format</span>(I4)  <span class="comment">! 使用4个字符宽度</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式化FORMAT"><a href="#格式化FORMAT" class="headerlink" title="格式化FORMAT"></a>格式化<code>FORMAT</code></h3><pre><code class="lang-fortran">a = 100
+write(*, 100) a ! 使用代码100,
+100 format(I4)  ! 使用4个字符宽度
+</code></pre>
 <p>格式化参考表，其中的<code>[]</code>中的内容可以省略，大写字母是格式字符，小写字母，是需要写数字的。</p>
 <div class="table-container">
 <table>
@@ -537,7 +557,9 @@ var _hmt = _hmt || [];
 </table>
 </div>
 <p><em>照抄自彭国伦《fortran95程序设计》，很多我也不懂，输入输出并不是很重要的内容，所以也不会一个个确认</em></p>
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">write</span>(*, <span class="string">&quot;(I5)&quot;</span>) a         <span class="comment">! 整数格式化</span></span><br><span class="line"><span class="built_in">write</span>(*, <span class="string">&quot;(F4.1, F4.1)&quot;</span>) c <span class="comment">! 复数要用两个浮点数输出</span></span><br></pre></td></tr></table></figure>
+<pre><code class="lang-fortran">write(*, &quot;(I5)&quot;) a         ! 整数格式化
+write(*, &quot;(F4.1, F4.1)&quot;) c ! 复数要用两个浮点数输出
+</code></pre>
 <p><strong>其他</strong>：</p>
 <ul>
 <li>格式字符串必须放在括号内，如果宽度不够则会输出<code>*</code>号表示警告</li>

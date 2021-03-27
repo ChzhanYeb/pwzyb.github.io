@@ -249,7 +249,15 @@ var _hmt = _hmt || [];
 					4.流程控制
 				</h2>
 				<div class="index-brief">
-					IF123456789if (condition) then    ! do somethingend ifif (condition) then    ! do somethingelse	! do otherend if
+					IFif (condition) then
+    ! do something
+end if
+
+if (condition) then
+    ! do something
+else
+    ! do other
+end if
 逻辑运算
 
 
@@ -263,7 +271,7 @@ f77 符号
 
 
 ==
-.eq.
+.e
 					...
 				</div>
 			</a>
@@ -363,10 +371,11 @@ R_{f}=\int_{\Delta E} \Sigma_{f}(E) \phi(E) \mathrm{d} E={\Sigma_{f}} \bar\Phi�
 				</h2>
 				<div class="index-brief">
 					类型说明语句一般形式为：
-1类型说明[(种别说明)][,属性说明表] :: 变量名表[&#x3D;初值]
+类型说明[(种别说明)][,属性说明表] :: 变量名表[=初值]
 在某些场合下，种别说明与属性说明可以省略，此时它的一般形式是最基本形式：
-1类型说明:: 变量名表
-类型说明：INTEGER1234567program main	integer        
+类型说明:: 变量名表
+类型说明：INTEGERprogram main
+    integer         a    ! 默认
 					...
 				</div>
 			</a>

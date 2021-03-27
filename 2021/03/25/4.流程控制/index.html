@@ -242,8 +242,16 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="IF"><a href="#IF" class="headerlink" title="IF"></a><code>IF</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if (condition) then</span><br><span class="line">    ! do something</span><br><span class="line">end if</span><br><span class="line"></span><br><span class="line">if (condition) then</span><br><span class="line">    ! do something</span><br><span class="line">else</span><br><span class="line">	! do other</span><br><span class="line">end if</span><br></pre></td></tr></table></figure>
-<p>逻辑运算</p>
+	<h3 id="IF"><a href="#IF" class="headerlink" title="IF"></a><code>IF</code></h3><pre><code>if (condition) then
+    ! do something
+end if
+
+if (condition) then
+    ! do something
+else
+    ! do other
+end if
+</code></pre><p>逻辑运算</p>
 <div class="table-container">
 <table>
 <thead>
@@ -320,10 +328,25 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 </div>
-<h5 id="IF-ELSE-IF"><a href="#IF-ELSE-IF" class="headerlink" title="IF ELSE IF"></a><code>IF ELSE IF</code></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if (condition1) then</span><br><span class="line">    ! ...</span><br><span class="line">else if (condition2) then</span><br><span class="line">    ! ...</span><br><span class="line">else if (condition3) then</span><br><span class="line">    ! ...</span><br><span class="line">else</span><br><span class="line">	! ...</span><br><span class="line">end if</span><br></pre></td></tr></table></figure>
-<h3 id="SELECT-CASE"><a href="#SELECT-CASE" class="headerlink" title="SELECT CASE"></a><code>SELECT CASE</code></h3><p>这是 f90 引入的标准，不过各大编译器基本都支持 f77 中使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select case(变量)</span><br><span class="line">case (数值1)</span><br><span class="line">	! ...</span><br><span class="line">case (数值2)</span><br><span class="line">	! ...</span><br><span class="line">case default</span><br><span class="line">	! ...</span><br><span class="line">end select</span><br></pre></td></tr></table></figure>
-<p>其中<code>case</code>的数值不一定是特定的数值</p>
+<h5 id="IF-ELSE-IF"><a href="#IF-ELSE-IF" class="headerlink" title="IF ELSE IF"></a><code>IF ELSE IF</code></h5><pre><code>if (condition1) then
+    ! ...
+else if (condition2) then
+    ! ...
+else if (condition3) then
+    ! ...
+else
+    ! ...
+end if
+</code></pre><h3 id="SELECT-CASE"><a href="#SELECT-CASE" class="headerlink" title="SELECT CASE"></a><code>SELECT CASE</code></h3><p>这是 f90 引入的标准，不过各大编译器基本都支持 f77 中使用。</p>
+<pre><code>select case(变量)
+case (数值1)
+    ! ...
+case (数值2)
+    ! ...
+case default
+    ! ...
+end select
+</code></pre><p>其中<code>case</code>的数值不一定是特定的数值</p>
 <ul>
 <li><code>case(1)</code> 变量=1时成立</li>
 <li><code>case(1:5)</code> 变量大于等于1，小于等于5时成立</li>
@@ -332,12 +355,15 @@ var _hmt = _hmt || [];
 </ul>
 <p>不过<code>case</code>只能使用整数，字符串和逻辑变量，不能使用浮点数和复数。每个<code>case</code>中使用的数值必须是常量，不能使用变量。</p>
 <h3 id="GOTO"><a href="#GOTO" class="headerlink" title="GOTO"></a><code>GOTO</code></h3><p>(一如既往的建议不要使用<code>goto</code>)，因为 Fortran 可以指定一行代码的编号，使用<code>goto</code>可以直接跳转</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goto 100</span><br><span class="line">100 write(*, *) &quot;Hello!&quot;</span><br></pre></td></tr></table></figure>
-<p>还有一种用法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">goto(10,20,30) I ! 根据 I 的值确定调到哪里</span><br><span class="line">! 如果 I&#x3D;2, 调到第二个数，也就是 20 处</span><br></pre></td></tr></table></figure>
-<p><code>IF</code>也有一种类似的用法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (C) 10,20,30</span><br><span class="line">! 如果 C &lt; 0, goto 10, 如果 C&#x3D;0, goto 20, 如果 C&gt;0, goto 30</span><br></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="PAUSE"><a href="#PAUSE" class="headerlink" title="PAUSE"></a><code>PAUSE</code></h4><p>相当于windows命令<code>pause</code></p>
+<pre><code>goto 100
+100 write(*, *) &quot;Hello!&quot;
+</code></pre><p>还有一种用法</p>
+<pre><code>goto(10,20,30) I ! 根据 I 的值确定调到哪里
+! 如果 I=2, 调到第二个数，也就是 20 处
+</code></pre><p><code>IF</code>也有一种类似的用法</p>
+<pre><code>if (C) 10,20,30
+! 如果 C &lt; 0, goto 10, 如果 C=0, goto 20, 如果 C&gt;0, goto 30
+</code></pre><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="PAUSE"><a href="#PAUSE" class="headerlink" title="PAUSE"></a><code>PAUSE</code></h4><p>相当于windows命令<code>pause</code></p>
 <h4 id="CONTINUE"><a href="#CONTINUE" class="headerlink" title="CONTINUE"></a><code>CONTINUE</code></h4><p>无意义，相当于 Python 中的<code>pass</code></p>
 <h4 id="STOP"><a href="#STOP" class="headerlink" title="STOP"></a><code>STOP</code></h4><p>停止程序.</p>
 
