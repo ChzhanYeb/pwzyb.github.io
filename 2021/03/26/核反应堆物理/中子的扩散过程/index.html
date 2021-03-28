@@ -165,6 +165,37 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										声学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-3%E5%B0%8F%E6%B5%81%E9%87%8F%E6%8C%AF%E8%8D%A1%E5%9C%A8%E9%A2%84%E8%92%B8%E6%B1%BD%E5%8F%91%E7%94%9F%E5%85%83%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">
+										1-3小流量振荡在预蒸汽发生元件中的传播速度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										文献笔记
 									</a>
 									
@@ -293,8 +324,10 @@ var _hmt = _hmt || [];
 <li>分子扩散的速率与分子密度的梯度程正比</li>
 </ul>
 <h3 id="扩散规律"><a href="#扩散规律" class="headerlink" title="扩散规律"></a>扩散规律</h3><p><img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/image-20210326103042150.png" alt></p>
+<center>图1.斐克定理推导示意图</center>
+
 <p>在$dv$中，单位时间内发生散射的中子数为$ Σ_{S} \phi(r) d v $</p>
-<p><strong>假设1：</strong>中子的散射是各向同性的 $dA$ 立体角所占总立体角的份额为<script type="math/tex">\frac{\cos \theta d A}{4 \pi r^{2}}</script></p>
+<p><strong>假设1：</strong>中子的散射是<strong>各向同性</strong>的 $dA$ 立体角所占总立体角的份额为<script type="math/tex">\frac{\cos \theta d A}{4 \pi r^{2}}</script></p>
 <p>那么单位时间内在 $dV$ 中发生散射后飞向 $dA$ 的中子数为</p>
 <script type="math/tex; mode=display">
 Σ_{S} \phi(r) \frac{\cos \theta d A d V}{4 \pi r^{2}}</script><p>这些中子实际能到达 $dV$ 的几率为 <script type="math/tex">e^{-\Sigma_{t} r}</script>（参考宏观截面定义）</p>
@@ -309,12 +342,107 @@ J_{z}^{-} d A=\frac{\Sigma_{s} d A}{4 \pi} \int_{0}^{2 \pi} \int_{0}^{\pi / 2} \
 \phi(x, y, z)=\phi_{0}+x\left(\frac{\partial \phi}{\partial x}\right)_{0}+y\left(\frac{\partial \phi}{\partial y}\right)_{0}+z\left(\frac{\partial \phi}{\partial z}\right)_{0}\\
 x=r \sin \theta \cos \varphi \quad y=r \sin \theta \sin \varphi \quad z=r \cos \theta\\
 J_{z}^{-} d A=\frac{\Sigma_{s} d A}{4 \pi} \int_{0}^{2 \pi} \int_{0}^{\pi / 2} \int_{0}^{\infty} \phi(r) e^{-\Sigma _{s}{r}} \cos \theta \sin \theta d r d \theta d \varphi\\
-=\frac{\phi_{0}}{4}+\frac{1}{6 \Sigma_{s}}\left(\frac{\partial \phi}{\partial z}\right)_{0}</script>
+=\frac{\phi_{0}}{4}+\frac{1}{6 \Sigma_{s}}\left(\frac{\partial \phi}{\partial z}\right)_{0}</script><p>若以 <script type="math/tex">J_{x}^{-}</script> 表示沿负 <script type="math/tex">x</script> 方向的分中子流密度，即，每秒自右方（沿负x方向）向左穿过单位面积的中子数，那么</p>
+<script type="math/tex; mode=display">
+J_{x}^{-}=\frac{\phi_{0}}{4}+\frac{1}{6 \Sigma_{s}}\left(\frac{\partial \phi}{\partial x}\right)_{0} \\
+J_{x}^{+}=\frac{\phi_{0}}{4}-\frac{1}{6 \Sigma_{s}}\left(\frac{\partial \phi}{\partial x}\right)_{0} \\
+J_{x}=J_{x}^{+}-J_{x}^{-}=-\frac{\lambda_{s}}{3}\left(\frac{\partial \phi}{\partial x}\right)_{0}</script><p>同理</p>
+<script type="math/tex; mode=display">
+J_{y}=J_{y}^{+}-J_{y}^{-}=-\frac{\lambda_{s}}{3}\left(\frac{\partial \phi}{\partial y}\right)_{0}</script><script type="math/tex; mode=display">
+J_{z}=J_{z}^{+}-J_{z}^{-}=-\frac{\lambda_{s}}{3}\left(\frac{\partial \phi}{\partial z}\right)_{0}</script><p>注意：</p>
+<ul>
+<li>中子通量密度 <script type="math/tex">Φ</script> 描述通过单位面积单位时间的中子数，没有方向概念</li>
+<li>中子流密度 <script type="math/tex">J</script> 描述通过单位时间单位密度沿某个方向的中子数，是矢量。</li>
+</ul>
+<p>因此，沿任意面的净中子通量为</p>
+<script type="math/tex; mode=display">
+J=-\frac{\lambda_{\mathrm{s}}}{3}\left[\frac{\partial \phi}{\partial x} \cos \alpha+\frac{\partial \phi}{\partial y} \cos \beta+\frac{\partial \phi}{\partial z} \cos \gamma\right]</script><p>即</p>
+<script type="math/tex; mode=display">
+J_{n}=\boldsymbol{J}\cdot \boldsymbol{n}\\
+\boldsymbol{n}=\cos \alpha \boldsymbol{i}+\cos \beta \boldsymbol{j}+\cos \gamma \boldsymbol{k} \\
+\boldsymbol{J}=J_{\mathrm{x}} \boldsymbol{i}+J_{\mathrm{y}} \boldsymbol{j}+J_{z} \boldsymbol{k}=-\frac{\lambda_{\mathrm{s}}}{3} \operatorname{grad} \phi</script><h3 id="斐克定律"><a href="#斐克定律" class="headerlink" title="斐克定律"></a>斐克定律</h3><div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/中子流密度J.png">
+</div>
+
+<center>图2.中子流密度J</center>
+
+<p>中子流密度J正比于负的中子通量密度梯度，其比例常数叫作<strong>扩散系数</strong>，并用D表示。于是，斐克定律便可以写成</p>
+<script type="math/tex; mode=display">
+\boldsymbol{J}=-D \mathrm{grad} \phi</script><p>其中</p>
+<script type="math/tex; mode=display">
+D=\frac{\lambda_{s}}{3}</script><p>由于<strong>假设1</strong>假设中子散射是各向同性，一般情况下，不符合实际情况（只有对于<strong>重核</strong>才近似成立，请参考中子慢化的<strong>对数能降</strong>和<strong>平均散射角余弦</strong>）。因此需要引入中子输运理论进行修正。</p>
+<p>用输运平均自由程 <script type="math/tex">λ_{tr}</script> 来代替散射平均自由程 <script type="math/tex">λ_{s}</script> 。斐克定律的扩散系数改为</p>
+<script type="math/tex; mode=display">
+D=\frac{\lambda_{tr}}{3}</script><p>其中</p>
+<script type="math/tex; mode=display">
+\lambda_{\mathrm{tr}}=\frac{\lambda_{\mathrm{s}}}{1-\bar{\mu}_{0}}</script><p>式中，<script type="math/tex">\bar{\mu}_{0}</script> 是实验室系统内的平均散射角余弦，且 <script type="math/tex">\bar{\mu}_{0}=\frac{2}{3A}</script> 。因此可以解释为何假设1在重核情况下近似成立。</p>
+<p><strong>举例：</strong></p>
+<p><img src="/.com//Users\29581\AppData\Roaming\Typora\typora-user-images\image-20210327154005402.png" alt="image-20210327154005402" style="zoom:50%;"></p>
+<center>图3.非均匀中子通量密度分布形成的中子流</center>
+
+<h3 id="单能中子扩散方程"><a href="#单能中子扩散方程" class="headerlink" title="单能中子扩散方程"></a>单能中子扩散方程</h3><p><strong>假设</strong>能量不变，只有一个能量，仅考虑空间的变化。</p>
+<p><strong>中子量守恒方程：</strong></p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}}{\mathrm{d} t} \int_{V} n(\boldsymbol{r}, t) \mathrm{d} V= 产生率(\mathrm{S})- 泄露率(\mathrm{L})- 吸收率(A)</script><p><strong>泄露率：</strong></p>
+<script type="math/tex; mode=display">
+\text { 泄漏率 }=\int_{S} \boldsymbol{J}(\boldsymbol{r}, t) \cdot \boldsymbol{n} \mathrm{d} S=\int_{V} \nabla \cdot \boldsymbol{J}(\boldsymbol{r}, t) \mathrm{d} V=\int_{V} \operatorname{div} \boldsymbol{J}(\boldsymbol{r}, t) \mathrm{d} V</script><p><strong>产生率：</strong></p>
+<script type="math/tex; mode=display">
+产生率=\int_{V} \mathrm{~S}(\boldsymbol{r}, t) \mathrm{d} V</script><p><strong>吸收率：</strong></p>
+<script type="math/tex; mode=display">
+吸收率=\int_{V} \Sigma_{\mathrm{a}} \phi(\boldsymbol{r}, t) \mathrm{d} V</script><p>由此可得到<strong>连续方程</strong>：</p>
+<script type="math/tex; mode=display">
+\frac{\partial n(\boldsymbol{r}, t)}{\partial t}=S(\boldsymbol{r}, t)-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r}, t)-\operatorname{div} \boldsymbol{J}(\boldsymbol{r}, t)</script><p>表征单位体积（或微元）内的中子数的平衡关系。</p>
+<p>泄露率项引入斐克定律，若扩散系数 <script type="math/tex">D</script> 与空间位置无关，可化简得</p>
+<script type="math/tex; mode=display">
+泄漏率=-D\left[\frac{\partial^{2} \phi}{\partial x^{2}}+\frac{\partial^{2} \phi}{\partial y^{2}}+\frac{\partial^{2} \phi}{\partial z^{2}}\right]=-D \nabla^{2} \phi</script><p>最终得到 <strong>单能中子扩散方程</strong></p>
+<script type="math/tex; mode=display">
+\frac{1}{v} \frac{\partial \phi(\boldsymbol{r}, t)}{\partial t}=S(\boldsymbol{r}, t)+D \nabla^{2} \phi(\boldsymbol{r}, t)-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r}, t)</script><p>若中子通量密度<strong>不随时间变化</strong>，则可得 <strong>稳态单能中子扩散方程</strong></p>
+<script type="math/tex; mode=display">
+D \nabla^{2} \phi(\boldsymbol{r})-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r})+S(\boldsymbol{r})=0</script><p>两个方程可用偏微分方程公式求解。</p>
+<h3 id="边界条件："><a href="#边界条件：" class="headerlink" title="边界条件："></a><strong>边界条件：</strong></h3><p>几种常见的边界条件：</p>
+<ol>
+<li>在扩散方程适用的范围内，中子通量密度的数值必须是正的、有限的实数。</li>
+<li>在两种不同扩散性质的介质交界面上，垂直于分界面的中子流密度相等，中子通量密度相等。</li>
+<li>介质与真空交界的外表面上，根据物理上要求，自真空返回介质的中子流等于零。</li>
+</ol>
+<p>对于条件1，不是所有情况都满足这个条件，因此需要该条件限制</p>
+<p>对于条件2</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件2.png">
+</div>
+
+<center>图4.在两种介质的分界面上的中子扩散</center>
+
+<script type="math/tex; mode=display">
+\left.J_{x}^{+}\right|_{A}=\left.J_{x}^{+}\right|_{B}\\
+\left.J_{x}^{-}\right|_{A}=\left.J_{x}^{-}\right|_{B}\\
+\left.D_{A} \frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{A}=\left.D_{B} \frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{B}\\
+\phi_{A}=\phi_{B}</script><p>对于条件3，中子只能出不能进（外界没有中子碰撞反弹回来）</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件2.png">
+</div>
+
+<center>图5.应用输运理论和扩散理论的外推距离求得的扩散方程的解</center>
+
+<script type="math/tex; mode=display">
+\left.J_{x}^{-}\right|_{x=0}=\frac{\phi_{0}}{4}+\left.\frac{\lambda_{\mathrm{tr}}}{6} \frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{x=0}=0</script><p>即</p>
+<script type="math/tex; mode=display">
+\left.\frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{x=0}=-\frac{3 \phi_{0}}{2 \lambda_{\mathrm{tr}}}=\frac{\phi_{0}}{ d}</script><p>其中</p>
+<script type="math/tex; mode=display">
+d=\frac{2}{3} \lambda_{\mathrm{tr}}</script><script type="math/tex; mode=display">d$$ 被称为**直线外推距离**。该值是从扩散理论求出的。按照更精确的中子输运理论，对于平面边界的情况，可求得</script><p>d=0.7104 \lambda_{\mathrm{tr}}</p>
+<p><script type="math/tex">更严格来讲，外推距离</script>d$$ 与表面曲率半径有关。对于曲率较小的表面，可以用上述近似。因此，自由外表面（真空边界）的边界条件可以用更简单的形式表示：</p>
+<p><strong>在自由表面外推距离 <script type="math/tex">d</script> 处，中子通量密度等于零。</strong></p>
+
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
+            
+              <a href="/2021/03/28/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-3%E5%B0%8F%E6%B5%81%E9%87%8F%E6%8C%AF%E8%8D%A1%E5%9C%A8%E9%A2%84%E8%92%B8%E6%B1%BD%E5%8F%91%E7%94%9F%E5%85%83%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  反应堆相关
+              </a>
             
         </div>
         <div class="item right">
