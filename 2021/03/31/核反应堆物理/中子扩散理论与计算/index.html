@@ -507,12 +507,60 @@ var _hmt = _hmt || [];
 <script type="math/tex; mode=display">
 L^{2}=\frac{1}{\kappa^{2}}=\frac{D}{\Sigma_{a}}</script><p>公式(1)方程称之为<strong>亥姆霍兹方程</strong> ，其通解见表</p>
 <div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/image-20210326103042150.png">
+    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/亥姆霍兹方程通解.png">
 </div>
 
+<center>图1.亥姆霍兹方程通解表</center>
 
+<h4 id="无限介质内点源情况"><a href="#无限介质内点源情况" class="headerlink" title="无限介质内点源情况"></a>无限介质内点源情况</h4><div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质点源情况.png">
+</div>
 
-<h3 id="增殖介质单能中子扩散方程计算"><a href="#增殖介质单能中子扩散方程计算" class="headerlink" title="增殖介质单能中子扩散方程计算"></a>增殖介质单能中子扩散方程计算</h3><h3 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h3><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
+<center>图２.无限介质点源示意图</center>
+
+<p>无限均匀介质内有一每秒各向同性地放出S个中子的点源情况。</p>
+<p>使用<strong>一维球坐标系</strong>最适合求解。一维球表示在球的三个自变量( <script type="math/tex">\phi(r,θ,φ)</script> )里，不考虑两个旋角度 <script type="math/tex">θ,φ</script> （利用堆成条件），仅考虑半径 <script type="math/tex">r</script> 这一情况。</p>
+<script type="math/tex; mode=display">
+\frac { d ^ { 2 } \phi ( r ) } { d r ^ { 2 } } + \frac { 2 } { r } \frac { d \phi ( r ) } { d r } - \frac { \phi ( r ) } { L ^ { 2 } } = 0 , \quad ( r \gt 0 )</script><p>注意，如果考虑 <script type="math/tex">r=0</script> 这一情况，需要将式（1）改写为以下形式</p>
+<script type="math/tex; mode=display">
+\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = S\delta(r)</script><p>边界条件：</p>
+<ul>
+<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
+</li>
+<li><p>中子源条件：</p>
+<script type="math/tex; mode=display">
+\lim _ { r \rightarrow 0 } 4 \pi r ^ { 2 } J ( r ) = S</script></li>
+</ul>
+<p>查表得通解为</p>
+<script type="math/tex; mode=display">
+\phi(r)=A \frac{e^{-r / L}}{r}+C \frac{e^{r / L}}{r}</script><p>求得中子流密度为</p>
+<script type="math/tex; mode=display">
+J ( r ) = - D \frac { d \phi } { d r } = D A ( \frac { 1 } { r L } + \frac { 1 } { r ^ { 2 } } ) e ^ { - r/L }\\</script><p>中子源条件：</p>
+<script type="math/tex; mode=display">
+\lim _{r \rightarrow 0} 4 \pi r^{2} J(r)=\lim _{r \rightarrow 0} 4 \pi D A\left(\frac{r}{L}+1\right) e^{-r / L}=S</script><p>求得</p>
+<script type="math/tex; mode=display">
+A = \frac { S } { 4 \pi D }</script><p>最后得中子通量密度为</p>
+<script type="math/tex; mode=display">
+\phi(r)=\frac{S \mathrm{e}^{-r / L}}{4 \pi D r}, \quad r>0</script><h4 id="无限介质平面源情况"><a href="#无限介质平面源情况" class="headerlink" title="无限介质平面源情况"></a>无限介质平面源情况</h4><p>无限均匀介质内有一每秒单位面积各向同性地放出S个中子的平面源情况。</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质平面源情况.png">
+</div>
+
+<center>图２.无限介质平面源示意图</center>
+
+<p>使用<strong>一维笛卡尔坐标系</strong>便于求解</p>
+<script type="math/tex; mode=display">
+\frac { d ^ { 2 } \phi ( x ) } { d x ^ { 2 } } - \frac { \phi ( x ) } { L ^ { 2 } } = 0 , ( x \neq 0 )</script><p>边界条件</p>
+<ul>
+<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
+</li>
+<li><p>中子源条件：</p>
+<script type="math/tex; mode=display">
+\lim _ { x \rightarrow 0 } J ( x ) = S / 2</script></li>
+</ul>
+<p>最终求得</p>
+<script type="math/tex; mode=display">
+\phi ( x ) = \frac { S L } { 2 D } e ^ { - | x | / L }</script><h3 id="增殖介质单能中子扩散方程计算"><a href="#增殖介质单能中子扩散方程计算" class="headerlink" title="增殖介质单能中子扩散方程计算"></a>增殖介质单能中子扩散方程计算</h3><h3 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h3><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
 </div>
 
 
@@ -554,20 +602,5 @@ L^{2}=\frac{1}{\kappa^{2}}=\frac{D}{\Sigma_{a}}</script><p>公式(1)方程称之
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
