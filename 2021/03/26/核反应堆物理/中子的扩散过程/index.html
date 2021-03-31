@@ -161,6 +161,64 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
+										5-循环
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
+										6-数值
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
+										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法集
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										高斯-约当消去法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
+										高斯-约当消去法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -418,7 +476,7 @@ var _hmt = _hmt || [];
 <li>从浓度高的到浓度低的扩散</li>
 <li>分子扩散的速率与分子密度的梯度程正比</li>
 </ul>
-<h3 id="扩散规律"><a href="#扩散规律" class="headerlink" title="扩散规律"></a>扩散规律</h3><p><img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/image-20210326103042150.png" alt></p>
+<p><img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/image-20210326103042150.png" alt></p>
 <center>图1.斐克定理推导示意图</center>
 
 <p>在$dv$中，单位时间内发生散射的中子数为$ Σ_{S} \phi(r) d v $</p>
@@ -499,9 +557,10 @@ D \nabla^{2} \phi(\boldsymbol{r})-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r})+S(\bo
 <li>在扩散方程适用的范围内，中子通量密度的数值必须是正的、有限的实数。</li>
 <li>在两种不同扩散性质的介质交界面上，垂直于分界面的中子流密度相等，中子通量密度相等。</li>
 <li>介质与真空交界的外表面上，根据物理上要求，自真空返回介质的中子流等于零。</li>
+<li>反照率边界条件</li>
 </ol>
-<p>对于条件1，不是所有情况都满足这个条件，因此需要该条件限制</p>
-<p>对于条件2</p>
+<p>对于<strong>条件1</strong>，是最一般的情况，但不是所有情况都满足这个条件，因此需要该条件限制。</p>
+<p>对于<strong>条件2</strong></p>
 <div align="center">
     <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件2.png">
 </div>
@@ -512,10 +571,11 @@ D \nabla^{2} \phi(\boldsymbol{r})-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r})+S(\bo
 \left.J_{x}^{+}\right|_{A}=\left.J_{x}^{+}\right|_{B}\\
 \left.J_{x}^{-}\right|_{A}=\left.J_{x}^{-}\right|_{B}\\
 \left.D_{A} \frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{A}=\left.D_{B} \frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{B}\\
-\phi_{A}=\phi_{B}</script><p>对于条件3，中子只能出不能进（外界没有中子碰撞反弹回来）</p>
+\phi_{A}=\phi_{B}</script><p>对于<strong>条件3</strong>，中子只能出不能进（外界没有中子碰撞反弹回来）</p>
 <div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件2.png">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件3.png">
 </div>
+
 
 <center>图5.应用输运理论和扩散理论的外推距离求得的扩散方程的解</center>
 
@@ -525,9 +585,85 @@ D \nabla^{2} \phi(\boldsymbol{r})-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r})+S(\bo
 \left.\frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{x=0}=-\frac{3 \phi_{0}}{2 \lambda_{\mathrm{tr}}}=\frac{\phi_{0}}{ d}</script><p>其中</p>
 <script type="math/tex; mode=display">
 d=\frac{2}{3} \lambda_{\mathrm{tr}}</script><script type="math/tex; mode=display">d$$ 被称为**直线外推距离**。该值是从扩散理论求出的。按照更精确的中子输运理论，对于平面边界的情况，可求得</script><p>d=0.7104 \lambda_{\mathrm{tr}}</p>
-<p><script type="math/tex">更严格来讲，外推距离</script>d$$ 与表面曲率半径有关。对于曲率较小的表面，可以用上述近似。因此，自由外表面（真空边界）的边界条件可以用更简单的形式表示：</p>
-<p><strong>在自由表面外推距离 <script type="math/tex">d</script> 处，中子通量密度等于零。</strong></p>
+<script type="math/tex; mode=display">
+更严格来讲，外推距离 $$d$$ 与表面曲率半径有关。对于曲率较小的表面，可以用上述近似。因此，自由外表面（真空边界）的边界条件可以用更简单的形式表示：
 
+**在自由表面外推距离 $$d$$ 处，中子通量密度等于零。**
+
+对于**条件4**，
+
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/边界条件4.png"></img>
+</div>
+
+<center>图6.反射情况</center></script><p>\left.J^{-x}\right|_{\Gamma}=\left.\beta J^{+x}\right|_{\Gamma}</p>
+<script type="math/tex; mode=display">
+
+$$β$$ 被称为**反射率**，根据斐克定律，可写出以下关系式</script><p>\beta=\frac{J^{-}}{J^{+}}=\frac{\frac{\phi}{4}+\frac{D}{2} \frac{d \phi}{d x}}{\frac{\phi}{4}-\frac{D}{2} \frac{d \phi}{d x}}=\frac{1+\frac{2 D}{\phi} \frac{d \phi}{d x}}{1-\frac{2 D}{\phi} \frac{d \phi}{d x}}</p>
+<script type="math/tex; mode=display">
+对于**无限平板反射层**，反射层内的中子通量密度分布为</script><p>\phi=C \mathrm{e}^{-x / L}</p>
+<script type="math/tex; mode=display">
+反照率 $$β_{∞}</script><script type="math/tex; mode=display">
+\beta_{\infty}=\frac{1-\frac{2 D}{L}}{1+\frac{2 D}{L}}</script><p>对于有限厚度的反射层，</p>
+<script type="math/tex; mode=display">
+\beta=\frac{1-\frac{2 D}{L} \operatorname{coth}\left(\frac{a}{L}\right)}{1+\frac{2 D}{L} \operatorname{coth}\left(\frac{a}{L}\right)}</script><p>其中，<script type="math/tex">a</script> 表示反射层厚度。实际上，当 <script type="math/tex">a/L>3</script> 时，反射率与无限厚的情况相差不多。</p>
+<p>反照率不仅取决于<strong>反射介质的材料特性</strong>，而且还取决于<strong>系统的尺寸和几何形状</strong>，反照率随几何形状的不同而改变。</p>
+<p>当 <script type="math/tex">β=0</script> ，没有一个返回的情况，对应于真空边界条件</p>
+<p>当 <script type="math/tex">β=1</script> ，出去的全都回来，该条件称为 <strong>反射全对称边界条件</strong> 。</p>
+<p>一般情况下，<script type="math/tex">β</script> 介于0和1之间。</p>
+<p>在工程模拟计算上，该条件适用于编程。</p>
+<h3 id="扩散方程适用范围"><a href="#扩散方程适用范围" class="headerlink" title="扩散方程适用范围"></a>扩散方程适用范围</h3><p>注意假设条件</p>
+<p>距真空边界，两三个自由程内不能使用扩散方程（不符合无限均匀介质假设）。（实际上工程仍会使用，会比实际偏大，但该误差还是复合工程安全条件）</p>
+<p>强吸收体（如，控制棒）附近不能使用（不符合介质为弱吸收假设）（实际上还是会使用，会偏大）</p>
+<p>距离中子源两三个平均自由程内不能使用（不符合假设通量变化缓慢）</p>
+<p>反应堆物理所计算的通量分布和反应性的大小，跟实验测量的数据非常吻合，误差小于10%（热工的误差一般在2%-30% ）</p>
+<p>PS：由于反应堆物理相关计算是从微观推导到宏观，计算非常精确，除了个别几个现象，其余基本无需做实验。</p>
+<h3 id="扩散长度、慢化长度和徙动长度"><a href="#扩散长度、慢化长度和徙动长度" class="headerlink" title="扩散长度、慢化长度和徙动长度"></a>扩散长度、慢化长度和徙动长度</h3><h4 id="扩散长度："><a href="#扩散长度：" class="headerlink" title="扩散长度："></a>扩散长度：</h4><script type="math/tex; mode=display">
+L^{2}=\frac{D}{\Sigma_{\mathrm{a}}}=\frac{\lambda_{\mathrm{a}} \lambda_{\mathrm{tr}}}{3}=\frac{\lambda_{\mathrm{a}} \lambda_{\mathrm{s}}}{3\left(1-\bar{\mu}_{0}\right)}=\frac{1}{3 \Sigma_{\mathrm{a}} \Sigma_{\mathrm{s}}\left(1-\bar{\mu}_{0}\right)}</script><p> 物理含义：在无限介质内点源的情况下，扩散长度的平方等于热中子从产生地点到被吸收地点穿行的直线距离均方值的六分之一。</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/点源空间二次矩的计算.png">
+</div>
+
+<center>图7.点源空间二次矩的计算</center>
+
+<script type="math/tex; mode=display">
+\overline{r^{2}}=\frac{\int_{0}^{\infty} r^{2}\left(4 \pi r^{2} \Sigma_{\mathrm{a}} \phi(r)\right) \mathrm{d} r}{\int_{0}^{\infty} 4 \pi r^{2} \Sigma_{\mathrm{a}} \phi(r) \mathrm{d} r}=\frac{\int_{0}^{\infty} r^{3} \mathrm{e}^{-r / L} \mathrm{~d} r}{\int_{0}^{\infty} r \mathrm{e}^{-r / L} \mathrm{~d} r}=6L^{2}</script><p>即</p>
+<script type="math/tex; mode=display">
+L^{2}=\frac{1}{6}\overline{r^{2}}</script><p>扩散长度L的大小将影响反应堆内热中子的泄漏。L愈大，则热中子自产生地点到被吸收地点所移动的平均距离也愈大，因而热中子泄漏到反应堆外的几率也就愈大。（该值越小越好）</p>
+<h4 id="慢化长度（热中子年龄）"><a href="#慢化长度（热中子年龄）" class="headerlink" title="慢化长度（热中子年龄）"></a>慢化长度（热中子年龄）</h4><div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/慢化长度.png">
+</div>
+
+<center>图8.慢化长度能量变化图示</center>
+
+<p>快中子和热中子之间有个能量分界线，这个能量称为<strong>分界能量</strong>或者<strong>逢合能</strong>，用 <script type="math/tex">E_{th}</script> 表示，一般大小在 <script type="math/tex">1eV</script> 左右。</p>
+<ul>
+<li><p>单位时间单位体积内快中子与原子核发生散射的次数为 <script type="math/tex">Σ_ { s } \phi _ { 1 } ( r )</script> </p>
+</li>
+<li><p>一个源中子从初始能量 <script type="math/tex">E_{0}</script> 慢化到 <script type="math/tex">E_{th}</script> 以下需要的平均碰撞次数为 <script type="math/tex">\ln \left(E_{0} / E_{t h}\right) / \xi</script></p>
+</li>
+<li><p>定义移出截面 <script type="math/tex">Σ_{1}</script> ，表示从快中子变为热中子的概率。则，单位时间单位体积内慢化为热中子的数量为 <script type="math/tex">Σ_ {1} \phi _ { 1 } ( r )</script> </p>
+<script type="math/tex; mode=display">
+\Sigma_{1} \phi_{1}(r)=\frac{\Sigma_{s} \phi_{1}}{\frac{1}{\xi} \ln \frac{E_{0}}{E_{t h}}}\\
+\Sigma_{1}= \frac { \xi \Sigma _ { s } } { \operatorname { ln} \frac { E _ { 0 } } { E _ { t h } } }</script></li>
+</ul>
+<p>类似热中子定义快中子<strong>慢化长度</strong></p>
+<script type="math/tex; mode=display">
+L_{1}^{2}=\frac{D_{1}}{\Sigma_{1}}=\frac{1}{3 \xi \Sigma_{s} \Sigma_{t r}} \ln \frac{E_{0}}{E_{t h}}=\int_{E_{t h}}^{E_{0}} \frac{D_{1}}{\xi \Sigma_{s}} \frac{d E}{E}=\tau_{t h}</script><p>中子年龄定义</p>
+<script type="math/tex; mode=display">
+\tau_{t h}=\int_{E_{t h}}^{E_{0}} \frac{D_{1}}{\xi \Sigma_{s}} \frac{d E}{E}</script><script type="math/tex; mode=display">E$$越小，$$τ$$ 越大。注意，中子年龄是长度平方的量纲。
+
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/慢化长度_物理意义.png"></img>
+</div>
+
+<center>图9.点源空间二次矩慢化长度的计算</center></script><p>r _ { s } ^ { 2 } = \frac { \int r ^ { 2 } ( 穿行r且慢化为热中子数) d x } { 总的慢化中子数}</p>
+<script type="math/tex; mode=display">
+</script><p>\tau_{t h}=\frac{1}{6} \bar{r}_{s}^{2}</p>
+<p>$$</p>
+<p>物理意义：在无限介质内点源的情况下，慢化长度的平方等于快中子从产生地点到被慢化成热中子地点穿行的直线距离均方值的六分之ー。</p>
+<p>慢化长度的大小将影响反应堆內快中子的泄漏。其值愈大，则快中子自产生地点到被慢化成热中子地点所移动的平均距离也愈大，因而快中子泄漏到反应堆外的几率也就愈大。</p>
+<h3 id="徙动长度"><a href="#徙动长度" class="headerlink" title="徙动长度"></a>徙动长度</h3>
 </div>
 
 
