@@ -1,1440 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	 
+	尼古拉斯冰的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "ChzhanYeb.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
 <link rel="stylesheet" href="/css/main.css">
 
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="尼古拉斯冰的笔记">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="尼古拉斯冰的笔记">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="Chzhan Yeb">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/">
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 
-  <title>尼古拉斯冰的笔记</title>
-  
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
 
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
 
+	
+<script src="/js/main.js"></script>
 
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
 
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+	
+	
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+<header id="header">
+    <a id="title" href="/" class="logo">尼古拉斯冰的笔记</a>
 
-  <div class="site-meta">
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">尼古拉斯冰的笔记</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
+	
+		<li class="menu-item">
+			<a href="https://github.com/ChzhanYeb" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Fortran
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/21/Fortran/1.%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										1.基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
+										2.输入输出基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/3.%E7%B1%BB%E5%9E%8B/">
+										3.类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/Fortran/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+										4.流程控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
+										5-循环
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
+										6-数值
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
+										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法集
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										高斯-约当消去法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
+										高斯-约当消去法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										信息技术
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
+										现代操作系统的主要组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆类型及结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
+										压水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										声学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-3%E5%B0%8F%E6%B5%81%E9%87%8F%E6%8C%AF%E8%8D%A1%E5%9C%A8%E9%A2%84%E8%92%B8%E6%B1%BD%E5%8F%91%E7%94%9F%E5%85%83%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">
+										1-3小流量振荡在预蒸汽发生元件中的传播速度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/">
+										1-4非线性液压元件的基本特性，特征，参数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										文献笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										射流理论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/24/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
+										Turbulent gravitational convection from maintained and instantaneous sources
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										旅行
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/15/%E6%97%85%E8%A1%8C/%E6%91%A9%E5%B0%94%E6%9B%BC%E6%96%AF%E5%85%8B%E4%BA%94%E6%97%A5%E8%A1%8C/">
+										摩尔曼斯克五日行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核反应堆物理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+										中子弹性散射碰撞公式及能量概率分布公式推导
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
+										中子扩散理论与计算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%85%A2%E5%8C%96%E8%BF%87%E7%A8%8B/">
+										中子的慢化过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
+										中子的扩散过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/">
+										核反应堆功率与衰变功率
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核电站
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0.习题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/">
+										задача-16
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										水处理
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										离子交换水处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/">
+										有关离子交换过程和离子交换剂的一般信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
 </div>
 
+	<!-- 引入正文 -->
+	<div id="content">
+		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
+				<h2 class="index-title">
+					中子扩散理论与计算
+				</h2>
+				<div class="index-brief">
+					非增殖介质单能中子扩散方程计算如果介质受到中子碰撞之后，中子数变大（一变二，二变四这种），这种介质称为增殖介质。反之，不产生中子的称之为非增殖介质。
 
+\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = 0其中
 
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/" class="post-title-link" itemprop="url">中子扩散理论与计算</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-31 14:35:51 / Modified: 15:38:08" itemprop="dateCreated datePublished" datetime="2021-03-31T14:35:51+03:00">2021-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="非增殖介质单能中子扩散方程计算"><a href="#非增殖介质单能中子扩散方程计算" class="headerlink" title="非增殖介质单能中子扩散方程计算"></a>非增殖介质单能中子扩散方程计算</h3><p>如果介质受到中子碰撞之后，中子数变大（一变二，二变四这种），这种介质称为增殖介质。反之，不产生中子的称之为非增殖介质。</p>
-<script type="math/tex; mode=display">
-\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = 0</script><p>其中</p>
-<script type="math/tex; mode=display">
-L^{2}=\frac{1}{\kappa^{2}}=\frac{D}{\Sigma_{a}}</script><p>公式(1)方程称之为<strong>亥姆霍兹方程</strong> ，其通解见表</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/亥姆霍兹方程通解.png">
-</div>
-
-<center>图1.亥姆霍兹方程通解表</center>
-
-<h4 id="无限介质内点源情况"><a href="#无限介质内点源情况" class="headerlink" title="无限介质内点源情况"></a>无限介质内点源情况</h4><div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质点源情况.png">
-</div>
-
-<center>图２.无限介质点源示意图</center>
-
-<p>无限均匀介质内有一每秒各向同性地放出S个中子的点源情况。</p>
-<p>使用<strong>一维球坐标系</strong>最适合求解。一维球表示在球的三个自变量( <script type="math/tex">\phi(r,θ,φ)</script> )里，不考虑两个旋角度 <script type="math/tex">θ,φ</script> （利用堆成条件），仅考虑半径 <script type="math/tex">r</script> 这一情况。</p>
-<script type="math/tex; mode=display">
-\frac { d ^ { 2 } \phi ( r ) } { d r ^ { 2 } } + \frac { 2 } { r } \frac { d \phi ( r ) } { d r } - \frac { \phi ( r ) } { L ^ { 2 } } = 0 , \quad ( r \gt 0 )</script><p>注意，如果考虑 <script type="math/tex">r=0</script> 这一情况，需要将式（1）改写为以下形式</p>
-<script type="math/tex; mode=display">
-\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = S\delta(r)</script><p>边界条件：</p>
-<ul>
-<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
-</li>
-<li><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _ { r \rightarrow 0 } 4 \pi r ^ { 2 } J ( r ) = S</script></li>
-</ul>
-<p>查表得通解为</p>
-<script type="math/tex; mode=display">
-\phi(r)=A \frac{e^{-r / L}}{r}+C \frac{e^{r / L}}{r}</script><p>求得中子流密度为</p>
-<script type="math/tex; mode=display">
-J ( r ) = - D \frac { d \phi } { d r } = D A ( \frac { 1 } { r L } + \frac { 1 } { r ^ { 2 } } ) e ^ { - r/L }\\</script><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _{r \rightarrow 0} 4 \pi r^{2} J(r)=\lim _{r \rightarrow 0} 4 \pi D A\left(\frac{r}{L}+1\right) e^{-r / L}=S</script><p>求得</p>
-<script type="math/tex; mode=display">
-A = \frac { S } { 4 \pi D }</script><p>最后得中子通量密度为</p>
-<script type="math/tex; mode=display">
-\phi(r)=\frac{S \mathrm{e}^{-r / L}}{4 \pi D r}, \quad r>0</script><h4 id="无限介质平面源情况"><a href="#无限介质平面源情况" class="headerlink" title="无限介质平面源情况"></a>无限介质平面源情况</h4><p>无限均匀介质内有一每秒单位面积各向同性地放出S个中子的平面源情况。</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质平面源情况.png">
-</div>
-
-<center>图２.无限介质平面源示意图</center>
-
-<p>使用<strong>一维笛卡尔坐标系</strong>便于求解</p>
-<script type="math/tex; mode=display">
-\frac { d ^ { 2 } \phi ( x ) } { d x ^ { 2 } } - \frac { \phi ( x ) } { L ^ { 2 } } = 0 , ( x \neq 0 )</script><p>边界条件</p>
-<ul>
-<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
-</li>
-<li><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _ { x \rightarrow 0 } J ( x ) = S / 2</script></li>
-</ul>
-<p>最终求得</p>
-<script type="math/tex; mode=display">
-\phi ( x ) = \frac { S L } { 2 D } e ^ { - | x | / L }</script><h3 id="增殖介质单能中子扩散方程计算"><a href="#增殖介质单能中子扩散方程计算" class="headerlink" title="增殖介质单能中子扩散方程计算"></a>增殖介质单能中子扩散方程计算</h3><h3 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h3><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">现代操作系统的主要组件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-31 11:29:01 / Modified: 11:31:49" itemprop="dateCreated datePublished" datetime="2021-03-31T11:29:01+03:00">2021-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/" class="post-title-link" itemprop="url">高斯-约当消去法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-29 21:34:47" itemprop="dateCreated datePublished" datetime="2021-03-29T21:34:47+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">7.函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-29 20:44:29 / Modified: 20:45:11" itemprop="dateCreated datePublished" datetime="2021-03-29T20:44:29+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="SUBROUTINE"><a href="#SUBROUTINE" class="headerlink" title="SUBROUTINE"></a><code>SUBROUTINE</code></h2><p>子程序</p>
-<pre><code>program test
+L^{2}=\frac{1}{\k
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-31</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
+				<h2 class="index-title">
+					现代操作系统的主要组件
+				</h2>
+				<div class="index-brief">
+					文件系统
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-31</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
+				<h2 class="index-title">
+					高斯-约当消去法
+				</h2>
+				<div class="index-brief">
+					
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
+				<h2 class="index-title">
+					7-函数
+				</h2>
+				<div class="index-brief">
+					SUBROUTINE子程序
+program test
     implicit none
     call hello()                 ! 调用 hello 子程序
     call myprint(&quot;Hello world!&quot;) ! 传参数
     stop
-end program test
-
-subroutine hello()               ! 定义 hello 子程序
-    implicit none                ! 注意在函数体内也要写`implicit none`
-    write(*,*) &quot;Hello world!&quot;
-    return                       ! 可以省略
-end subroutine hello
-
-subroutine myprint(msg)
-    implicit none
-    character(len=20) :: msg     ! 比较奇怪的一点是需要在函数体内声明参数类型
-    write(*,*) msg
-    return
-end subroutine myprint
-</code></pre><p>子程序和 C 语言中返回类型<code>void</code>的函数相对应。在两种语言混编时，是可以一一对应的。在本笔记中，我按照 C 语言的习惯，统一称之为函数。</p>
-<h2 id="FUNCTION"><a href="#FUNCTION" class="headerlink" title="FUNCTION"></a><code>FUNCTION</code></h2><pre><code>program test
-implicit none
-    real :: a=1
-    real :: b=2
-    real,external :: add  ! 声明这是函数而不是变量
-    write(*,*) add(a,b)
-    stop
-end program test
-
-function add(a, b)
-    implicit none
-    real :: a,b     ! 指定参数类型
-    real :: add     ! 指定返回值类型，fortran 规定函数名就是返回值
-    add = a + b
-    return          ! (所以这个 return 究竟有什么用啊 kora)
-end function add
-</code></pre><p>注意<code>function</code>有点不同，调用函数事先需要在<code>program</code>块中声明。<code>external</code>形容词不是必须的，但是不建议省略。f77 也可以这样写：</p>
-<pre><code>real add
-external add
-</code></pre><p>声明返回值类型也可以这样写</p>
-<pre><code>real function add(a, b)
-    ! ...
-end funtion
-</code></pre><p>这样后面可以不同再指定<code>add</code>的类型。（这样或许更像C语言）。</p>
-<p>对于一些简短的函数，可以直接这样写</p>
-<pre><code>real :: a, b, add
-add(a, b) = a + b
-write(*, *) add(1.0, 2.0)
-</code></pre><p>一些简单的函数建议这样写。注意这里的函数定义中，<code>a,b</code>虽然都必须要声明，但是在这里仅仅是占位所用，调用<code>add</code>函数并不会改变<code>a,b</code>的值。</p>
-<h2 id="COMMON"><a href="#COMMON" class="headerlink" title="COMMON"></a><code>COMMON</code></h2><p>虽然不是函数，但是也涉及到程序的组织方式，这里一并作出说明。</p>
-<pre><code>program test
-    implicit none
-    integer :: a, b
-    common a, b        ! 定义 a,b 是全局变量中的第一个和第二个变量
-    a = 1
-    b = 2
-    call show_common()
-end program test
-
-subroutine show_common()
-    implicit none
-    integer :: n1, n2
-    common n1, n2      ! 定义 n1, n2 是全局变量中的第一个和第二个变量
-    write(*,*) n1, n2
-    return
-end
-</code></pre><p>有些奇怪，两个地方都要用<code>common</code>声明一下，并且可以有不同的命名。这是因为，<code>common</code>的实现是取一块内存赋值，任何一个函数体内使用<code>common</code>声明的变量其实是按照顺序对应这块内存的地址。这其实很不方便，比如</p>
-<pre><code>program main
-    implicit none
-    integer a,b,c,d
-    common a,b,c,d
-    !...
-end
-subroutine test()
-    implicit none
-    integer n1,n2,n3,d
-    common n1,n2,n3,d
-end
-! 如果你只是需要 `d`，但是你仍然需要声明几个变量占位置
-</code></pre><p>为此，你可以声明一个<code>common</code>的分组</p>
-<pre><code>common /group1/ a,b
-common /group2/ c,d
-</code></pre><p>（感觉向奇怪的方向发展了）。</p>
-<p>而且，在不同的函数中使用<code>common</code>，你甚至可以使用不同的类型。比如在<code>program</code>块中声明4个<code>integer(kind=4)</code>，在函数中声明两个<code>real(kind=8)</code>也是可以的，反正就是按照地址来取。这在c++中简直不能忍受。反正就是交给程序员自觉不犯错呗。</p>
-<p><code>common</code>变量的初始化，不能使用<code>data</code>命令，需要在<code>block data</code>块中设置。</p>
-<pre><code>block data
-    implicit none
-    integer a,b
-    common a,b             ! a,b在不署名的组中
-    data a,b /1,2/
-    integer c,d
-    common /group1/ c,d    ! c,d在组group1中
-    data c,d /3,4/
-end block data
-</code></pre><p>全局变量不能声明为常量，也就是不支持<code>parameter</code>.</p>
-<h3 id="变量的生存周期"><a href="#变量的生存周期" class="headerlink" title="变量的生存周期"></a>变量的生存周期</h3><p>函数中定义的变量自然在函数结束之后就没有了。可以使用<code>SAVE</code>延长变量生存期</p>
-<pre><code>program test
-    implicit none
-    call plus()    ! 打印 1
-    call plus()    ! 打印 2
-end program test
-
-subroutine plus()
-    implicit none
-    integer :: count = 1  ! 只有第一次调用的时候会赋值
-    save count            ! 使得 count 始终存在
-    ! f90 中，也可以这样写
-    ! integer,save :: count = 1
-    write(*,*) count
-    count = count + 1
-    return
-end subroutine plus
-</code></pre><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><blockquote>
-</blockquote>
-<p>按道理说，上面的说法是正确的。但是实际上，Fortran标准并没有规定不加<code>save</code>的变量就一定销毁。而实际上目前我用的<code>gfortran</code>编译器似乎就是默认的函数内局部变量都是<code>save</code>的。这造成了很严重的问题，比如</p>
-<pre><code>real function func(t)
-    implicit none
-    real :: x = 0.0
-    ! ...
-    x = 1.2
-    return
-end function
-</code></pre><p>一般我们定义一个变量的时候，通常会给它初始化。比如上面这个函数，<code>x</code>变量初始化是<code>0.0</code>。但是如果你在后面改变了<code>x</code>的值，因为<code>save</code>机制，下次再进入的时候，<code>x</code>的初值就是改变后的<code>1.2</code>，不是<code>0.0</code>。如果这样运行，很可能会出现错误，因为<code>x</code>的初始值不是<code>0.0</code>了。</p>
-<p>解决的办法，就是总是采用赋值，而不是初始化。</p>
-<pre><code>real function func(t)
-    implicit none
-    real :: x
-    x = 0.0       ! 采用赋值来给变量初始值
-end function
-</code></pre><p>因为赋值是一个语句，是进入函数之后一定要执行的。而初始化由于<code>save</code>机制的存在，不一定值必须执行。特别注意的是，<code>data</code>命令也是初始化命令，而不是语句，所以也不建议在函数体内使用<code>data</code>命令。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/" class="post-title-link" itemprop="url">6.数组</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-29 20:40:02 / Modified: 20:43:48" itemprop="dateCreated datePublished" datetime="2021-03-29T20:40:02+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><pre><code>DATATYPE :: name(size)
-</code></pre><p>其中<code>DATATYPE</code>可以是<code>integer,real,complex,logical</code>，也可以是<code>type</code>自定义类型。</p>
-<p>eg:</p>
-<pre><code>integer :: a(10) ! 声明 a 为10个整数的数组
-a(1) = 12        ! 为 a 的第一个元素赋值
-</code></pre><p>数组在声明时，大小就确定了的，所以只有<code>parameter</code>整数才能够用在数组声明中表示大小。</p>
-<pre><code>integer a(10)
-integer,dimension(10) :: a
-! 下面是 f77 的写法，先声明类型，再声明大小
-integer a
-dimension a(10)
-</code></pre><h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><pre><code>integer a(3,3) ! 3x3 二维数组
-a(1,1) = 3     ! 需要两个索引值
-! 其他声明方式
-integer,dimension(10,10) :: a
-integer a
-dimension a(10,10)
-! 多维，类似
-integer a(D1,D2,...,Dn)
-</code></pre><p>此外，还可以指定索引范围</p>
-<pre><code>integer a(-3:5)
-integer b(2:3, -1:3)
-</code></pre><h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><pre><code>integer A(5)
-DATA A /1,2,3,4,5/
-DATA A /5*3/              ! 使用`*`表示 5 个 3
-DATA(A(I),I=2,4)/3,6,5/   ! `I`从2到4，分别赋值后面的三个数
-DATA(A(I),I=2,10,2) /.../ ! 当然也可以指定 step
-DATA((A(I,J),I=1,2),J=1,2) /1,2,3,4/ ! 二维数组嵌套
-integer :: a(5) = (/1,2,3,4,5/)      ! f90 中可以直接这样赋值
-integer :: a(5) = (/1,(2,I=2,4),5/)  ! f90,这样赋值要求必须每个数都赋值
-integer :: a(5) = (/(I,I=1,5)/)      ! 甚至可以使用 I
-integer :: a(5) = 5                  ! 全部赋值为同一个数也是可以的
-! 还可以在别的地方使用这种隐式循环
-write(*,*) (A(I), I=2,4)
-</code></pre><h3 id="对整个数组的操作"><a href="#对整个数组的操作" class="headerlink" title="对整个数组的操作"></a>对整个数组的操作</h3><pre><code>integer :: a(5) = (/1,2,3,4,5/) ! 声明和初始化
-a = 5                           ! 赋值
-a = b                           ! 要求两者维数及大小相等
-a = b + c                       ! 每个元素依次计算
-a = sin(b)                      ! 每个元素以及计算 sin 值
-l = b &gt; c                       ! l 为逻辑类型数组
-</code></pre><h3 id="切片-slice"><a href="#切片-slice" class="headerlink" title="切片(slice)"></a>切片(slice)</h3><p>切片是 Fortran 的强项之一，一个数组切片相当于数组。</p>
-<pre><code>a(3:5) = 5           ! 部分赋值
-a(3:) = 5            ! a(3) 以及之后的所有元素
-a(1:3) = b(4:6)      ! 两边分别看做数组
-a(1:5:2)             ! 有 step 的 slice
-a(1:10) = a(10:1:-1) ! 使用 slice 做数组翻转
-a(:,2)               ! 多维数组 slice, 全部 a(i,2) 元素
-</code></pre><h3 id="WHERE（f95"><a href="#WHERE（f95" class="headerlink" title="WHERE（f95)"></a><code>WHERE</code>（f95)</h3><p>按照一定条件取出数组的一部分。</p>
-<pre><code>integer :: I
-integer :: a(5) = (/(I,I=1,5)/)
-integer :: b(5) = 0
-where (a &lt; 3)
-    b = a           ! 要求 b 和 a 的维数和大小相同
-end where
-! 还有 elsewhere
-where (a&lt;3)
-    b = 1
-elsewhere
-    b = 2
-end where
-</code></pre><p><code>elsewhere</code>可以试是多个的，<code>where</code>当然也可以嵌套，也可以署名。</p>
-<h3 id="FORALL-f95"><a href="#FORALL-f95" class="headerlink" title="FORALL(f95)"></a><code>FORALL</code>(f95)</h3><pre><code>! 伪代码
-forall (triplet1[,triplet2[,triplet3...]] [,mask])
-    ! ...
-end forall
-! 例子
-forall (I=1:5, J=1:5, a(I,J)&lt;10)
-    a(I,J) = 1
-end forall
-</code></pre><p><code>forall</code>中可以使用<code>where</code>，但是<code>where</code>中不可以使用<code>forall</code>。</p>
-<h2 id="数组的保存规则"><a href="#数组的保存规则" class="headerlink" title="数组的保存规则"></a>数组的保存规则</h2><p>一个数组不管是什么形状，他的所有元素都是分布在计算机的同一块内存中。</p>
-<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>一维数组就是单纯的线性排列，如<code>integer :: A(-1:3)</code>，则<code>A(-1)</code>在最前面，之后依次排列。</p>
-<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>Fortran 多维数组的内存排列是所谓的列优先排列。先看二维数组</p>
-<pre><code>integer :: A(3,3)
-</code></pre><p>第一维称为<code>row</code>(行)，第二维称为<code>column</code>(列)，所谓列优先，数组排列，先排完第一列，再排第二列。上述<code>A</code>数组的排列顺序为</p>
-<pre><code>A(1,1)=&gt;A(2,1)=&gt;A(3,1)=&gt;A(1,2)=&gt;A(2,2)=&gt;A(3,2)=&gt;A(1,3)=&gt;A(2,3)=&gt;A(3,3)
-</code></pre><h3 id="多维数组-1"><a href="#多维数组-1" class="headerlink" title="多维数组"></a>多维数组</h3><p>多维数组和二维数组类似，也就是低维度的指标先变动，高纬度的指标后变动。</p>
-<pre><code>program test
-    implicit none
-    integer :: i,j,k
-    integer :: a(8) = (/(I*2, I=1,8)/)
-    integer :: b(2,2,2)
-    b = reshape(a, shape(b))
-    do i=1,2
-        do j=1,2
-            do k=1,2
-                write(*,&quot;(I4)&quot;) b(k,j,i)
-            end do
-        end do
-    end do
-    write(*,&quot;(8(I4))&quot;) b
-end program
-</code></pre><p>可以看见，上面按照列优先方式打印出来顺序是对的，并且<code>write</code>的索引也是列优先的。如果是C语言，也就是行优先语言，就应该是<code>b[i][j][k]</code>了。</p>
-<p>在使用数组时，连续读取，最好先读低维的数字（也就是按照内存顺序读取），这在计算机硬件实现上会比较快。</p>
-<h2 id="可变大小数组（f90）"><a href="#可变大小数组（f90）" class="headerlink" title="可变大小数组（f90）"></a>可变大小数组（f90）</h2><pre><code>integer,allocatable :: a(:)  ! 声明一个可变大小一维数组
-integer :: N
-read(*,*) N
-allocate(a(N))               ! 分配内存空间
-allocate(a(100), stat=error) ! 赋值给 error, 如果 error 为0, 表示 allocate 成功
-deallocate(a)                ! 释放内存
-!-------------------------------------
-integer,allocatable :: b(:,:) ! 二维数组
-allocate(b(-3:5))             ! 也可以指定索引范围
-allocated(b)                  ! 检查是否已经分配内存，如果是，返回 .true.
-</code></pre>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">5.循环</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-29 20:37:27 / Modified: 20:40:51" itemprop="dateCreated datePublished" datetime="2021-03-29T20:37:27+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="DO"><a href="#DO" class="headerlink" title="DO"></a><code>DO</code></h3><pre><code>do I = start_,end_[,step_]
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
+				<h2 class="index-title">
+					6-数值
+				</h2>
+				<div class="index-brief">
+					数组DATATYPE :: name(size)
+其中DATATYPE可以是integer,real,complex,logical，也可以是type自定义类型。
+eg:
+integer :: a(10) ! 声明 a 为10个整数的数组
+a(1) = 12        ! 为 a 的第一个元素赋
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
+				<h2 class="index-title">
+					5-循环
+				</h2>
+				<div class="index-brief">
+					DOdo I = start_,end_[,step_]
     ! ...
 end do
-</code></pre><p>和 Python 不同的是，<code>I</code>是能够取到<code>end_</code>的。</p>
-<p>以上是 f90 的语法，而 f77 要奇怪一些，不使用 <code>end do</code>结束循环</p>
-<pre><code>      DO 100, I=2,10,2
-100   ans = ans + I
-C     后面的就在循环外了
-
+和 Python 不同的是，I是能够取到end_的。
+以上是 f90 的语法，而 f77 要奇怪一些，不使用 end do结束循环
       DO 100, I=2,10,2
-          ans = ans + I
-          ! ...
-100   CONTINUE
-C     这是多行的循环，常常使用 continue 来控制循环
-</code></pre><p>（同样，现在的 f77 编译器基本都支持 <code>end do</code>)</p>
-<h3 id="DO-WHILE"><a href="#DO-WHILE" class="headerlink" title="DO WHILE"></a><code>DO WHILE</code></h3><pre><code>do while (condition)
-    ! ...
-end do
-</code></pre><h3 id="CYCLE-EXIT"><a href="#CYCLE-EXIT" class="headerlink" title="CYCLE,EXIT"></a><code>CYCLE,EXIT</code></h3><p>虽然也是 f90 标准，现在的 f77 编译器也是支持的。</p>
-<ul>
-<li><code>CYCLE</code>，跳过循环内，<code>cycle</code>之后的代码。相当于c/c++里面的<code>continue</code>.</li>
-<li><code>EXIT</code>，退出一个循环。相当于c/c++里面的<code>break</code></li>
-</ul>
-<h3 id="署名的循环"><a href="#署名的循环" class="headerlink" title="署名的循环"></a>署名的循环</h3><pre><code>outter: do i=1,10
-    inner: do j=1,10
-        ! ...
-        exit inner   ! 跳出 inner 循环
-        cycle ouuter ! 直接做下一次 ouuter 循环
-    end do inner
-end do outter
-</code></pre>
-      
-    </div>
+100   ans = ans
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/">
+				<h2 class="index-title">
+					1-4非线性液压元件的基本特性，特征，参数
+				</h2>
+				<div class="index-brief">
+					回路的水力元件特性由其静态特性描述。而元件的有效水力阻力的静态特性是通过该元件的质量速度与该元件中的压力损失之间的关系。这种关系称为给定元件的水力特性，可用函数式表达为
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+\Delta p=f(wρ)由此，定义水力元件的静态参数为比值
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/">
+r=\frac{\Delta p}{w \rho}由于以上各个
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/">
+				<h2 class="index-title">
+					задача-16
+				</h2>
+				<div class="index-brief">
+					Вопрос:Определить среднеинтегральную температуру подвода теплоты и термический КПД обратимого (идеального, без потерь) цикла Ренкина насыщенного пара,
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/">
+				<h2 class="index-title">
+					有关离子交换过程和离子交换剂的一般信息
+				</h2>
+				<div class="index-brief">
+					定义离子交换（ионный обмен）本质：特殊材料（离子交换剂）在所需方向上改变处理后水的离子组成的能力。（способность специальных материалов (ионитов) изменять в желаемом направлении ионный состав обр
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-29</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
+				<h2 class="index-title">
+					压水堆
+				</h2>
+				<div class="index-brief">
+					ВВЭР-440ТТДтактико-технические данные — ТТД 战术技术数据
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/" class="post-title-link" itemprop="url">1.4非线性水力元件的基本特性，特征，参数</a>
-        </h2>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-03-29 16:06:09 / Modified: 20:32:32" itemprop="dateCreated datePublished" datetime="2021-03-29T16:06:09+03:00">2021-03-29</time>
-            </span>
+Характеристика
+Параметр (参数)
 
-          
 
-        </div>
-      </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-          <p>回路的水力元件特性由其<strong>静态特性</strong>描述。而元件的有效水力阻力的静态特性是通过该元件的质量速度与该元件中的压力损失之间的关系。这种关系称为<strong>给定元件的水力特性</strong>，可用函数式表达为</p>
-<script type="math/tex; mode=display">
-\Delta p=f(wρ)</script><p>由此，定义水力元件的静态参数为比值</p>
-<script type="math/tex; mode=display">
-r=\frac{\Delta p}{w \rho}</script><p>由于以上各个参数都是瞬时值，故，<script type="math/tex">r</script> 可认为是 <script type="math/tex">\Delta p</script> 在 <script type="math/tex">wρ</script> 上的微分，即</p>
-<script type="math/tex; mode=display">
-r_{d}=\frac {d\Delta p}{d\Delta wρ}=f^{'}(wρ)</script><p>此外，扩展到一般情况，静态阻值和差分阻值可由以下关系式求得</p>
-<script type="math/tex; mode=display">
-r_{d}=r+wρ\frac{dr}{d(wρ)}</script><p>对于非线性水力元件，该参数取决于介质通过该元件的流动状态，即取决于<script type="math/tex">wρ</script> 。</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0//1.水力特性曲线.png">
+Тип реактора
+Водо-водяной энергетический реактор
+
+
+Назначение 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-28</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+			<span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+		
+	</div>
 </div>
 
-<center>图1.表征质量流量对非线性液压元件参数影响的曲线<br>а-静态电阻和差分电阻对通道中介质质量流量的关系式；<br>б-非线性元件的水力特性
-</center>
-
-<p>同一点的差动电阻与表示该点水力特性的曲线的切线和横坐标轴（质量流轴）之间的角度的正切成正比。</p>
-<p>存在 <script type="math/tex">r_{d}=r</script> 的点，如点1和点2，但一般情况下， <script type="math/tex">r_{d}\neq r</script> 。在其他点（如点3和点4），<script type="math/tex">r_{d}=0</script>，且<script type="math/tex">r>0</script>。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/" class="post-title-link" itemprop="url">задача 16</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-29 12:30:02 / Modified: 15:15:09" itemprop="dateCreated datePublished" datetime="2021-03-29T12:30:02+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Вопрос"><a href="#Вопрос" class="headerlink" title="Вопрос:"></a>Вопрос:</h3><p>Определить среднеинтегральную температуру подвода теплоты и термический КПД обратимого (идеального, без потерь) цикла Ренкина насыщенного пара, если заданы давления подвода ($р<em>{подв}$ = 7 МПа) и отвода ($р</em>{отв}$ = 4 кПа) теплоты в цикле. Показать, какое влияние на результаты оказывает неучёт работы насоса.</p>
-<h3 id="Решение"><a href="#Решение" class="headerlink" title="Решение"></a>Решение</h3><div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/Рис. 1. Идеальный цикл Ренкина на насыщенном паре.png">
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Chzhan Yeb</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
 </div>
-
-<center>Рис. 1. Идеальный цикл Ренкина на насыщенном паре<br>1-2 - сжатие рабочего тела в насосе;<br>2-3-4 - подвод теплоты от верхнего (горячего) источника;<br>4-5 - расширение в турбине;<br>5-1 - отвод теплоты от рабочего тела цикла</center>
-
-<h4 id="1-Сначала-решим-задачу-без-учёта-работы-насоса"><a href="#1-Сначала-решим-задачу-без-учёта-работы-насоса" class="headerlink" title="1. Сначала решим задачу без учёта работы насоса."></a>1. Сначала решим задачу без учёта работы насоса.</h4><p>Определим термодинамические параметры рабочего тела в конце процесса отвода теплоты.</p>
-<ul>
-<li><p>температура</p>
-<script type="math/tex; mode=display">
-t_{отв}=t_{1}=29,0 ℃=302,1K</script></li>
-<li><p>энтальпия воды на линии насыщения</p>
-<script type="math/tex; mode=display">
-h_{1}=h_{воды}^{'}=121,4кДж/кг</script></li>
-<li><p>энтропия воды на линии насыщения </p>
-<script type="math/tex; mode=display">
-s_{1}=s_{воды}^{'}=0,4224кДж/(кг·К)</script></li>
-<li><p>удельный объем</p>
-<script type="math/tex; mode=display">
-v_{1}=v_{воды}^{'}=0,001004м^{3}/кг</script></li>
-</ul>
-<p>В конце процесса подвода теплоты:</p>
-<ul>
-<li><p>температура</p>
-<script type="math/tex; mode=display">
-t_{подв}=t_{4}=285,8 ℃=559K</script></li>
-<li><p>энтальпия воды на линии насыщения</p>
-<script type="math/tex; mode=display">
-h_{4}=h_{пара}^{''}=2773кДж/кг</script></li>
-<li><p>энтропия воды на линии насыщения </p>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-s_{4}=s_{пара}^{''}=5,815кДж/(кг·К)</script><p>Для точки в конце изоэнтропийного процесса расширения пара:</p>
-<ul>
-<li><p>энтальпия</p>
-<script type="math/tex; mode=display">
-h_{5}=h(p_{отв},s_{подв}^{''})=1751кДж/кг</script></li>
-<li><p>степень сухости</p>
-<script type="math/tex; mode=display">
-x_{5}=x(p_{отв},s_{подв}^{''})=0,67</script></li>
-</ul>
-<p>Далее рассчитаем</p>
-<ul>
-<li><p>подведённую в цикле теплоту</p>
-<script type="math/tex; mode=display">
-q_{подв}=h_{подв}^{''}-h_{отв}^{'}=2652 кДж/кг</script></li>
-<li><p>отведенную теплоту</p>
-<script type="math/tex; mode=display">
-q_{отв}=h_{5}-h_{отв}^{'}=1630 кДж/кг</script></li>
-<li><p>среднеинтегральную температуру подвода теплоты (равна</p>
-<p>температуре подвода теплоты в эквивалентном цикле Карно)</p>
-<script type="math/tex; mode=display">
-T_{подв}^{ср}=\frac{q_{подв}}{s_{подв}^{''}-s_{отв}^{'}}=491,78 K</script></li>
-<li><p>полезную работу цикла (уравнение для <script type="math/tex">l_{т}</script> следует из энергетического баланса цикла без учёта работы насоса <script type="math/tex">q_{подв}= l_{т}+q_{отв}</script> - подведённая энергия равна сумме отведённых энергий)</p>
-<script type="math/tex; mode=display">
-l_{т}=q_{подв}-q_{отв}=1022 кДж/кг</script></li>
-<li><p>термический КПД цикла (отношение полезной работы к энергии,затраченной на её производство)</p>
-<script type="math/tex; mode=display">
-η_{t}=\frac{l_{т}}{q_{подв}}=0,3854</script></li>
-</ul>
-<h4 id="Каким-образом-учёт-работы-насоса-влияет-на-рассчитываемые-параметры-цикла"><a href="#Каким-образом-учёт-работы-насоса-влияет-на-рассчитываемые-параметры-цикла" class="headerlink" title="Каким образом учёт работы насоса влияет на рассчитываемые параметры цикла."></a>Каким образом учёт работы насоса влияет на рассчитываемые параметры цикла.</h4><ul>
-<li><p>Уравнение энергетического баланса для цикла</p>
-<script type="math/tex; mode=display">
-l_{н}+q_{подв1}=l_{т}+q_{отв}=h_{2}-h_{1}+h_{4}-h_{1}=h_{4}-h_{1}</script><p>где <script type="math/tex">q_{подв1}</script> - подведённая теплота от горячего источника при учёте работы насоса (<script type="math/tex">q_{подв1}=q_{подв}-l_{н}</script>)</p>
-</li>
-<li><p>Средняя температура восприятия теплоты не изменяется</p>
-<script type="math/tex; mode=display">
-T_{подв}^{ср}=\frac{h_{4}-h_{1}}{s_{4}-s_{1}}=491,7K</script></li>
-<li><p>Термический КПД цикла тоже не изменяется</p>
-<script type="math/tex; mode=display">
-η_{t1}=\frac{l_{т}}{l_{н}+q_{подв1}}=0,3854</script></li>
-<li><p>Уравнение энергетического баланса для анализируемого цикла</p>
-<script type="math/tex; mode=display">
-q_{подв1}=l_{т}-l_{н}+q_{отв}</script></li>
-</ul>
-<p>Рассчитаем основные характеристики насоса:</p>
-<ul>
-<li><p>Давление насоса</p>
-<script type="math/tex; mode=display">
-\Delta p_{н}=p_{подв}-p_{отв}=6,996 МПа</script></li>
-<li><p>повышение энтальпии при изоэнтропийном сжатии рабочего тела (удельная работа насоса)</p>
-<script type="math/tex; mode=display">
-l_{н}=\Delta h_{н}=\Delta p_{н}v_{воды}^{'}=7,0 кДж/кг</script></li>
-<li><p>Работы насоса снижает термический КПД цикла:</p>
-<script type="math/tex; mode=display">
-η_{t2}=\frac{l_{т}-l_{н}}{q_{подв1}}=0,3837</script><p>Среднеинтегральная температура восприятия теплоты рабочим телом и здесь останется прежней - 491,7 К.</p>
-</li>
-</ul>
-<p>Иной подход приведёт к следующему.</p>
-<p>Среднеинтегральная температура подвода теплоты в цикл, рассчитанная</p>
-<script type="math/tex; mode=display">
-T_{подв1}^{ср}=\frac{h_{4}-h_{2}}{s_{4}-s_{2}}=490,4K</script><p>будет меньше, чем рассчитанная ранее 491,7 К. В то же время она должна быть больше, так как нагрев рабочего тела начинается с большей температуры (в точке 2 вместо точки 1 - см. рис. 1) и идёт до той же температуры в точке 4.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/" class="post-title-link" itemprop="url">4.1 离子交换过程和离子交换剂概述</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-29 09:58:40 / Modified: 11:15:19" itemprop="dateCreated datePublished" datetime="2021-03-29T09:58:40+03:00">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>离子交换（ионный обмен）本质：特殊材料（离子交换剂）在所需方向上改变处理后水的离子组成的能力。（способность специальных материалов (ионитов) изменять в желаемом направлении ионный состав обрабатываемой воды.）</p>
-<p>离子交换剂（ионит）是不溶解的高分子物质（нерастворимые высокомолекулярные вещества），由于它们中存在特殊的官能团（функциональная группа），因此能够进行离子交换反应。即，离子交换剂能够从溶液中吸收正离子或负离子，以交换包含在具有相同符号电荷的离子交换剂中的等量其他离子</p>
-<p>离子交换剂可分为阳离子交换剂（катионит）和阴离子交换剂（анионит）。</p>
-<p>离子交换剂的交换能力取决于离子交换剂的结构（строение），离子交换剂由不溶性固体碱（基质）（нерастворимой твердой основы (матрицы)）组成，该碱通常通过以下初始产物的共聚获得：苯乙烯（стирола）和二乙烯基苯（дивинилбензола），其添加量约为8％，用于交联线性聚苯乙烯（линейный полистирол）。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chzhan Yeb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="尼古拉斯冰的笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/" class="post-title-link" itemprop="url">压水堆</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-03-28 14:23:02 / Modified: 22:00:53" itemprop="dateCreated datePublished" datetime="2021-03-28T14:23:02+03:00">2021-03-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="ВВЭР-440"><a href="#ВВЭР-440" class="headerlink" title="ВВЭР-440"></a>ВВЭР-440</h3><h4 id="ТТД"><a href="#ТТД" class="headerlink" title="ТТД"></a>ТТД</h4><p>тактико-технические данные — <strong>ТТД</strong> 战术技术数据</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>Характеристика</strong></th>
-<th>Параметр (参数)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Тип реактора</td>
-<td>Водо-водяной энергетический реактор</td>
-</tr>
-<tr>
-<td>Назначение реактора</td>
-<td>Теплоэнергетика, электроэнергетика</td>
-</tr>
-<tr>
-<td>Теплоноситель</td>
-<td>Вода</td>
-</tr>
-<tr>
-<td>Топливо</td>
-<td>Двуокись урана (二氧化铀)</td>
-</tr>
-<tr>
-<td>Тепловая мощность</td>
-<td>1375 МВт</td>
-</tr>
-<tr>
-<td>Электрическая мощность</td>
-<td>440 МВт</td>
-</tr>
-<tr>
-<td>К. п. д. (брутто), %</td>
-<td>32,0</td>
-</tr>
-<tr>
-<td>Давление пара перед турбиной, атм</td>
-<td>44,0</td>
-</tr>
-<tr>
-<td>Давление в первом контуре, атм</td>
-<td>125</td>
-</tr>
-<tr>
-<td>Температура воды, °C:</td>
-<td></td>
-</tr>
-<tr>
-<td>на входе в реактор</td>
-<td>269</td>
-</tr>
-<tr>
-<td>на выходе из реактора</td>
-<td>300</td>
-</tr>
-<tr>
-<td>Диаметр активной зоны, м</td>
-<td>2,88</td>
-</tr>
-<tr>
-<td>Высота активной зоны, м</td>
-<td>2,50</td>
-</tr>
-<tr>
-<td>Диаметр ТВЭЛа, мм</td>
-<td>9,1</td>
-</tr>
-<tr>
-<td>Число ТВЭЛов в кассете</td>
-<td>126</td>
-</tr>
-<tr>
-<td>Загрузка урана, т</td>
-<td>42</td>
-</tr>
-<tr>
-<td>Среднее обогащение урана (平均铀浓缩率), %</td>
-<td>3,5</td>
-</tr>
-<tr>
-<td>Среднее выгорание топлива (平均燃耗), МВт-сут/кг</td>
-<td>28,6</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h4><ul>
-<li>1964年，苏联第一台配备210兆瓦（电）VVER-210反应堆的机组在诺沃沃罗涅什核电厂（НВАЭС）投入运行。</li>
-<li>1967年，装有VVER-365的机组在同一核电厂投入运行。</li>
-<li>70年代-配备VVER-440的装置，该装置成为具有440 MW电力的核电站的串联反应堆。 </li>
-</ul>
-<h4 id="结构及其功能"><a href="#结构及其功能" class="headerlink" title="结构及其功能"></a>结构及其功能</h4><p>ВВЭР-440是一种<strong>容器型反应堆（реактор корпусного типа）</strong>，其堆芯内部装有<strong>可拆卸球形盖的厚壁金属外壳（</strong>толстостенный металлическый корпус, снабженном съемной сферической крышкой<strong>）</strong>。</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86///VVER-440一般结构.png">
-</div>
-
-
-<p><center>图1.VVER-440一般结构 <center><br>垂直圆柱体配备有两排用于供应和排出载热体的管道（8和9）。 </center></center></p>
-<p>载热体通过下排喷嘴供入反应堆，水从反应堆外壳（10）和悬挂轴（12）之间的环形空间流下，并经过180°转弯后，通过保护管下部组件（13）流入堆芯（11）。</p>
-<p>在堆芯中，载热体通过圆柱形悬架轴的穿孔通过上排喷嘴加热并排出。</p>
-<p>载热体通过堆芯的上升运动具有优势，因为在断开主循环泵（ГЦН）的情况下，会发生直接过渡到自然对流的情况。 这也简化了核心出口处主要参数的控制回路。 </p>
-<p>按照载热体的指示移动方向，用相对冷的水冷却反应堆容器。 载热体没有通过堆芯向上运动的原因是，燃料组件（ТВС）会在压降的影响下漂浮。 为了防止这种情况的发生，防护管上部组件（7）起压力装置的作用。</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86//VVER-440反应堆堆芯.png">
-</div>
-
-<p><center>图2.VVER-440反应堆堆芯 <center></center></center></p>
-<p>压水堆的关键要素是<strong>承载高压冷却剂的坚固壳体（прочноплошый корпус, несущий высокое давление теплоносителя）</strong>。 </p>
-<p>在这种类型的现代动力反应堆中，压力范围为约<strong>12至17MPa</strong>。 壳体的直径通常受铁路运输的限制，并且<strong>外部尺寸不应超过4.5 m</strong>。 在规定的压力和直径限制下，主体未削弱部分的壁厚为<strong>140-200 mm</strong>，在喷嘴区域（зона патрубков）为两倍大（见图2）。</p>
-<p> 外壳是在工厂用<strong>耐热珠光体钢（термостойкая перлитная сталь）</strong>制造的，从内部覆盖了<strong>10-20 mm的奥氏体不锈钢层（наплавка (плакировка) слоем 10—20 мм из аустенитной нержавеющей стали）</strong>。 堆焊（напл、авка(英语resurfacing welding)）的目的是<strong>防止水与珠光体钢接触</strong>，从而减少腐蚀产物向回路的释放。 </p>
-<p>此外，由于辐射分解，一次回路的水中总是存在一定量的<strong>游离氢（свободный водород）</strong>，载热体与<strong>珠光体钢</strong>直接接触会导致其氢化，因此必须避免这种接触，因为氢化会导致钢变脆，它失去了强度和延展性。 然而，电镀增加了制造车身的成本，并施加了额外的限制。 后者是由于珠光体和奥氏体钢的热物理性质不同，因为它们具有不同的热膨胀系数和导热系数，结果在接触点处会产生额外的热应力。</p>
-<p> 因此，存在一定的放弃铺面的趋势。 解决该问题的一种可能的方法是维持水的状态，在水的状态下会形成坚固的氧化膜，从而防止珠光体钢腐蚀和氢化。 然而，在这个方向上，还不是很清楚，在绝大多数情况下是用电镀制成的。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Chzhan Yeb</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">21</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Chzhan Yeb</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
