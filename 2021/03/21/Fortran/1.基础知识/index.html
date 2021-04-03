@@ -708,9 +708,9 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 </li>
 <li><strong>算术表达式</strong>中各运算元素都是算术量，使用的运算符只能是算术运算符，表达式的值也是一个算术量(即数值)。<ul>
 <li>由于用“/”号作为除号，因此在写除法运算式子时应加上必要的括号。</li>
-<li>乘号不能省略，如 $ asin(x)$，必须写成A*SIN(X)，而不能写成ASIN(X)。</li>
+<li>乘号不能省略，如 <script type="math/tex">asin(x)</script>，必须写成<script type="math/tex">A*SIN(X)</script>，而不能写成<script type="math/tex">ASIN(X)</script>。</li>
 <li>Fortran中无大、中、小括号之分，一律用小括号。</li>
-<li>对单项运算符 (如-A中的符号) 相当于在它前面有一个运算量“0”，如：$－A<strong>2$ 相当于 $0-A</strong>2$ 而非 $(-A)**2$。</li>
+<li>对单项运算符 (如-A中的符号) 相当于在它前面有一个运算量“0”，如：<script type="math/tex">－A**2</script> 相当于 <script type="math/tex">0-A**2</script> 而非 <script type="math/tex">(-A)**2</script>。</li>
 </ul>
 </li>
 <li>表达式运算中的类型:<ul>
@@ -729,7 +729,7 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <li>误差:<ul>
 <li>整数无误差，但实数有（由于位数限制）</li>
 <li>在写表达式时应尽量使每一次运算结果都在有效位数范围之内，尽量不要使两个相差很大的数值直接相加或相减。</li>
-<li>在判断两个实数是否相等时，要特别慎重，最好改为判断　$|Ａ－Ｂ|\leq\epsilon$，即A和B之差的绝对值如果小于 $\epsilon$ ($\epsilon$ 为一个很小的数，如10-10)，则认为A和B相等</li>
+<li>在判断两个实数是否相等时，要特别慎重，最好改为判断　<script type="math/tex">|Ａ－Ｂ|\leq\epsilon</script>，即A和B之差的绝对值如果小于 <script type="math/tex">\epsilon</script> (<script type="math/tex">\epsilon</script> 为一个很小的数，如<script type="math/tex">10^{-10}</script>)，则认为A和B相等</li>
 </ul>
 </li>
 </ul>
@@ -748,9 +748,7 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <td>ABS</td>
 <td>求绝对值</td>
 <td>ABS(X)</td>
-<td>$${</td>
-<td>x</td>
-<td>}$$</td>
+<td><script type="math/tex">{\vert x\vert}</script></td>
 </tr>
 <tr>
 <td>EXP</td>
@@ -822,11 +820,7 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 <td>SIGN</td>
 <td>求符号</td>
 <td>SIGN(Xl，X2)</td>
-<td>$$</td>
-<td>x_1</td>
-<td><script type="math/tex">或</script>-</td>
-<td>x_2</td>
-<td>$$</td>
+<td><script type="math/tex">\vert x_1\vert</script> 或 <script type="math/tex">-\vert x_2\vert</script></td>
 </tr>
 <tr>
 <td>REAL</td>
@@ -900,20 +894,5 @@ IMPLICIT INTEGER (A，B)，REAL(I,K)，INTEGER (X-Z)
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
