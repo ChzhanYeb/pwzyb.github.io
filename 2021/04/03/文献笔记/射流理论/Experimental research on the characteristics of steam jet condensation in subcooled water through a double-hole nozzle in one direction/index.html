@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		中子扩散理论与计算 | 
+		Experimental research on the characteristics of steam jet condensation in subcooled water through a double-hole nozzle in one direction | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -318,7 +318,7 @@ var _hmt = _hmt || [];
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/04/03/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Experimental%20research%20on%20the%20characteristics%20of%20steam%20jet%20condensation%20in%20subcooled%20water%20through%20a%20double-hole%20nozzle%20in%20one%20direction/">
 										Experimental research on the characteristics of steam jet condensation in subcooled water through a double-hole nozzle in one direction
 									</a>
@@ -380,7 +380,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
 										中子扩散理论与计算
 									</a>
@@ -489,12 +489,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	中子扩散理论与计算
+	Experimental research on the characteristics of steam jet condensation in subcooled water through a double-hole nozzle in one direction
 </h1>
 <div class="article-meta">
 	
 	<span>Chzhan Yeb</span>
-	<span>2021-03-31 14:35:51</span>
+	<span>2021-04-03 08:53:08</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -510,82 +510,37 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="非增殖介质单能中子扩散方程计算"><a href="#非增殖介质单能中子扩散方程计算" class="headerlink" title="非增殖介质单能中子扩散方程计算"></a>非增殖介质单能中子扩散方程计算</h3><p>如果介质受到中子碰撞之后，中子数变大（一变二，二变四这种），这种介质称为增殖介质。反之，不产生中子的称之为非增殖介质。</p>
-<script type="math/tex; mode=display">
-\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = 0</script><p>其中</p>
-<script type="math/tex; mode=display">
-L^{2}=\frac{1}{\kappa^{2}}=\frac{D}{\Sigma_{a}}</script><p>公式(1)方程称之为<strong>亥姆霍兹方程</strong> ，其通解见表</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/亥姆霍兹方程通解.png">
-</div>
-
-<center>图1.亥姆霍兹方程通解表</center>
-
-<h4 id="无限介质内点源情况"><a href="#无限介质内点源情况" class="headerlink" title="无限介质内点源情况"></a>无限介质内点源情况</h4><div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质点源情况.png">
-</div>
-
-<center>图２.无限介质点源示意图</center>
-
-<p>无限均匀介质内有一每秒各向同性地放出S个中子的点源情况。</p>
-<p>使用<strong>一维球坐标系</strong>最适合求解。一维球表示在球的三个自变量( <script type="math/tex">\phi(r,θ,φ)</script> )里，不考虑两个旋角度 <script type="math/tex">θ,φ</script> （利用堆成条件），仅考虑半径 <script type="math/tex">r</script> 这一情况。</p>
-<script type="math/tex; mode=display">
-\frac { d ^ { 2 } \phi ( r ) } { d r ^ { 2 } } + \frac { 2 } { r } \frac { d \phi ( r ) } { d r } - \frac { \phi ( r ) } { L ^ { 2 } } = 0 , \quad ( r \gt 0 )</script><p>注意，如果考虑 <script type="math/tex">r=0</script> 这一情况，需要将式（1）改写为以下形式</p>
-<script type="math/tex; mode=display">
-\nabla^ { 2 } \phi - \frac { \phi } { L ^ { 2 } } = S\delta(r)</script><p>边界条件：</p>
-<ul>
-<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
-</li>
-<li><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _ { r \rightarrow 0 } 4 \pi r ^ { 2 } J ( r ) = S</script></li>
+	<h3 id="1-Article"><a href="#1-Article" class="headerlink" title="1.Article:"></a>1.<strong>Article:</strong></h3><p>Lu, D., et al. (2021). “Experimental research on the characteristics of steam jet condensation in subcooled water through a double-hole nozzle in one direction.” Annals of Nuclear Energy 151: 107898.</p>
+<h3 id="2-Data"><a href="#2-Data" class="headerlink" title="2.Data:"></a>2.<strong>Data:</strong></h3><ul>
+<li>这篇文章的目的</li>
+<li>结论</li>
+<li>背景介绍</li>
+<li>结果</li>
+<li>方法（可选）</li>
 </ul>
-<p>查表得通解为</p>
-<script type="math/tex; mode=display">
-\phi(r)=A \frac{e^{-r / L}}{r}+C \frac{e^{r / L}}{r}</script><p>求得中子流密度为</p>
-<script type="math/tex; mode=display">
-J ( r ) = - D \frac { d \phi } { d r } = D A ( \frac { 1 } { r L } + \frac { 1 } { r ^ { 2 } } ) e ^ { - r/L }\\</script><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _{r \rightarrow 0} 4 \pi r^{2} J(r)=\lim _{r \rightarrow 0} 4 \pi D A\left(\frac{r}{L}+1\right) e^{-r / L}=S</script><p>求得</p>
-<script type="math/tex; mode=display">
-A = \frac { S } { 4 \pi D }</script><p>最后得中子通量密度为</p>
-<script type="math/tex; mode=display">
-\phi(r)=\frac{S \mathrm{e}^{-r / L}}{4 \pi D r}, \quad r>0</script><h4 id="无限介质平面源情况"><a href="#无限介质平面源情况" class="headerlink" title="无限介质平面源情况"></a>无限介质平面源情况</h4><p>无限均匀介质内有一每秒单位面积各向同性地放出S个中子的平面源情况。</p>
-<div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/无限介质平面源情况.png">
-</div>
-
-<center>图２.无限介质平面源示意图</center>
-
-<p>使用<strong>一维笛卡尔坐标系</strong>便于求解</p>
-<script type="math/tex; mode=display">
-\frac { d ^ { 2 } \phi ( x ) } { d x ^ { 2 } } - \frac { \phi ( x ) } { L ^ { 2 } } = 0 , ( x \neq 0 )</script><p>边界条件</p>
+<h3 id="3-Comments"><a href="#3-Comments" class="headerlink" title="3.Comments"></a>3.<strong>Comments</strong></h3><p>记录自己看文献时的一些思路，以及发现文献的一些不足</p>
+<h3 id="4-Why"><a href="#4-Why" class="headerlink" title="4.Why"></a>4.<strong>Why</strong></h3><p>为什么精读这篇文献，为什么做文献笔记？</p>
+<p>我一般只从以下三个原因中选</p>
 <ul>
-<li><p>除 <script type="math/tex">r=0</script> 处以外，中子通量密度在各处均为有限值。</p>
-</li>
-<li><p>中子源条件：</p>
-<script type="math/tex; mode=display">
-\lim _ { x \rightarrow 0 } J ( x ) = S / 2</script></li>
+<li>了解课题背景</li>
+<li>用于实验设计</li>
+<li>用于写作模仿</li>
 </ul>
-<p>最终求得</p>
-<script type="math/tex; mode=display">
-\phi ( x ) = \frac { S L } { 2 D } e ^ { - | x | / L }</script><h3 id="增殖介质单能中子扩散方程计算"><a href="#增殖介质单能中子扩散方程计算" class="headerlink" title="增殖介质单能中子扩散方程计算"></a>增殖介质单能中子扩散方程计算</h3><h3 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h3><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
+<h3 id="5-Summary"><a href="#5-Summary" class="headerlink" title="5.Summary"></a>5.<strong>Summary</strong></h3><p>不超过5个字来总结这篇文献</p>
+<p>可以是文献关键词的结合，也可以是你对文献方向的总结</p>
+<p>目的是为了让你以后对相关文献笔记进行分类，搜索的时候也更容易。</p>
+
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/04/03/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Experimental%20research%20on%20the%20characteristics%20of%20steam%20jet%20condensation%20in%20subcooled%20water%20through%20a%20double-hole%20nozzle%20in%20one%20direction/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  射流理论
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
-                现代操作系统的主要组件
+              <a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
+                
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
