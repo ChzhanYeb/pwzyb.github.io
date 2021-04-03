@@ -625,23 +625,20 @@ D \nabla^{2} \phi(\boldsymbol{r})-\Sigma_{\mathrm{a}} \phi(\boldsymbol{r})+S(\bo
 <script type="math/tex; mode=display">
 \left.\frac{\mathrm{d} \phi}{\mathrm{d} x}\right|_{x=0}=-\frac{3 \phi_{0}}{2 \lambda_{\mathrm{tr}}}=\frac{\phi_{0}}{ d}</script><p>其中</p>
 <script type="math/tex; mode=display">
-d=\frac{2}{3} \lambda_{\mathrm{tr}}</script><script type="math/tex; mode=display">d$$ 被称为**直线外推距离**。该值是从扩散理论求出的。按照更精确的中子输运理论，对于平面边界的情况，可求得</script><p>d=0.7104 \lambda_{\mathrm{tr}}</p>
+d=\frac{2}{3} \lambda_{\mathrm{tr}}</script><p>d 被称为<strong>直线外推距离</strong>。该值是从扩散理论求出的。按照更精确的中子输运理论，对于平面边界的情况，可求得</p>
 <script type="math/tex; mode=display">
-更严格来讲，外推距离 $$d$$ 与表面曲率半径有关。对于曲率较小的表面，可以用上述近似。因此，自由外表面（真空边界）的边界条件可以用更简单的形式表示：
-
-**在自由表面外推距离 $$d$$ 处，中子通量密度等于零。**
-
-对于**条件4**，
-
+d=0.7104 \lambda_{\mathrm{tr}}</script><p>更严格来讲，外推距离 <script type="math/tex">d</script> 与表面曲率半径有关。对于曲率较小的表面，可以用上述近似。因此，自由外表面（真空边界）的边界条件可以用更简单的形式表示：</p>
+<p><strong>在自由表面外推距离 <script type="math/tex">d</script> 处，中子通量密度等于零。</strong></p>
+<p>对于<strong>条件4</strong>，</p>
 <div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B//边界条件4.png"></img>
+    <img src="https://www.chzhanyeb.cloud/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B//边界条件4.png">
 </div>
 
 
-<center>图6.反射情况</center></script><p>\left.J^{-x}\right|_{\Gamma}=\left.\beta J^{+x}\right|_{\Gamma}</p>
-<script type="math/tex; mode=display">
+<center>图6.反射情况</center>
 
-$$β$$ 被称为**反射率**，根据斐克定律，可写出以下关系式</script><p>\beta=\frac{J^{-}}{J^{+}}=\frac{\frac{\phi}{4}+\frac{D}{2} \frac{d \phi}{d x}}{\frac{\phi}{4}-\frac{D}{2} \frac{d \phi}{d x}}=\frac{1+\frac{2 D}{\phi} \frac{d \phi}{d x}}{1-\frac{2 D}{\phi} \frac{d \phi}{d x}}</p>
+<script type="math/tex; mode=display">
+\left.J^{-x}\right|_{\Gamma}=\left.\beta J^{+x}\right|_{\Gamma}</script><script type="math/tex; mode=display">β$$ 被称为**反射率**，根据斐克定律，可写出以下关系式</script><p>\beta=\frac{J^{-}}{J^{+}}=\frac{\frac{\phi}{4}+\frac{D}{2} \frac{d \phi}{d x}}{\frac{\phi}{4}-\frac{D}{2} \frac{d \phi}{d x}}=\frac{1+\frac{2 D}{\phi} \frac{d \phi}{d x}}{1-\frac{2 D}{\phi} \frac{d \phi}{d x}}</p>
 <script type="math/tex; mode=display">
 对于**无限平板反射层**，反射层内的中子通量密度分布为</script><p>\phi=C \mathrm{e}^{-x / L}</p>
 <script type="math/tex; mode=display">
@@ -793,20 +790,5 @@ l=t_{s}+t_{d}</script>
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
