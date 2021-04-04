@@ -522,9 +522,9 @@ var _hmt = _hmt || [];
 <script type="math/tex; mode=display">
 E^{\prime}=\frac{1}{2}\left[(1+\alpha)+(1-\alpha) \cos \theta_{\mathrm{c}}\right] E</script><p>其中，$E$ 和 $E^{\prime}$ 分别表示碰撞前后的中子能量，$\theta_{\mathrm{c}}$ 表示C系的中子散射角度。$ \alpha=\left(\frac{A-1}{A+1}\right)^{2} $</p>
 <ul>
-<li><p>当 $\theta_{\mathrm{c}}=0^\circ$ 时，$ E^{\prime} \longrightarrow E_{\mathrm{max}}^{\prime}=E $ ，没有造成能量损失</p>
+<li><p>当 $\theta<em>{\mathrm{c}}=0^\circ$ 时，$ E^{\prime} \longrightarrow E</em>{\mathrm{max}}^{\prime}=E $ ，没有造成能量损失</p>
 </li>
-<li><p>当 $\theta_{\mathrm{c}}=180^\circ$ 时，$ E^{\prime} \longrightarrow E_{\mathrm{min}}=αΕ $ ，</p>
+<li><p>当 $\theta<em>{\mathrm{c}}=180^\circ$ 时，$ E^{\prime} \longrightarrow E</em>{\mathrm{min}}=αΕ $ ，</p>
 <p>即，$ E^{\prime}\in [αΕ,E] $</p>
 <p>因此一次碰撞中子可能损失的最大能量为 <script type="math/tex">\Delta E_{\max }=(1-\alpha) E</script></p>
 </li>
@@ -547,7 +547,7 @@ f\left(E \rightarrow E^{\prime}\right) \mathrm{d} E^{\prime}=-\frac{\mathrm{d} E
 <h3 id="平均对数能降"><a href="#平均对数能降" class="headerlink" title="平均对数能降"></a>平均对数能降</h3><script type="math/tex; mode=display">
 u=\ln \frac{E_{0}}{E}\\
 或\\
-E=E_{0} \mathrm{e}^{-u}</script><p>其中，$E_{0}$ 为选定的参考能量，一般取 $E_{0}=2 MeV$</p>
+E=E_{0} \mathrm{e}^{-u}</script><p>其中，$E<em>{0}$ 为选定的参考能量，一般取 $E</em>{0}=2 MeV$</p>
 <p><strong>对数能将增量</strong></p>
 <script type="math/tex; mode=display">
 \Delta u=u^{\prime}-u=\ln \frac{E_{0}}{E^{\prime}}-\ln \frac{E_{0}}{E}=\ln \frac{E}{E^{\prime}}</script><p><strong>最大对数能降增量</strong></p>
@@ -655,20 +655,5 @@ N_{\mathrm{c}}=\frac{\ln E_{1}-\ln E_{2}}{\xi}=\frac{\ln \frac{E_{1}}{E_{2}}}{\x
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
