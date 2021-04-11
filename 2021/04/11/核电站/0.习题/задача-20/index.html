@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		3.类型 | 
+		задача-20 | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -144,7 +144,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/03/23/Fortran/3.%E7%B1%BB%E5%9E%8B/">
 										3.类型
 									</a>
@@ -501,7 +501,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-20/">
 										задача-20
 									</a>
@@ -565,12 +565,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	3.类型
+	задача-20
 </h1>
 <div class="article-meta">
 	
 	<span>Chzhan Yeb</span>
-	<span>2021-03-23 22:49:21</span>
+	<span>2021-04-11 23:28:07</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -586,343 +586,23 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="类型说明语句"><a href="#类型说明语句" class="headerlink" title="类型说明语句"></a>类型说明语句</h3><p>一般形式为：</p>
-<pre><code>类型说明[(种别说明)][,属性说明表] :: 变量名表[=初值]
-</code></pre><p>在某些场合下，种别说明与属性说明可以省略，此时它的一般形式是最基本形式：</p>
-<pre><code>类型说明:: 变量名表
-</code></pre><h3 id="类型说明："><a href="#类型说明：" class="headerlink" title="类型说明："></a><strong>类型说明：</strong></h3><h4 id="INTEGER"><a href="#INTEGER" class="headerlink" title="INTEGER"></a><code>INTEGER</code></h4><pre><code>program main
-    integer         a    ! 默认字节数
-    integer ::      a2   ! f90 语法
-    integer(kind=4) b    ! f90 语法
-    integer*4       c    ! f77 传统写法
-    integer(4)      d    ! f77 传统写法
-end
-</code></pre><p>值得一提是在 f90 中可以使用二进制赋值</p>
-<pre><code>a = B&quot;10&quot; ! 二进制
-a = O&quot;10&quot; ! 八进制
-a = Z&quot;10&quot; ! 十六进制
-</code></pre><h4 id="REAL"><a href="#REAL" class="headerlink" title="REAL"></a><code>REAL</code></h4><pre><code>real(kind=4) a ! f90
-real*4       b ! f77
-real(4)      c ! f77
-real(kind=8) d ! 双精度
-double precision e ! f77 双精度
-</code></pre><ul>
-<li>科学计数法<code>1.5e23</code></li>
-<li>双精度科学计数法<code>1D10</code></li>
-<li>双精度后缀<code>d0</code>，比如<code>1.d0</code>表示双精度的<code>1.0</code></li>
-</ul>
-<p><strong>特别要强调的是，Fortran的小数字面量默认是单精度的。</strong> 也就是你如果这样写</p>
-<pre><code>real(8) :: a
-a = 1.2
-</code></pre><p>其实赋值给<code>a</code>的还是单精度的<code>1.2</code>，必须要写<code>a = 1.2d0</code>才是双精度的。</p>
-<h4 id="COMPLEX"><a href="#COMPLEX" class="headerlink" title="COMPLEX"></a><code>COMPLEX</code></h4><pre><code>complex a
-complex(kind=4) b
-complex(kind=8) c ! 双精度
-complex*4       d ! f77
-complex(4)      e ! f77
-</code></pre><p>赋值</p>
-<pre><code>a = (1.0, 1.0)
-</code></pre><h4 id="CHARACTER"><a href="#CHARACTER" class="headerlink" title="CHARACTER"></a><code>CHARACTER</code></h4><p>声明一个字符</p>
-<pre><code>character a
-</code></pre><p>声明字符串</p>
-<pre><code>character(len=10) a ! f90
-character(10)     b ! f77
-character*10      c ! f77
-character*(10)    d ! f77
-</code></pre><p>值得注意的是，在 f77 中<code>character</code>后指定的数字，表示的是字符长度，而前面几种类型表示的一个变量的字节数，在 f77 中，这两者在写法上是一样的。在 f90 后，参数<code>len</code>和<code>kind</code>的区别，明确了其中的不同。</p>
-<ul>
-<li>单引号字符要包含单引号，转义需要两个单引号；双引号字符包含双引号同理</li>
-<li>字符串拼接 <code>//</code></li>
-<li>相关函数</li>
-</ul>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th><code>char(num)</code></th>
-<th>返回数值<code>num</code>所代表的字符</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ichar(char)</code></td>
-<td>返回<code>char</code>字符的二进制编码整数</td>
-</tr>
-<tr>
-<td><code>len(string)</code></td>
-<td>返回字符串的<strong>声明长度</strong></td>
-</tr>
-<tr>
-<td><code>len_trim(string)</code></td>
-<td>返回字符串除去尾端空格之后的实际长度</td>
-</tr>
-<tr>
-<td><code>index(string, key)</code></td>
-<td>匹配子串<code>key</code>在<code>string</code>中第一次出现的位置</td>
-</tr>
-<tr>
-<td><code>trim(string)</code></td>
-<td>返回把<code>string</code>字符串尾端多余空格清除之后的字符串</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="LOGICAL"><a href="#LOGICAL" class="headerlink" title="LOGICAL"></a><code>LOGICAL</code></h4><pre><code>logical a
-logical*4 b ! f77 指定 4 字节，不过没什么意义，其他类似`INTEGER`的写法也有
-</code></pre><p>赋值</p>
-<pre><code>a = .true.
-b = .false.
-</code></pre><h4 id="IMPLICIT"><a href="#IMPLICIT" class="headerlink" title="IMPLICIT"></a>IMPLICIT</h4><p>Fortran 有一个默认的特性，如果没有事先声明，第一个字母为<code>I,J,K,L,M,N</code>的变量被视为整数类型，其他变量会被当成浮点数来使用。</p>
-<p>使用<code>implicit none</code>关掉这个特性，则所有变量必须声明之后才能够使用。此外，也可以指定默认类型。</p>
-<pre><code>implicit integer(A,B,C)  ! 以A,B,C开头的变量视为整数
-implicit real(M-P,X,Y,Z) ! 指定默认的实数类型变量
-</code></pre><p>不过，<strong>建议在程序说明部分使用语句<code>implicit none</code>关掉这个特性，默认开头表示类型这种东西容易造成混乱</strong></p>
-<h3 id="赋初值："><a href="#赋初值：" class="headerlink" title="赋初值："></a><strong>赋初值：</strong></h3><pre><code>类型说明:: 变量名1=初值1[,变量名2=初值2,…]
-</code></pre><p>注意：在过程中这种赋初值的方法实际上是对变量赋于了<code>SAVE属性</code>，即当过程被调用以后，变量的新值将被保存下来，过程再次被调用时变量的初值不再是类型说明语句中的初值，而是上次被保留下来的值。</p>
-<h3 id="DATA语句："><a href="#DATA语句：" class="headerlink" title="DATA语句："></a><strong>DATA语句：</strong></h3><p>是F77中的一种语句，不重要</p>
-<pre><code>DATA 变量名表1/初值表1/[[,]变量名表2/初值表2/…]
-</code></pre><p>例如：</p>
-<pre><code>! 对数组作以下的初始化：
-DIMENSION A(10,10)
-DATA A/100*1.0/           ! 按数组变量名统一初始化
-DATA A(1,1), A(10,1), A(3,3) /2*2.5, 2.0/  
-                        ! 按数组元素逐个初始化
-DATA ((A(I,J),I=1,5,2),J=1,5) /15*1.0/     
-                        ! 按隐DO循环初始化
-
-! 对字符串作初始化：
-CHARACTER (LEN=10) name
-CHARACTER BELL, TAB, LF, FF, STARS*6
-CHARACTER*8 help
-DATA name,STARS /&#39;Zhang Fei&#39;,&#39;****&#39;/
-DATA BELL,TAB,LF,FF /7,9,10,12/ 
-                        ! 用ACSII控制字符码赋于字符变量
-DATA  help(1:4),help(5:8) /2*&#39;HELP&#39;/        
-                        ! 用字符子串分段赋值
-
-! 对数值型数据作初始化：
-INTEGER n, order, list(100)
-REAL coef(4),eps(2),pi(5),x(5,5)
-COMPLEX*8 cstuff
-DATA  n/0/, order/3/, list/100*0/
-DATA  coef/1.0,2*3.0,1.0/, eps(1)/.00001/
-DATA  pi/5*3.14159/
-DATA  ((x(j,i),i=1,j),j=1,5)/15*1.0/
-DATA  cstuff/(-1.0,-1.0)/
-</code></pre><h3 id="种别说明"><a href="#种别说明" class="headerlink" title="种别说明"></a>种别说明</h3><h4 id="种别说明方法"><a href="#种别说明方法" class="headerlink" title="种别说明方法"></a>种别说明方法</h4><p>种别是F90的新概念。一个数据,不仅有一个类型，并在同一类型下可分为若干种别，种别值确定了数据的大小范围和精度，便于代码移植。</p>
-<p>由于F90程序设计语言没有规定各类型的种别值，因此，具体种别值划分由软件开发商设置。</p>
-<pre><code>类型说明([KIND=]种别值)
-</code></pre><p>一个变量必有一个种别，如果变量的类型说明语句中没有种别说明符，如：</p>
-<p>​        REAL:: X, Y</p>
-<p>则表示变量X，Y的种别缺省，这时采用系统规定的标准值。</p>
-<h4 id="种别函数"><a href="#种别函数" class="headerlink" title="种别函数"></a>种别函数</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>KIND(X)：</td>
-<td>函数<code>KIND</code>用于查询变量的种别，它返回X的种别值，当X取值为0时，返回标准种别值即缺省值。</td>
-</tr>
-<tr>
-<td>SELECTED_REAL_KIND([n][,m])：</td>
-<td>该函数返回实型变量对所取的值范围和精度恰当的种别值。其中n是指明十进制有效位的位数，m指明值范围内以10为底的幂次。<br>对给定的实型和复型量X，它的精度和范围可通过内部函数<code>PRECISION(X)</code>和<code>RANGE(X)</code>查出。</td>
-</tr>
-<tr>
-<td>SELECTED_INT_KIND([m])：</td>
-<td>该函数返回整型变量对所取的值范围恰当的种别值。m指明值的范围是$－10^{m}—10^{m}$<br>可以用<code>SELECTED_REAL_KIND</code>或<code>SELECTED_INT_KIND</code>定义一个<code>PARAMETER</code>常数以备后用</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="常数种别"><a href="#常数种别" class="headerlink" title="常数种别"></a>常数种别</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>例子</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>21_2+7.6_4</td>
-<td>表示整型种别为2的数21与实型种别为4的数7.6相加。</td>
-</tr>
-<tr>
-<td>3.8E-5_4</td>
-<td></td>
-</tr>
-<tr>
-<td>0.87D-16</td>
-<td>禁止说明种别值</td>
-</tr>
-<tr>
-<td>(4.7_8,5)</td>
-<td>复型数据表示用括号，逗号分开前面的实部(种别值为8的实数)和后面的虚部(缺省种别值的整数)。</td>
-</tr>
-<tr>
-<td>.FALSE._4</td>
-<td>表示逻辑型，其常数值是假，种别值是4。</td>
-</tr>
-<tr>
-<td>5_‘αβγ’</td>
-<td>表示希腊字符串αβγ的种别值是5。</td>
-</tr>
-<tr>
-<td>6_‘计算数学’</td>
-<td>表示汉字字符串‘计算数学’的种别值是6。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="整数的其他机制"><a href="#整数的其他机制" class="headerlink" title="整数的其他机制"></a>整数的其他机制</h4><p>2#01011011  -&gt;  二进制</p>
-<p>8#43051472  -&gt;  八进制</p>
-<p>#A92D80EF  -&gt;  十六进制</p>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th><strong>属性关键字</strong></th>
-<th><strong>描述</strong></th>
-<th><strong>适用范围</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ALLOCATABLE</td>
-<td>说明动态数组</td>
-<td>数组</td>
-</tr>
-<tr>
-<td>AUTOMATIC</td>
-<td>声明变量在堆栈中而不是在内存中</td>
-<td>变量</td>
-</tr>
-<tr>
-<td>DIMENSION</td>
-<td>说明数组</td>
-<td>数组变量</td>
-</tr>
-<tr>
-<td>EXTERNAL</td>
-<td>声明外部函数的名称</td>
-<td>过程</td>
-</tr>
-<tr>
-<td>INTENT</td>
-<td>说明过程哑元的用意</td>
-<td>过程哑元</td>
-</tr>
-<tr>
-<td>INTRINSIC</td>
-<td>声明一个内部函数</td>
-<td>过程</td>
-</tr>
-<tr>
-<td>OPTIONAL</td>
-<td>允许过程被调用时省略哑元</td>
-<td>过程哑元</td>
-</tr>
-<tr>
-<td>PARAMETER</td>
-<td>声明常量</td>
-<td>常量</td>
-</tr>
-<tr>
-<td>POINTER</td>
-<td>声明数据对象为指针</td>
-<td>变量</td>
-</tr>
-<tr>
-<td>PRIVATE</td>
-<td>限制模块中的实体访问于本块内</td>
-<td>常量、变量或模块</td>
-</tr>
-<tr>
-<td>PUBLIC</td>
-<td>允许模块中的实体被外部使用</td>
-<td>常量、变量或模块</td>
-</tr>
-<tr>
-<td>SAVE</td>
-<td>保存过程执行后其中的变量值</td>
-<td>变量或公共块</td>
-</tr>
-<tr>
-<td>STATIC</td>
-<td>说明变量为静态存储</td>
-<td>变量</td>
-</tr>
-<tr>
-<td>TARGET</td>
-<td>声明变量为目标</td>
-<td>变量</td>
-</tr>
-<tr>
-<td>VOLATILE</td>
-<td>声明对象为完全不可预测并在编译时无优化</td>
-<td>数据对象或公共块</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="PARAMETER"><a href="#PARAMETER" class="headerlink" title="PARAMETER"></a>PARAMETER</h4><p>指定常数。</p>
-<pre><code>implicit none
-real, parameter :: e = 2.71828 ! f90 `::`不能省略
-real pi
-parameter(pi=3.14159)          ! f77
-</code></pre><h4 id="DIMENSION"><a href="#DIMENSION" class="headerlink" title="DIMENSION"></a>DIMENSION</h4><p>说明一个符号名是数组名，只要在说明语句中附加数组属性关键字。数组属性关键字是：DIMENSION(数组形状说明)。</p>
-<h4 id="变量初始化"><a href="#变量初始化" class="headerlink" title="变量初始化"></a>变量初始化</h4><pre><code>character(len=20) :: str = &quot;fortran 90&quot; ! f90 才可以
-</code></pre><p>而 Fortran 77 采用 <code>DATA</code> 命令来初始化，示例如下</p>
-<pre><code>      PROGRAM test
-      IMPLICIT NONE
-      INTEGER A
-      REAL B
-      COMPLEX C
-      CHARACTER*(20) STR
-      DATA A,B,C,STR /1, 2.0, (1,0, 2.0), &#39;FORTRAN 77&#39;/
-      STOP
-      END
-</code></pre><p>在函数内最好不要使用 <code>data</code> 来初始化。 由于 Fortran 函数局部变量的<code>save</code>机制（后面会讲），第二次进入函数时，局部变量可能就不是<code>data</code>设置的值了。（至少gfortran出现过这种错误。）最好直接用<code>=</code>赋值。</p>
-<h4 id="等价声明"><a href="#等价声明" class="headerlink" title="等价声明"></a>等价声明</h4><pre><code>integer a
-real b
-equivalence(a, b)
-</code></pre><p>此时 <code>a,b</code> 占用同一块内存，类似于C语言的<code>union</code>，有的时候，如果程序常用<code>array(1,1,5)</code>，可以这样写<code>equivalence(array(1,1,5), A)</code>，以后用<code>A</code>表示<code>array(1,1,5)</code>，而不是在每个要用<code>array(1,1,5)</code>的地方重新创建。</p>
-<h3 id="自定义数据类型（f90"><a href="#自定义数据类型（f90" class="headerlink" title="自定义数据类型（f90)"></a>自定义数据类型（f90)</h3><pre><code>type :: student      ! 定义`student`类型
-    character(len=30) :: name
-    integer :: score
-    real :: GPA
-end type student
-type(student) :: alice ! 声明一个 student 变量
-alice%name = &quot;Alice&quot;   ! 使用 `%` 访问 student 的属性
-alice = student(&quot;Alice&quot;, 100, 4.0) ! 直接设置所有属性
-</code></pre><h3 id="隐式类型转化"><a href="#隐式类型转化" class="headerlink" title="隐式类型转化"></a>隐式类型转化</h3><p>需要特别注意的是，Fortran只有在变量初始化的时候，才会发生隐式类型转换。在其他任何时候，包括<strong>参数传递，运算符</strong>等地方，都不支持隐式类型转换。也就是说，即使是<code>real(4)</code>变量传给<code>real(8)</code>参数，都会发生严重的错误。（有一些运算符能够执行，比如<code>real+integer</code>，是因为 Fortran 重载了该运算符，而不是发生了隐式类型转换。）</p>
-<p>如果深究原因，Fortran 的变量，本质上相当于 C 语言的指针。。传递参数相当于传递了一个地址过去，这当然是不包含类型信息的，所以会被按照内存的方式直接读取，是不可能发生隐式类型转换的。</p>
-<pre><code>// 类型匹配错误大概相当于 C 语言发生了这样的转换
-int a = 100;
-float b = *(float*(&amp;a));
-</code></pre><p>这一点在熟悉 C/c++ 的刚开始学习 Fortran 时必须特别注意</p>
-
+	
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/03/24/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
+              <a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-21/">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  射流理论
+                  задача-21
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2021/03/23/Fortran/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
-                2.输入输出基础
+              <a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E7%A9%BA%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
+                表示空间关系的前置词
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
