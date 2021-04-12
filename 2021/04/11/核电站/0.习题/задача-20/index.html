@@ -595,7 +595,36 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	
+	<h3 id="Вопрос"><a href="#Вопрос" class="headerlink" title="Вопрос:"></a>Вопрос:</h3><p>Паротурбинная установка вырабатывает электрическую мощность и теплофикационную мощность для потребителей, преобразуя подводимую тепловую мощность 1540 МВт с КПД  $η_{эт}$ = 36,5% . Определить электрическую мощность, если известно, что электрический КПД в этом режиме $η_э$ = 34%; КПД по производству теплофикационной мощности принять $η_т$ = 98% .</p>
+<p>蒸汽轮机厂为用户产生电力和热能，将提供的1540兆瓦的热能转换成$η_{эт}$ = 36.5％的效率。 如果已知在此模式下的电效率为$η_э$ = 34％，则确定电功率；否则，确定电功率。 假设用于生产加热能力的效率为$η_т$= 98％。</p>
+<h3 id="Решение"><a href="#Решение" class="headerlink" title="Решение:"></a>Решение:</h3><p>Известно:</p>
+<script type="math/tex; mode=display">
+\mathrm{Q}_{0}=1540 \quad \mathrm{МВт}\\
+\eta_{эт}=36.5 \%=0.365\\
+\eta_{э}=34 \%=0.34\\
+\eta_{\mathrm{т}}:=98 \%=0.98</script><ol>
+<li><script type="math/tex; mode=display">
+\eta_{эт}=\frac{\mathrm{N}_{\text {эл }}+\mathrm{Q}_{\mathrm{T} 0}}{\mathrm{Q}_{0}}</script><p>$Q_{т0}$ - тепловая мощность , отведённая внешнему потребителю</p>
+</li>
+<li><script type="math/tex; mode=display">
+\eta_{э}=\frac{N_{э}}{Q_{0}-Q_{т}}</script><p>$Q_{т}$ - теплота, отданная на теплофикацию</p>
+</li>
+<li><script type="math/tex; mode=display">
+η _ {т } = \frac { Q _ {т0} } { Q _ {т} }</script></li>
+<li><script type="math/tex; mode=display">
+\mathrm{N}_{\text {эл }}=\mathrm{Q}_{0} \cdot \eta_{эт}-\mathrm{Q}_{\mathrm{т} 0}</script><script type="math/tex; mode=display">
+\mathrm{Q}_{\mathrm{T} 0}=\mathrm{Q}_{\mathrm{T}} \cdot \eta_{\mathrm{T}}</script><script type="math/tex; mode=display">
+\mathrm{Q}_{т}=\mathrm{Q}_{0}-\frac{\mathrm{N}_{Э }}{\eta_{Э}}</script><script type="math/tex; mode=display">
+Q_{э}=\frac{\mathrm{N}_{Э }}{\eta_{э}}</script></li>
+<li><p>Подставим $Q_{т}$ , и $Q_{т0}$ в уравнение $\mathrm{N}_{Э }$ </p>
+<script type="math/tex; mode=display">
+\mathrm{N}_{\text {эл }}=\mathrm{Q}_{0} \cdot \eta_{\mathrm{эт}}-\eta_{\mathrm{т}} \cdot\left(\mathrm{Q}_{0}-\frac{\mathrm{N}_{\mathrm{э}}}{\eta_{\mathrm{э}}}\right)</script></li>
+<li><p>Раскроем скобки и выразим из уравнения 5 </p>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+N _ {эл}= \frac { Q _ { 0 } \cdot η _ { эл } - η _ { эл }\cdot Q _ { 0 }} { 1 - \frac { η _ {т} } { η _ { э} } }=\\
+= \frac { 1540 \cdot 0.365 - 0.98 \cdot 1540 } { 1 - \frac { 0.98 } { 0.34 } } = 503.147 МВт</script>
 </div>
 
 
