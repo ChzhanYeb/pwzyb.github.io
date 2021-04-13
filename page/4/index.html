@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		6.数组 | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -171,9 +169,9 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
-										6-数值
+								<li class="file">
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E7%BB%84/">
+										6-数组
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -183,6 +181,15 @@ var _hmt = _hmt || [];
 								<li class="file">
 									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
 										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/Fortran/Fortran%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
+										Fortran其他相关知识点
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -294,6 +301,15 @@ var _hmt = _hmt || [];
 								<li class="file">
 									<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
 										压水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E6%B2%B8%E6%B0%B4%E5%A0%86/">
+										沸水堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -572,163 +588,41 @@ var _hmt = _hmt || [];
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-
-	6-数值
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-	<span>Chzhan Yeb</span>
-	<span>2021-03-29 20:40:02</span>
-		<div id="article-categories">
-    
-		<span>Categories：</span>
-            
-    
+		<div class="index-li">
+			<a href="/2021/03/15/%E6%97%85%E8%A1%8C/%E6%91%A9%E5%B0%94%E6%9B%BC%E6%96%AF%E5%85%8B%E4%BA%94%E6%97%A5%E8%A1%8C/">
+				<h2 class="index-title">
+					摩尔曼斯克五日行
+				</h2>
+				<div class="index-brief">
+					摩尔曼斯克（Мурманск）是俄罗斯西北部的一座城市，是世界上处于北极圈内最大的城市[1]。由于洋流的关系，被称为“纬度最高的不冻港”。来摩尔曼斯克旅行的最大目的，就是看极光（图0）。我们这次旅行亦是如此。
 
     
-		<span>Tags：</span>
-            
-    
-		</div>
 
+
+图0. 那段时间的极光
+
+0. 开销先说说这次旅途我们的开销。
+我们这次旅
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-15</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+			<a class="extend prev" rel="prev" href="/page/3/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+		
+	</div>
 </div>
-
-<div id="article-content">
-	<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><pre><code>DATATYPE :: name(size)
-</code></pre><p>其中<code>DATATYPE</code>可以是<code>integer,real,complex,logical</code>，也可以是<code>type</code>自定义类型。</p>
-<p>eg:</p>
-<pre><code>integer :: a(10) ! 声明 a 为10个整数的数组
-a(1) = 12        ! 为 a 的第一个元素赋值
-</code></pre><p>数组在声明时，大小就确定了的，所以只有<code>parameter</code>整数才能够用在数组声明中表示大小。</p>
-<pre><code>integer a(10)
-integer,dimension(10) :: a
-! 下面是 f77 的写法，先声明类型，再声明大小
-integer a
-dimension a(10)
-</code></pre><h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><pre><code>integer a(3,3) ! 3x3 二维数组
-a(1,1) = 3     ! 需要两个索引值
-! 其他声明方式
-integer,dimension(10,10) :: a
-integer a
-dimension a(10,10)
-! 多维，类似
-integer a(D1,D2,...,Dn)
-</code></pre><p>此外，还可以指定索引范围</p>
-<pre><code>integer a(-3:5)
-integer b(2:3, -1:3)
-</code></pre><h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><pre><code>integer A(5)
-DATA A /1,2,3,4,5/
-DATA A /5*3/              ! 使用`*`表示 5 个 3
-DATA(A(I),I=2,4)/3,6,5/   ! `I`从2到4，分别赋值后面的三个数
-DATA(A(I),I=2,10,2) /.../ ! 当然也可以指定 step
-DATA((A(I,J),I=1,2),J=1,2) /1,2,3,4/ ! 二维数组嵌套
-integer :: a(5) = (/1,2,3,4,5/)      ! f90 中可以直接这样赋值
-integer :: a(5) = (/1,(2,I=2,4),5/)  ! f90,这样赋值要求必须每个数都赋值
-integer :: a(5) = (/(I,I=1,5)/)      ! 甚至可以使用 I
-integer :: a(5) = 5                  ! 全部赋值为同一个数也是可以的
-! 还可以在别的地方使用这种隐式循环
-write(*,*) (A(I), I=2,4)
-</code></pre><h3 id="对整个数组的操作"><a href="#对整个数组的操作" class="headerlink" title="对整个数组的操作"></a>对整个数组的操作</h3><pre><code>integer :: a(5) = (/1,2,3,4,5/) ! 声明和初始化
-a = 5                           ! 赋值
-a = b                           ! 要求两者维数及大小相等
-a = b + c                       ! 每个元素依次计算
-a = sin(b)                      ! 每个元素以及计算 sin 值
-l = b &gt; c                       ! l 为逻辑类型数组
-</code></pre><h3 id="切片-slice"><a href="#切片-slice" class="headerlink" title="切片(slice)"></a>切片(slice)</h3><p>切片是 Fortran 的强项之一，一个数组切片相当于数组。</p>
-<pre><code>a(3:5) = 5           ! 部分赋值
-a(3:) = 5            ! a(3) 以及之后的所有元素
-a(1:3) = b(4:6)      ! 两边分别看做数组
-a(1:5:2)             ! 有 step 的 slice
-a(1:10) = a(10:1:-1) ! 使用 slice 做数组翻转
-a(:,2)               ! 多维数组 slice, 全部 a(i,2) 元素
-</code></pre><h3 id="WHERE（f95"><a href="#WHERE（f95" class="headerlink" title="WHERE（f95)"></a><code>WHERE</code>（f95)</h3><p>按照一定条件取出数组的一部分。</p>
-<pre><code>integer :: I
-integer :: a(5) = (/(I,I=1,5)/)
-integer :: b(5) = 0
-where (a &lt; 3)
-    b = a           ! 要求 b 和 a 的维数和大小相同
-end where
-! 还有 elsewhere
-where (a&lt;3)
-    b = 1
-elsewhere
-    b = 2
-end where
-</code></pre><p><code>elsewhere</code>可以试是多个的，<code>where</code>当然也可以嵌套，也可以署名。</p>
-<h3 id="FORALL-f95"><a href="#FORALL-f95" class="headerlink" title="FORALL(f95)"></a><code>FORALL</code>(f95)</h3><pre><code>! 伪代码
-forall (triplet1[,triplet2[,triplet3...]] [,mask])
-    ! ...
-end forall
-! 例子
-forall (I=1:5, J=1:5, a(I,J)&lt;10)
-    a(I,J) = 1
-end forall
-</code></pre><p><code>forall</code>中可以使用<code>where</code>，但是<code>where</code>中不可以使用<code>forall</code>。</p>
-<h2 id="数组的保存规则"><a href="#数组的保存规则" class="headerlink" title="数组的保存规则"></a>数组的保存规则</h2><p>一个数组不管是什么形状，他的所有元素都是分布在计算机的同一块内存中。</p>
-<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><p>一维数组就是单纯的线性排列，如<code>integer :: A(-1:3)</code>，则<code>A(-1)</code>在最前面，之后依次排列。</p>
-<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>Fortran 多维数组的内存排列是所谓的列优先排列。先看二维数组</p>
-<pre><code>integer :: A(3,3)
-</code></pre><p>第一维称为<code>row</code>(行)，第二维称为<code>column</code>(列)，所谓列优先，数组排列，先排完第一列，再排第二列。上述<code>A</code>数组的排列顺序为</p>
-<pre><code>A(1,1)=&gt;A(2,1)=&gt;A(3,1)=&gt;A(1,2)=&gt;A(2,2)=&gt;A(3,2)=&gt;A(1,3)=&gt;A(2,3)=&gt;A(3,3)
-</code></pre><h3 id="多维数组-1"><a href="#多维数组-1" class="headerlink" title="多维数组"></a>多维数组</h3><p>多维数组和二维数组类似，也就是低维度的指标先变动，高纬度的指标后变动。</p>
-<pre><code>program test
-    implicit none
-    integer :: i,j,k
-    integer :: a(8) = (/(I*2, I=1,8)/)
-    integer :: b(2,2,2)
-    b = reshape(a, shape(b))
-    do i=1,2
-        do j=1,2
-            do k=1,2
-                write(*,&quot;(I4)&quot;) b(k,j,i)
-            end do
-        end do
-    end do
-    write(*,&quot;(8(I4))&quot;) b
-end program
-</code></pre><p>可以看见，上面按照列优先方式打印出来顺序是对的，并且<code>write</code>的索引也是列优先的。如果是C语言，也就是行优先语言，就应该是<code>b[i][j][k]</code>了。</p>
-<p>在使用数组时，连续读取，最好先读低维的数字（也就是按照内存顺序读取），这在计算机硬件实现上会比较快。</p>
-<h2 id="可变大小数组（f90）"><a href="#可变大小数组（f90）" class="headerlink" title="可变大小数组（f90）"></a>可变大小数组（f90）</h2><pre><code>integer,allocatable :: a(:)  ! 声明一个可变大小一维数组
-integer :: N
-read(*,*) N
-allocate(a(N))               ! 分配内存空间
-allocate(a(100), stat=error) ! 赋值给 error, 如果 error 为0, 表示 allocate 成功
-deallocate(a)                ! 释放内存
-!-------------------------------------
-integer,allocatable :: b(:,:) ! 二维数组
-allocate(b(-3:5))             ! 也可以指定索引范围
-allocated(b)                  ! 检查是否已经分配内存，如果是，返回 .true.
-</code></pre>
-</div>
-
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  7-函数
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
-                5-循环
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-
-<script>
-	
-	
-</script>
 
 	</div>
 	<div id="footer">

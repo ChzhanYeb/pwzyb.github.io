@@ -172,8 +172,8 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E5%80%BC/">
-										6-数值
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E7%BB%84/">
+										6-数组
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -183,6 +183,15 @@ var _hmt = _hmt || [];
 								<li class="file">
 									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
 										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/Fortran/Fortran%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
+										Fortran其他相关知识点
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -294,6 +303,15 @@ var _hmt = _hmt || [];
 								<li class="file">
 									<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
 										压水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E6%B2%B8%E6%B0%B4%E5%A0%86/">
+										沸水堆
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -688,8 +706,11 @@ var _hmt = _hmt || [];
 <li>UNIT，输出设备，<code>*</code>表示控制台输出</li>
 <li>FMT，输出格式，<code>*</code>表示默认格式</li>
 </ul>
-<p>（双引号转义：使用两个双引号，比如<code>write(*,*) &quot;My name is &quot;&quot;Alice&quot;&quot;.&quot;</code>）</p>
-<p>（F77 标准只规定了使用单引号封装字符串，虽然多数编译器都支持双引号）</p>
+<p>注意：</p>
+<ol>
+<li>每一次执行<code>WRITE</code>命令后，会自动换到下一行来准备做下一次的输出</li>
+<li>双引号转义：使用两个双引号，比如<code>write(*,*) &quot;My name is &quot;&quot;Alice&quot;&quot;.&quot;</code>（F77 标准只规定了使用单引号封装字符串，虽然多数编译器都支持双引号）</li>
+</ol>
 <h5 id="功能完整形式："><a href="#功能完整形式：" class="headerlink" title="功能完整形式："></a>功能完整形式：</h5><pre><code>WRITE(&#123;[UNIT=]单元|*&#125;[,&#123;[FMT=]格式说明符|[NML=]名称列表组名|*&#125;][，REC=记录号][,IOSTAT=状态变量名][,ERR＝错误标号]) [I/O列表]
 </code></pre><ul>
 <li><p><strong>单元</strong>：</p>
@@ -721,7 +742,9 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h4 id="print和type"><a href="#print和type" class="headerlink" title="print和type"></a><code>print</code>和<code>type</code></h4><p>PRINT语句向屏幕输出，TYPE语句是PRINT语句的别名</p>
+<h4 id="print和type"><a href="#print和type" class="headerlink" title="print和type"></a><code>print</code>和<code>type</code></h4><p>PRINT语句向屏幕输出，TYPE语句是PRINT语句的别名。</p>
+<p>相较于<code>WRITE</code>语句，<code>PRINT</code>语句少了赋值输出位置的能力（少了<code>WRITE</code>当中第一个星号），只能针对屏幕进行输出。</p>
+<p>尽量使用<code>WRITE</code>语句，如果想把程序输出转换到其他地方，<code>WRITE</code>会方便很多，只需要把<code>UNIT</code>值指到另一个位置就行</p>
 <h5 id="简化格式："><a href="#简化格式：" class="headerlink" title="简化格式："></a>简化格式：</h5><pre><code>print *, &quot;Hello world!&quot;
 </code></pre><ul>
 <li><code>*</code>表示不限定输出格式</li>
