@@ -639,8 +639,9 @@ var _hmt = _hmt || [];
 <p>操作系统按照此顺序加载。 首先加载io.sys和msdos.sys文件。 必须理解，它们必须位于引导盘上明确定义的位置。 接下来，它检查引导盘根目录中是否存在config.sys文件，该文件使您可以配置某些OS组件（例如RAM）的操作并连接硬件驱动程序。 如果不存在该文件，则默认情况下采用OS引导参数。 接下来，将加载command.com。 然后，它会在启动磁盘的根目录中检查autoexec.bat文件。 反过来，此文件使您可以自定义命令解释器的操作。 如果不存在，则默认情况下将再次使用所有参数。 这样就完成了OS的加载。  DOS还包括其他实用程序，例如，用于处理磁盘。 但是，最小的DOS文件集使您即使在软盘上也可以创建可引导磁盘。</p>
 <p>以简化形式在DOS中使用OP的体系结构如图1所示。 首先，必须记住，最初用于DOS的处理器只能直接寻址1024K RAM。 此外，在OP的此部分中，分配了主存储器，OS内核位于该主存储器中，并且用户程序运行。 在1024K以上的区域中，有一个技术部分，其中显示BIOS，视频内存等。 用户程序不在正常模式下放置在那里。 在1024K以上，有一个64 KB的段-HMA（高内存区域），通过在config.sys中设置适当的参数，可以将一部分OS内核移入其中，并释放主内存。 记住DOS是16位的，程序中最大的可寻址内存是64Kb，这也很有用。</p>
 <div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/DOS.png">
+    <img src="https://www.chzhanyeb.cloud/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0//DOS.png">
 </div>
+
 
 <center>图1.DOS内存体系结构
 </center>
@@ -649,11 +650,31 @@ var _hmt = _hmt || [];
 <h3 id="Windows-3-1"><a href="#Windows-3-1" class="headerlink" title="Windows 3.1"></a>Windows 3.1</h3><p>随着计算机系统硬件的发展和世界范围内用户的需求，在OS中使用图形界面的趋势已经出现。 其主要动机是在OS上工作时创建一个更友好的环境，从而简化用户操作，加快工作速度并减少可能的错误数量。 所有这些还为广大人民发展现代计算机系统提供了机会。</p>
 <p>为响应这些趋势，Microsoft发布了Windows的第一个版本，其中3.1版取得了巨大的商业成功。 必须马上说Windows 3.1实际上并不是一个独立的操作系统，而仅仅是DOS上的图形附加组件。 该操作系统最初是16位的，但它使运行32位程序成为可能。 操作系统架构如图2所示。</p>
 <div align="center">
-    <img src="https://www.chzhanyeb.cloud/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/DOS.png">
+    <img src="https://www.chzhanyeb.cloud/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0//Windows 3.1.png">
 </div>
 
 <center>图2.Windows 3.1内存体系结构
 </center>
+
+<p>如您所见，所有应用程序和OS内核都位于单个地址空间中。 因此，编写不当的程序很容易使其他任务甚至OS内核混乱。 此外，该操作系统还使用了企业多任务处理。 所有这些都解释了OS的功能质量差和可靠性低。 当前，该OS几乎无法在任何地方使用，并且仅用于说明OS体系结构发展的趋势。</p>
+<h3 id="Windows-9x"><a href="#Windows-9x" class="headerlink" title="Windows 9x"></a>Windows 9x</h3><p>了解这些问题后，Microsoft发布了以下版本的Windows 9x OS系列。 这些是Windows 95、98和ME。 它们与Windows 3.1的主要区别是在操作系统中使用32位程序，并且体系结构具有更高的可靠性。 同时，任务是确保与DOS和Windows 3.1的广泛兼容性，从而保留了操作系统的某些不可靠性。 操作系统架构如图3所示。</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0//Windows 9x.png">
+</div>
+
+<center>图3.Windows 9x内存体系结构</center>
+
+<p>每个Win32程序都会看到自己的虚拟地址空间，最大为2 GB。 因此，任务彼此保护。 所有进程最多共享4 MB的空间，以实现向后兼容。 同时，任何进程都可能破坏此处其他进程的数据。 在2至3 GB的共享空间中，有16位Win16程序和16位OS系统组件。 因此，程序之间也可能存在交互作用，并且可能会对OS造成威胁。 所有Win32程序也可以看到地址空间为3到4 GB的OS内核组件，并且可以进行编写。</p>
+<p>由此可知，尽管与旧版本的操作系统实现了一定的兼容性，但该系列的操作系统以其足够的不可靠性以及大量16位系统组件的存在而著称，与之相比，它减慢了其工作速度。与完全32位OS对应物。 当前，仍可以在使用实验型和其他旧类型设备的地方找到该系列的OS，这些设备的接口已为此类型的OS配置。 还应注意，在参数受限的计算机系统上，Windows 9x下的相同应用程序比MS Windows NT家族的操作系统下的运行速度快得多。</p>
+<h3 id="OS-2"><a href="#OS-2" class="headerlink" title="OS/2"></a>OS/2</h3><p>当前，这种操作系统在俄罗斯非常陌生，但是在20世纪90年代，这种操作系统通常被用作科学计算的平台。 出于与以前的操作系统相同的原因，我们将在此介绍此操作系统的最常见功能。</p>
+<p>OS / 2由IBM和Microsoft在1980年代后期共同开发。 但是，Microsoft后来将该项目留给了MS Windows平台。  IBM继续开发该操作系统，并在90年代初发布了多个版本之后，于1992年发布了OS 2.0，然后发布了3.0，这比当时的MS Windows平台要先进得多。 在2.0版中，与更高版本的MS Windows 95相比，使用32位的方式要广泛得多-除了视频系统以外，所有内容都是32位的。 使用虚拟DOS计算机（VDM），您可以一次运行多个DOS和Windows任务。 要运行Windows程序，我们使用了基于许可的IBM Windows 3.1的Win-OS / 2。 使用虚拟机可以隔离Windows和DOS任务，因此程序崩溃不会阻止其他程序继续运行。 还实现了程序间通信的机制，例如动态数据交换（Dynamic Data Exchange）和剪贴板。 在OS / 2上，可以使用专门设计的HPFS文件系统。 该系统旨在解决FAT文件系统的以下问题：文件大小和磁盘空间的限制； 限制文件名的长度； 文件碎片化，导致系统性能下降和设备磨损； 大型群集导致的内存开销；易受数据丢失的影响。 与MS Windows不同，在OS / 2和类似Unix的系统中，您可以跳过图形外壳的加载，从而在命令行模式下获得可行的系统。  OS / 2中内存分配的一般方案如图4所示。</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0//OS_2.png">
+</div>
+
+<center>图4.OS / 2系列中的内存体系结构</center>
+
+<h3 id="ОС-семейств-MS-Windows-NT"><a href="#ОС-семейств-MS-Windows-NT" class="headerlink" title="ОС семейств MS Windows NT"></a>ОС семейств MS Windows NT</h3>
 </div>
 
 
