@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		4.流程控制 | 
+		石墨慢化反应堆 | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -153,7 +153,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/03/25/Fortran/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
 										4.流程控制
 									</a>
@@ -327,7 +327,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/04/17/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E7%9F%B3%E5%A2%A8%E6%85%A2%E5%8C%96%E5%8F%8D%E5%BA%94%E5%A0%86/">
 										石墨慢化反应堆
 									</a>
@@ -619,12 +619,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	4.流程控制
+	石墨慢化反应堆
 </h1>
 <div class="article-meta">
 	
 	<span>Chzhan Yeb</span>
-	<span>2021-03-25 20:05:36</span>
+	<span>2021-04-17 12:06:26</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -640,147 +640,18 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="IF"><a href="#IF" class="headerlink" title="IF"></a><code>IF</code></h3><pre><code>if (condition) then
-    ! do something
-end if
-
-if (condition) then
-    ! do something
-else
-    ! do other
-end if
-</code></pre><p>逻辑运算</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>f90 符号</th>
-<th>f77 符号</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>==</code></td>
-<td><code>.eq.</code></td>
-<td>判断是否等于</td>
-</tr>
-<tr>
-<td><code>/=</code></td>
-<td><code>.ne.</code></td>
-<td>不等于</td>
-</tr>
-<tr>
-<td><code>&gt;</code></td>
-<td><code>.gt.</code></td>
-<td>大于</td>
-</tr>
-<tr>
-<td><code>&gt;=</code></td>
-<td><code>.ge.</code></td>
-<td>大于等于</td>
-</tr>
-<tr>
-<td><code>&lt;</code></td>
-<td><code>.lt.</code></td>
-<td>小于</td>
-</tr>
-<tr>
-<td><code>&lt;=</code></td>
-<td><code>.le.</code></td>
-<td>小于等于</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>逻辑之间的关系</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>意义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>.and.</code></td>
-<td>两边都<code>.true.</code>才表示<code>.true</code></td>
-</tr>
-<tr>
-<td><code>.or.</code></td>
-<td>只要有一个是<code>.true.</code>就是<code>.true.</code></td>
-</tr>
-<tr>
-<td><code>.not.</code></td>
-<td>只对一个逻辑表达式作用，取反</td>
-</tr>
-<tr>
-<td><code>.eqv.</code></td>
-<td>两边相同时，得到<code>.true.</code></td>
-</tr>
-<tr>
-<td><code>.neqv.</code></td>
-<td>两边不相同时，得到<code>.true.</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h5 id="IF-ELSE-IF"><a href="#IF-ELSE-IF" class="headerlink" title="IF ELSE IF"></a><code>IF ELSE IF</code></h5><pre><code>if (condition1) then
-    ! ...
-else if (condition2) then
-    ! ...
-else if (condition3) then
-    ! ...
-else
-    ! ...
-end if
-</code></pre><h3 id="SELECT-CASE"><a href="#SELECT-CASE" class="headerlink" title="SELECT CASE"></a><code>SELECT CASE</code></h3><p>这是 f90 引入的标准，不过各大编译器基本都支持 f77 中使用。</p>
-<pre><code>select case(变量)
-case (数值1)
-    ! ...
-case (数值2)
-    ! ...
-case default
-    ! ...
-end select
-</code></pre><p>其中<code>case</code>的数值不一定是特定的数值</p>
-<ul>
-<li><code>case(1)</code> 变量=1时成立</li>
-<li><code>case(1:5)</code> 变量大于等于1，小于等于5时成立</li>
-<li><code>case(1:)</code> 大于1</li>
-<li><code>case(1,4,5)</code> 指定特定的几个数值</li>
-</ul>
-<p>不过<code>case</code>只能使用整数，字符串和逻辑变量，不能使用浮点数和复数。每个<code>case</code>中使用的数值必须是常量，不能使用变量。</p>
-<h3 id="GOTO"><a href="#GOTO" class="headerlink" title="GOTO"></a><code>GOTO</code></h3><p>(一如既往的建议不要使用<code>goto</code>)，因为 Fortran 可以指定一行代码的编号，使用<code>goto</code>可以直接跳转</p>
-<pre><code>goto 100
-100 write(*, *) &quot;Hello!&quot;
-</code></pre><p>还有一种用法</p>
-<pre><code>goto(10,20,30) I ! 根据 I 的值确定调到哪里
-! 如果 I=2, 调到第二个数，也就是 20 处
-</code></pre><p><code>IF</code>也有一种类似的用法</p>
-<pre><code>if (C) 10,20,30
-! 如果 C &lt; 0, goto 10, 如果 C=0, goto 20, 如果 C&gt;0, goto 30
-</code></pre><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="PAUSE"><a href="#PAUSE" class="headerlink" title="PAUSE"></a><code>PAUSE</code></h4><p>相当于windows命令<code>pause</code></p>
-<h4 id="CONTINUE"><a href="#CONTINUE" class="headerlink" title="CONTINUE"></a><code>CONTINUE</code></h4><p>无意义，相当于 Python 中的<code>pass</code></p>
-<h4 id="STOP"><a href="#STOP" class="headerlink" title="STOP"></a><code>STOP</code></h4><p>停止程序.</p>
-
+	
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  中子的扩散过程
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
-                中子弹性散射碰撞公式及能量概率分布公式推导
+              <a href="/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0/">
+                某些操作系统的功能概述
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             
