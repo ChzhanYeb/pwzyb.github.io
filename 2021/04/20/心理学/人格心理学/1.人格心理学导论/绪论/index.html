@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		1.1. 绪论 | 
+	 
+	尼古拉斯冰的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "ChzhanYeb.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">尼古拉斯冰的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="https://github.com/ChzhanYeb" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Fortran
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/21/Fortran/1.%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										1.基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
+										2.输入输出基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/3.%E7%B1%BB%E5%9E%8B/">
+										3.类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/Fortran/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+										4.流程控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
+										5-循环
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E7%BB%84/">
+										6-数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
+										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/Fortran/Fortran%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
+										Fortran其他相关知识点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法集
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										高斯-约当消去法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
+										高斯-约当消去法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										语法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/20/Python/%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F/">
+										变量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/Python/%E8%AF%AD%E6%B3%95/%E6%B3%A8%E9%87%8A%E5%8F%8A%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6/">
+										注释及算数运算符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										俄语
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										前置词
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E5%8E%9F%E5%9B%A0%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
+										表示原因关系的前置词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E7%A9%BA%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
+										表示空间关系的前置词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										信息技术
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0/">
+										某些操作系统的功能概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
+										现代操作系统的主要组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆类型及结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
+										压水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E6%B2%B8%E6%B0%B4%E5%A0%86/">
+										沸水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/17/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E7%9F%B3%E5%A2%A8%E6%85%A2%E5%8C%96%E5%8F%8D%E5%BA%94%E5%A0%86/">
+										石墨慢化反应堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										声学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-3%E5%B0%8F%E6%B5%81%E9%87%8F%E6%8C%AF%E8%8D%A1%E5%9C%A8%E9%A2%84%E8%92%B8%E6%B1%BD%E5%8F%91%E7%94%9F%E5%85%83%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">
+										1-3小流量振荡在预蒸汽发生元件中的传播速度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/">
+										1-4非线性液压元件的基本特性，特征，参数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										心理学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										人格心理学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1.人格心理学导论
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/20/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/1.%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/%E7%BB%AA%E8%AE%BA/">
+										绪论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3.新精神分析学派
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/23/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/3.%E6%96%B0%E7%B2%BE%E7%A5%9E%E5%88%86%E6%9E%90%E5%AD%A6%E6%B4%BE/3.4.%20%E8%89%BE%E9%87%8C%E5%85%8B%E6%A3%AE%E4%BA%BA%E6%A0%BC%E7%90%86%E8%AE%BA/">
+										3.4. 艾里克森人格理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										文献笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										射流理论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/03/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Experimental%20research%20on%20the%20characteristics%20of%20steam%20jet/">
+										Experimental research on the characteristics of steam jet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/24/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
+										Turbulent gravitational convection from maintained and instantaneous sources
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										旅行
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/15/%E6%97%85%E8%A1%8C/%E6%91%A9%E5%B0%94%E6%9B%BC%E6%96%AF%E5%85%8B%E4%BA%94%E6%97%A5%E8%A1%8C/">
+										摩尔曼斯克五日行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核反应堆物理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+										中子弹性散射碰撞公式及能量概率分布公式推导
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
+										中子扩散理论与计算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%85%A2%E5%8C%96%E8%BF%87%E7%A8%8B/">
+										中子的慢化过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
+										中子的扩散过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/">
+										核反应堆功率与衰变功率
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核电站
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0.习题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-10/">
+										задача-10
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-12-1/">
+										задача-12-1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/">
+										задача-16
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-20/">
+										задача-20
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-21/">
+										задача-21
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/%E6%A0%B8%E7%94%B5%E7%AB%99/1.%E6%A0%B8%E7%94%B5%E5%8F%91%E5%B1%95%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%89%8D%E6%99%AF/">
+										1.核电发展现状与前景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/20/%E6%A0%B8%E7%94%B5%E7%AB%99/2.%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E7%94%B5%E5%8E%82%E8%BF%90%E8%A1%8C/">
+										2.电力系统中的电厂运行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										水处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E6%B0%B4%E4%B8%AD%E5%8F%AF%E6%BA%B6%E6%80%A7%E6%B0%94%E4%BD%93%E5%8E%BB%E9%99%A4/">
+										水中可溶性气体去除
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E6%B0%B4%E7%9A%84%E7%83%AD%E5%A4%84%E7%90%86/">
+										水的热处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%94%B5%E5%8E%82%E7%9A%84%E9%99%84%E5%8A%A0%E6%B0%B4%E5%92%8C%E5%86%B7%E5%87%9D%E6%B0%B4%E5%A4%84%E7%90%86%E7%9A%84%E5%87%86%E5%A4%87/">
+										电厂的附加水和冷凝水处理的准备
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										离子交换水处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/">
+										有关离子交换过程和离子交换剂的一般信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E8%86%9C%E6%B0%B4%E5%A4%84%E7%90%86%E6%B3%95/">
+										膜水处理法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	绪论
+</h1>
+<div class="article-meta">
+	
+	<span>Chzhan Yeb</span>
+	<span>2021-04-20 09:55:49</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h1 id="人格心理科学的特点"><a href="#人格心理科学的特点" class="headerlink" title="人格心理科学的特点"></a>人格心理科学的特点</h1><h2 id="研究内容侧重于人的心理差异"><a href="#研究内容侧重于人的心理差异" class="headerlink" title="研究内容侧重于人的心理差异"></a>研究内容侧重于人的心理差异</h2><p>人格心理学关注共同心理现象在每个人身上所表现出的差异性，探讨人格差异现象的机制与规律（认知风格）。</p>
+<blockquote>
+<p>最早发现并研究：英国人 高尔顿（Francis Galton，1870）。测量人的颜色知觉、反应时和听觉灵敏度等心理机能时发现，随后开创差异心理学。</p>
+</blockquote>
+<p>实际上，心理机能的共同特征与个体差异是在一个人身上表现出的两种规律，二者相互交织在一起，共性中包含着个性，个性中体现着共性。 </p>
+<blockquote>
+<p>人的风格系统</p>
+<p>风格是心理差异的一种表现形式，包含知、情、意的成分。认知风格可划分为：古典主义—浪漫主义，客观主义—主观主义，辐合思想—发散思维，逻辑严密性—富于幻想性 等。情绪风格：超然主义—移情主义。动机风格：父权主义—母权主义。</p>
+</blockquote>
+<h2 id="研究策略强调人格的整体统合性"><a href="#研究策略强调人格的整体统合性" class="headerlink" title="研究策略强调人格的整体统合性"></a>研究策略强调人格的整体统合性</h2><p>按照研究取向划分，可分为：<strong>微观主义</strong> 与 <strong>宏观主义</strong></p>
+<p><strong>微观主义取向 </strong> 是以注重<strong>细节</strong>的分析性研究为主导的方法论。</p>
+<p><strong>宏观主义取向</strong>  是以注重<strong>整体</strong>的综合性研究为主导的方法论。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">微观研究策略</th>
+<th style="text-align:center">宏观研究策略</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">研究领域</td>
+<td style="text-align:center">认知心理学主导</td>
+<td style="text-align:center">人格心理学主导</td>
+</tr>
+<tr>
+<td style="text-align:center">研究思路</td>
+<td style="text-align:center">从下至上</td>
+<td style="text-align:center">从上至下</td>
+</tr>
+<tr>
+<td style="text-align:center">研究单位</td>
+<td style="text-align:center">小单位</td>
+<td style="text-align:center">大单位</td>
+</tr>
+<tr>
+<td style="text-align:center">研究系统</td>
+<td style="text-align:center">各单元分割独立</td>
+<td style="text-align:center">各单元联系与统合</td>
+</tr>
+<tr>
+<td style="text-align:center">研究方法</td>
+<td style="text-align:center">注重客观分析与实验室研究</td>
+<td style="text-align:center">注重主观分析与自然情景中把人作为一个整体人来研究</td>
+</tr>
+<tr>
+<td style="text-align:center">其他</td>
+<td style="text-align:center">实验可能低估人在自然环境下所达到的准确水平</td>
+<td style="text-align:center">流程：人性哲学-人格理论-咨询理论-咨询与治疗技术</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="研究特征注重人的内部稳定性"><a href="#研究特征注重人的内部稳定性" class="headerlink" title="研究特征注重人的内部稳定性"></a>研究特征注重人的内部稳定性</h2><p>注重内部的稳定成分如何导致对同一刺激产生不同反应的。仅从外部环境因素来解释人的复杂行为是不够的，还需要寻找内部稳定的机制来解释人的全部行为。</p>
+<p>划分：综合型认知方式 与 分析型认知方式</p>
+<p>人格是个体内部逐渐形成的一种稳定的结构成分，他是在人与外部世界的相互作用中，由客观现实逐渐“内化”的结果。</p>
+<blockquote>
+<p>挫折的S-O-R模型</p>
+</blockquote>
+<h1 id="人格研究主题"><a href="#人格研究主题" class="headerlink" title="人格研究主题"></a>人格研究主题</h1><h2 id="人性哲学"><a href="#人性哲学" class="headerlink" title="人性哲学"></a>人性哲学</h2><p>是第一个基本论题，因为人格心理学是研究人的学科，人性哲学体现了每位学者看待人的态度与对人的思考取向。</p>
+<h2 id="人格结构"><a href="#人格结构" class="headerlink" title="人格结构"></a>人格结构</h2><h2 id="人格动力"><a href="#人格动力" class="headerlink" title="人格动力"></a>人格动力</h2><h2 id="人格发展"><a href="#人格发展" class="headerlink" title="人格发展"></a>人格发展</h2><h2 id="人格成因"><a href="#人格成因" class="headerlink" title="人格成因"></a>人格成因</h2><h2 id="人格改变"><a href="#人格改变" class="headerlink" title="人格改变"></a>人格改变</h2><h2 id="人格测量"><a href="#人格测量" class="headerlink" title="人格测量"></a>人格测量</h2>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/20/Python/%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/04/19/Python/%E8%AF%AD%E6%B3%95/%E6%B3%A8%E9%87%8A%E5%8F%8A%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Chzhan Yeb</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

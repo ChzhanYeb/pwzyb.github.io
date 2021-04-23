@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		变量 | 
+	 
+	尼古拉斯冰的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "ChzhanYeb.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">尼古拉斯冰的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="https://github.com/ChzhanYeb" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Fortran
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/21/Fortran/1.%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										1.基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
+										2.输入输出基础
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/23/Fortran/3.%E7%B1%BB%E5%9E%8B/">
+										3.类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/Fortran/4.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
+										4.流程控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/5-%E5%BE%AA%E7%8E%AF/">
+										5-循环
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/6-%E6%95%B0%E7%BB%84/">
+										6-数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/7-%E5%87%BD%E6%95%B0/">
+										7-函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/Fortran/Fortran%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
+										Fortran其他相关知识点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法集
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										高斯-约当消去法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/Fortran/%E7%AE%97%E6%B3%95%E9%9B%86/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/%E9%AB%98%E6%96%AF-%E7%BA%A6%E5%BD%93%E6%B6%88%E5%8E%BB%E6%B3%95/">
+										高斯-约当消去法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Python
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										语法
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2021/04/20/Python/%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F/">
+										变量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/Python/%E8%AF%AD%E6%B3%95/%E6%B3%A8%E9%87%8A%E5%8F%8A%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6/">
+										注释及算数运算符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										俄语
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										前置词
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E5%8E%9F%E5%9B%A0%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
+										表示原因关系的前置词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E7%A9%BA%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
+										表示空间关系的前置词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										信息技术
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/14/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E6%A6%82%E8%BF%B0/">
+										某些操作系统的功能概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%B0%E4%BB%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6/">
+										现代操作系统的主要组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆类型及结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E5%8E%8B%E6%B0%B4%E5%A0%86/">
+										压水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E6%B2%B8%E6%B0%B4%E5%A0%86/">
+										沸水堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/17/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%BB%93%E6%9E%84/%E7%9F%B3%E5%A2%A8%E6%85%A2%E5%8C%96%E5%8F%8D%E5%BA%94%E5%A0%86/">
+										石墨慢化反应堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										声学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										反应堆相关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/28/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-3%E5%B0%8F%E6%B5%81%E9%87%8F%E6%8C%AF%E8%8D%A1%E5%9C%A8%E9%A2%84%E8%92%B8%E6%B1%BD%E5%8F%91%E7%94%9F%E5%85%83%E4%BB%B6%E4%B8%AD%E7%9A%84%E4%BC%A0%E6%92%AD%E9%80%9F%E5%BA%A6/">
+										1-3小流量振荡在预蒸汽发生元件中的传播速度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E5%A3%B0%E5%AD%A6/%E5%8F%8D%E5%BA%94%E5%A0%86%E7%9B%B8%E5%85%B3/1-4%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B6%B2%E5%8E%8B%E5%85%83%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7%EF%BC%8C%E7%89%B9%E5%BE%81%EF%BC%8C%E5%8F%82%E6%95%B0/">
+										1-4非线性液压元件的基本特性，特征，参数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										心理学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										人格心理学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1.人格心理学导论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/20/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/1.%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/%E7%BB%AA%E8%AE%BA/">
+										绪论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3.新精神分析学派
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/23/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/3.%E6%96%B0%E7%B2%BE%E7%A5%9E%E5%88%86%E6%9E%90%E5%AD%A6%E6%B4%BE/3.4.%20%E8%89%BE%E9%87%8C%E5%85%8B%E6%A3%AE%E4%BA%BA%E6%A0%BC%E7%90%86%E8%AE%BA/">
+										3.4. 艾里克森人格理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										文献笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										射流理论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/03/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Experimental%20research%20on%20the%20characteristics%20of%20steam%20jet/">
+										Experimental research on the characteristics of steam jet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/24/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%B0%84%E6%B5%81%E7%90%86%E8%AE%BA/Turbulent%20gravitational%20convection%20from%20maintained%20and%20instantaneous%20sources/">
+										Turbulent gravitational convection from maintained and instantaneous sources
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										旅行
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/15/%E6%97%85%E8%A1%8C/%E6%91%A9%E5%B0%94%E6%9B%BC%E6%96%AF%E5%85%8B%E4%BA%94%E6%97%A5%E8%A1%8C/">
+										摩尔曼斯克五日行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核反应堆物理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E5%BC%B9%E6%80%A7%E6%95%A3%E5%B0%84%E7%A2%B0%E6%92%9E%E5%85%AC%E5%BC%8F%E5%8F%8A%E8%83%BD%E9%87%8F%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+										中子弹性散射碰撞公式及能量概率分布公式推导
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/">
+										中子扩散理论与计算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%85%A2%E5%8C%96%E8%BF%87%E7%A8%8B/">
+										中子的慢化过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/26/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E7%9A%84%E6%89%A9%E6%95%A3%E8%BF%87%E7%A8%8B/">
+										中子的扩散过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/25/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E5%8A%9F%E7%8E%87%E4%B8%8E%E8%A1%B0%E5%8F%98%E5%8A%9F%E7%8E%87/">
+										核反应堆功率与衰变功率
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										核电站
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0.习题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-10/">
+										задача-10
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-12-1/">
+										задача-12-1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-16/">
+										задача-16
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-20/">
+										задача-20
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-21/">
+										задача-21
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/13/%E6%A0%B8%E7%94%B5%E7%AB%99/1.%E6%A0%B8%E7%94%B5%E5%8F%91%E5%B1%95%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%89%8D%E6%99%AF/">
+										1.核电发展现状与前景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/20/%E6%A0%B8%E7%94%B5%E7%AB%99/2.%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E7%94%B5%E5%8E%82%E8%BF%90%E8%A1%8C/">
+										2.电力系统中的电厂运行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										水处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E6%B0%B4%E4%B8%AD%E5%8F%AF%E6%BA%B6%E6%80%A7%E6%B0%94%E4%BD%93%E5%8E%BB%E9%99%A4/">
+										水中可溶性气体去除
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E6%B0%B4%E7%9A%84%E7%83%AD%E5%A4%84%E7%90%86/">
+										水的热处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/12/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%94%B5%E5%8E%82%E7%9A%84%E9%99%84%E5%8A%A0%E6%B0%B4%E5%92%8C%E5%86%B7%E5%87%9D%E6%B0%B4%E5%A4%84%E7%90%86%E7%9A%84%E5%87%86%E5%A4%87/">
+										电厂的附加水和冷凝水处理的准备
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										离子交换水处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/03/29/%E6%B0%B4%E5%A4%84%E7%90%86/%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E6%B0%B4%E5%A4%84%E7%90%86/%E6%9C%89%E5%85%B3%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E8%BF%87%E7%A8%8B%E5%92%8C%E7%A6%BB%E5%AD%90%E4%BA%A4%E6%8D%A2%E5%89%82%E7%9A%84%E4%B8%80%E8%88%AC%E4%BF%A1%E6%81%AF/">
+										有关离子交换过程和离子交换剂的一般信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/19/%E6%B0%B4%E5%A4%84%E7%90%86/%E8%86%9C%E6%B0%B4%E5%A4%84%E7%90%86%E6%B3%95/">
+										膜水处理法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	变量
+</h1>
+<div class="article-meta">
+	
+	<span>Chzhan Yeb</span>
+	<span>2021-04-20 19:40:46</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h1 id="变量的命名"><a href="#变量的命名" class="headerlink" title="变量的命名"></a>变量的命名</h1><h2 id="标识符和关键词"><a href="#标识符和关键词" class="headerlink" title="标识符和关键词"></a>标识符和关键词</h2><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>标示符就是程序员定义的 <strong>变量名</strong>、<strong>函数名</strong></p>
+<ul>
+<li>标示符可以由 <strong>字母</strong>、<strong>下划线</strong> 和 <strong>数字</strong> 组成</li>
+<li><strong>不能以数字开头</strong></li>
+<li><strong>不能与关键字重名</strong></li>
+</ul>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><ul>
+<li><strong>关键字</strong> 就是在 <code>Python</code> 内部已经使用的标识符</li>
+<li><strong>关键字</strong> 具有特殊的功能和含义</li>
+<li>开发者 <strong>不允许定义和关键字相同的名字的标示符</strong></li>
+</ul>
+<p>通过以下命令可以查看 <code>Python</code> 中的关键字</p>
+<pre><code class="lang-python">In [1]: import keyword
+In [2]: print(keyword.kwlist)
+</code></pre>
+<blockquote>
+<ul>
+<li><p><code>import</code> <strong>关键字</strong> 可以导入一个 <strong>“工具包”</strong></p>
+</li>
+<li><p>在 <code>Python</code> 中不同的工具包，提供有不同的工具</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="变量的命名规则"><a href="#变量的命名规则" class="headerlink" title="变量的命名规则"></a>变量的命名规则</h2><blockquote>
+<p><strong>命名规则</strong> 可以被视为一种 <strong>惯例</strong>，并无绝对与强制<br>目的是为了 <strong>增加代码的识别和可读性</strong></p>
+</blockquote>
+<p><code>Python</code> 中的 <strong>标识符</strong> 是 <strong>区分大小写的</strong></p>
+<ol>
+<li>在定义变量时，为了保证代码格式，<code>=</code> 的左右应该各保留一个空格</li>
+<li>在 <code>Python</code> 中，如果 <strong>变量名</strong> 需要由 <strong>二个</strong> 或 <strong>多个单词</strong> 组成时，可以按照以下方式命名<ol>
+<li>每个单词都使用小写字母</li>
+<li>单词与单词之间使用 <strong><code>_</code>下划线</strong> 连接</li>
+</ol>
+</li>
+</ol>
+<h3 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h3><ul>
+<li>当 <strong>变量名</strong> 是由二个或多个单词组成时，还可以利用驼峰命名法来命名</li>
+<li><strong>小驼峰式命名法</strong><ul>
+<li>第一个单词以小写字母开始，后续单词的首字母大写</li>
+<li>例如：<code>firstName</code>、<code>lastName</code></li>
+</ul>
+</li>
+<li><strong>大驼峰式命名法</strong><ul>
+<li>每一个单词的首字母都采用大写字母</li>
+<li>例如：<code>FirstName</code>、<code>LastName</code>、<code>CamelCase</code> </li>
+</ul>
+</li>
+</ul>
+<h1 id="变量的基本使用"><a href="#变量的基本使用" class="headerlink" title="变量的基本使用"></a>变量的基本使用</h1><h2 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h2><ul>
+<li>在 Python 中，每个变量 <strong>在使用前都必须赋值</strong>，变量 <strong>赋值以后</strong> 该变量 <strong>才会被创建</strong></li>
+<li>等号（=）用来给变量赋值<ul>
+<li><code>=</code> 左边是一个变量名</li>
+<li><code>=</code> 右边是存储在变量中的值</li>
+</ul>
+</li>
+</ul>
+<pre><code>变量名 = 值
+</code></pre><h2 id="变量的类型"><a href="#变量的类型" class="headerlink" title="变量的类型"></a>变量的类型</h2><ul>
+<li>在内存中创建一个变量，会包括：<ol>
+<li>变量的名称</li>
+<li>变量保存的数据</li>
+<li>变量存储数据的类型</li>
+<li>变量的地址（标示）</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>在 <code>Python</code> 中定义变量是 <strong>不需要指定类型</strong>（在其他很多高级语言中都需要）</li>
+<li>数据类型可以分为 <strong>数字型</strong> 和 <strong>非数字型</strong></li>
+<li>数字型<ul>
+<li>整型 (<code>int</code>)</li>
+<li>浮点型（<code>float</code>）</li>
+<li>布尔型（<code>bool</code>） <ul>
+<li>真 <code>True</code> <code>非 0 数</code> —— <strong>非零即真</strong></li>
+<li>假 <code>False</code> <code>0</code></li>
+</ul>
+</li>
+<li>复数型 (<code>complex</code>)<ul>
+<li>主要用于科学计算，例如：平面场问题、波动问题、电感电容等问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非数字型<ul>
+<li>字符串</li>
+<li>列表</li>
+<li>元组</li>
+<li>字典</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>提示：在 Python 2.x 中，<strong>整数</strong> 根据保存数值的长度还分为：</p>
+<ul>
+<li><code>int</code>（整数）</li>
+<li><code>long</code>（长整数）</li>
+</ul>
+</blockquote>
+<ul>
+<li>使用 <code>type</code> 函数可以查看一个变量的类型</li>
+</ul>
+<h2 id="不同类型变量之间的计算"><a href="#不同类型变量之间的计算" class="headerlink" title="不同类型变量之间的计算"></a>不同类型变量之间的计算</h2><h3 id="1-数字型变量-之间可以直接计算"><a href="#1-数字型变量-之间可以直接计算" class="headerlink" title="1.数字型变量 之间可以直接计算"></a>1.<strong>数字型变量</strong> 之间可以直接计算</h3><p>在 Python 中，两个数字型变量是可以直接进行 算数运算的</p>
+<p>如果变量是 <code>bool</code> 型，在计算时</p>
+<ul>
+<li><code>True</code> 对应的数字是 <code>1</code></li>
+<li><code>False</code> 对应的数字是 <code>0</code></li>
+</ul>
+<h3 id="2-字符串变量-之间使用-拼接字符串"><a href="#2-字符串变量-之间使用-拼接字符串" class="headerlink" title="2.字符串变量 之间使用 + 拼接字符串"></a>2.<strong>字符串变量</strong> 之间使用 <code>+</code> 拼接字符串</h3><p>在 Python 中，字符串之间可以使用 <code>+</code> 拼接生成新的字符串</p>
+<h3 id="3-字符串变量-可以和-整数-使用-重复拼接相同的字符串"><a href="#3-字符串变量-可以和-整数-使用-重复拼接相同的字符串" class="headerlink" title="3.字符串变量 可以和 整数 使用 * 重复拼接相同的字符串"></a>3.<strong>字符串变量</strong> 可以和 <strong>整数</strong> 使用 <code>*</code> 重复拼接相同的字符串</h3><h3 id="4-数字型变量-和-字符串-之间-不能进行其他计算"><a href="#4-数字型变量-和-字符串-之间-不能进行其他计算" class="headerlink" title="4.数字型变量 和 字符串 之间 不能进行其他计算"></a>4.<strong>数字型变量</strong> 和 <strong>字符串</strong> 之间 <strong>不能进行其他计算</strong></h3><h2 id="变量的输入"><a href="#变量的输入" class="headerlink" title="变量的输入"></a>变量的输入</h2><p>在 Python 中，如果要获取用户在 <strong>键盘</strong> 上的输入信息，需要使用到 <code>input</code> 函数</p>
+<h3 id="关于函数"><a href="#关于函数" class="headerlink" title="关于函数"></a>关于函数</h3><ul>
+<li><p>一个 <strong>提前准备好的功能</strong>(别人或者自己写的代码)，<strong>可以直接使用</strong>，而 <strong>不用关心内部的细节</strong></p>
+</li>
+<li><p>目前已经学习过的函数</p>
+<p>| 函数     | 说明              |<br>| ———— | ————————- |<br>| print(x) | 将 x 输出到控制台 |<br>| type(x)  | 查看 x 的变量类型 |</p>
+</li>
+</ul>
+<h3 id="input-函数实现键盘输入"><a href="#input-函数实现键盘输入" class="headerlink" title="input 函数实现键盘输入"></a>input 函数实现键盘输入</h3><ul>
+<li><p>在 Python 中可以使用 <code>input</code> 函数从键盘等待用户的输入</p>
+</li>
+<li><p>用户输入的 <strong>任何内容</strong> Python 都认为是一个 <strong>字符串</strong></p>
+</li>
+<li><p>语法如下：</p>
+<pre><code>字符串变量 = input(&quot;提示信息：&quot;)
+</code></pre></li>
+</ul>
+<h3 id="类型转换函数"><a href="#类型转换函数" class="headerlink" title="类型转换函数"></a>类型转换函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int(x)</td>
+<td>将 x 转换为一个整数</td>
+</tr>
+<tr>
+<td>float(x)</td>
+<td>将 x 转换到一个浮点数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="变量的格式化输出"><a href="#变量的格式化输出" class="headerlink" title="变量的格式化输出"></a>变量的格式化输出</h3><ul>
+<li><p>在 Python 中可以使用 <code>print</code> 函数将信息输出到控制台</p>
+</li>
+<li><p>如果希望输出文字信息的同时，<strong>一起输出</strong> <strong>数据</strong>，就需要使用到 <strong>格式化操作符</strong></p>
+</li>
+<li><p><code>%</code> 被称为 <strong>格式化操作符</strong>，专门用于处理字符串中的格式</p>
+<ul>
+<li>包含 <code>%</code> 的字符串，被称为 <strong>格式化字符串</strong></li>
+<li><code>%</code> 和不同的 <strong>字符</strong> 连用，<strong>不同类型的数据</strong> 需要使用 <strong>不同的格式化字符</strong></li>
+</ul>
+<p>| 格式化字符 | 含义                                                         |<br>| ————— | —————————————————————————————— |<br>| %s         | 字符串                                                       |<br>| %d         | 有符号十进制整数，<code>%06d</code> 表示输出的整数显示位数，不足的地方使用 <code>0</code> 补全 |<br>| %f         | 浮点数，<code>%.2f</code> 表示小数点后只显示两位                        |<br>| %%         | 输出 <code>%</code>                                                     |</p>
+</li>
+</ul>
+<ul>
+<li><p>语法格式如下：</p>
+<pre><code>print(&quot;格式化字符串&quot; % 变量1)
+
+print(&quot;格式化字符串&quot; % (变量1, 变量2...))
+</code></pre></li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/04/20/%E6%A0%B8%E7%94%B5%E7%AB%99/2.%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E7%94%B5%E5%8E%82%E8%BF%90%E8%A1%8C/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/04/20/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/1.%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6%E5%AF%BC%E8%AE%BA/%E7%BB%AA%E8%AE%BA/">
+                1.人格心理学导论
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+
+	</div>
+	<div id="footer">
+	<p>
+	©2021-<span id="footerYear"></span> 
+	<a href="/">Chzhan Yeb</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
