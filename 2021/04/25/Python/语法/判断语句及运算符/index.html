@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		задача-20 | 
+		判断语句及运算符 | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -247,7 +247,7 @@ var _hmt = _hmt || [];
 									</a>
 									
 							<ul>
-								<li class="file">
+								<li class="file active">
 									<a href="/2021/04/25/Python/%E8%AF%AD%E6%B3%95/%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">
 										判断语句及运算符
 									</a>
@@ -657,7 +657,7 @@ var _hmt = _hmt || [];
 							</ul>
 			
 							<ul>
-								<li class="file active">
+								<li class="file">
 									<a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-20/">
 										задача-20
 									</a>
@@ -775,12 +775,12 @@ var _hmt = _hmt || [];
 	<div id="content">
 		<h1 id="article-title">
 
-	задача-20
+	判断语句及运算符
 </h1>
 <div class="article-meta">
 	
 	<span>Chzhan Yeb</span>
-	<span>2021-04-11 23:28:07</span>
+	<span>2021-04-25 09:37:06</span>
 		<div id="article-categories">
     
 		<span>Categories：</span>
@@ -796,52 +796,389 @@ var _hmt = _hmt || [];
 </div>
 
 <div id="article-content">
-	<h3 id="Вопрос"><a href="#Вопрос" class="headerlink" title="Вопрос:"></a>Вопрос:</h3><p>Паротурбинная установка вырабатывает электрическую мощность и теплофикационную мощность для потребителей, преобразуя подводимую тепловую мощность 1540 МВт с КПД  $η_{эт}$ = 36,5% . Определить электрическую мощность, если известно, что электрический КПД в этом режиме $η_э$ = 34%; КПД по производству теплофикационной мощности принять $η_т$ = 98% .</p>
-<p>蒸汽轮机厂为用户产生电力和热能，将提供的1540兆瓦的热能转换成$η_{эт}$ = 36.5％的效率。 如果已知在此模式下的电效率为$η_э$ = 34％，则确定电功率；否则，确定电功率。 假设用于生产加热能力的效率为$η_т$= 98％。</p>
-<h3 id="Решение"><a href="#Решение" class="headerlink" title="Решение:"></a>Решение:</h3><p>Известно:</p>
-<script type="math/tex; mode=display">
-\mathrm{Q}_{0}=1540 \quad \mathrm{МВт}\\
-\eta_{эт}=36.5 \%=0.365\\
-\eta_{э}=34 \%=0.34\\
-\eta_{\mathrm{т}}:=98 \%=0.98</script><ol>
-<li><script type="math/tex; mode=display">
-\eta_{эт}=\frac{\mathrm{N}_{\text {эл }}+\mathrm{Q}_{\mathrm{T} 0}}{\mathrm{Q}_{0}}</script><p>$Q_{т0}$ - тепловая мощность , отведённая внешнему потребителю</p>
-</li>
-<li><script type="math/tex; mode=display">
-\eta_{э}=\frac{N_{э}}{Q_{0}-Q_{т}}</script><p>$Q_{т}$ - теплота, отданная на теплофикацию</p>
-</li>
-<li><script type="math/tex; mode=display">
-η _ {т } = \frac { Q _ {т0} } { Q _ {т} }</script></li>
-<li><script type="math/tex; mode=display">
-\mathrm{N}_{\text {эл }}=\mathrm{Q}_{0} \cdot \eta_{эт}-\mathrm{Q}_{\mathrm{т} 0}</script><script type="math/tex; mode=display">
-\mathrm{Q}_{\mathrm{T} 0}=\mathrm{Q}_{\mathrm{T}} \cdot \eta_{\mathrm{T}}</script><script type="math/tex; mode=display">
-\mathrm{Q}_{т}=\mathrm{Q}_{0}-\frac{\mathrm{N}_{Э }}{\eta_{Э}}</script><script type="math/tex; mode=display">
-Q_{э}=\frac{\mathrm{N}_{Э }}{\eta_{э}}</script></li>
-<li><p>Подставим $Q_{т}$ , и $Q_{т0}$ в уравнение $\mathrm{N}_{Э }$ </p>
-<script type="math/tex; mode=display">
-\mathrm{N}_{\text {эл }}=\mathrm{Q}_{0} \cdot \eta_{\mathrm{эт}}-\eta_{\mathrm{т}} \cdot\left(\mathrm{Q}_{0}-\frac{\mathrm{N}_{\mathrm{э}}}{\eta_{\mathrm{э}}}\right)</script></li>
-<li><p>Раскроем скобки и выразим из уравнения 5 </p>
-</li>
-</ol>
-<script type="math/tex; mode=display">
-N _ {эл}= \frac { Q _ { 0 } \cdot η _ { эл } - η _ { эл }\cdot Q _ { 0 }} { 1 - \frac { η _ {т} } { η _ { э} } }=\\
-= \frac { 1540 \cdot 0.365 - 0.98 \cdot 1540 } { 1 - \frac { 0.98 } { 0.34 } } = 503.147 МВт</script>
+	<h1 id="判断（if）语句"><a href="#判断（if）语句" class="headerlink" title="判断（if）语句"></a>判断（if）语句</h1><h2 id="判断的定义"><a href="#判断的定义" class="headerlink" title="判断的定义"></a>判断的定义</h2><ul>
+<li>如果 <strong>条件满足</strong>，才能做某件事情，</li>
+<li>如果 <strong>条件不满足</strong>，就做另外一件事情，或者什么也不做</li>
+</ul>
+<blockquote>
+<p>正是因为有了判断，才使得程序世界丰富多彩，充满变化！</p>
+<p><strong>判断语句</strong> 又被称为 “分支语句”，正是因为有了判断，才让程序有了很多的分支</p>
+</blockquote>
+<h2 id="语句格式"><a href="#语句格式" class="headerlink" title="语句格式"></a>语句格式</h2><pre><code class="lang-python">if 要判断的条件:
+    条件成立时，要做的事情
+    ……
+else:
+    条件不成立时，要做的事情
+    ……
+</code></pre>
+<p>注意：</p>
+<ul>
+<li><code>if</code> 和 <code>else</code> 语句以及各自的缩进部分共同是一个 <strong>完整的代码块</strong></li>
+</ul>
+<h3 id="进阶语句1"><a href="#进阶语句1" class="headerlink" title="进阶语句1"></a>进阶语句1</h3><pre><code class="lang-python">if 条件1:
+    条件1满足执行的代码
+    ……
+elif 条件2:
+    条件2满足时，执行的代码
+    ……
+elif 条件3:
+    条件3满足时，执行的代码
+    ……
+else:
+    以上条件都不满足时，执行的代码
+    ……
+</code></pre>
+<h3 id="进阶语句2"><a href="#进阶语句2" class="headerlink" title="进阶语句2"></a>进阶语句2</h3><pre><code class="lang-python">if 条件 1:
+    条件 1 满足执行的代码
+    ……
+
+    if 条件 1 基础上的条件 2:
+        条件 2 满足时，执行的代码
+        ……    
+
+    # 条件 2 不满足的处理
+    else:
+        条件 2 不满足时，执行的代码
+
+# 条件 1 不满足的处理
+else:
+    条件1 不满足时，执行的代码
+    ……
+</code></pre>
+<h2 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h2><ul>
+<li><strong>逻辑运算符</strong> 可以把 <strong>多个条件</strong> 按照 <strong>逻辑</strong> 进行 <strong>连接</strong>，变成 <strong>更复杂的条件</strong></li>
+<li>Python 中的 <strong>逻辑运算符</strong> 包括：<strong>与 and</strong>／<strong>或 or</strong>／<strong>非 not</strong> 三种</li>
+</ul>
+<h3 id="and"><a href="#and" class="headerlink" title="and"></a>and</h3><pre><code>条件1 and 条件2
+</code></pre><ul>
+<li><strong>与</strong>／<strong>并且</strong></li>
+<li>两个条件同时满足，返回 <code>True</code></li>
+<li>只要有一个不满足，就返回 <code>False</code></li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">条件 1</th>
+<th style="text-align:center">条件 2</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">成立</td>
+</tr>
+<tr>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">不成立</td>
+</tr>
+<tr>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">不成立</td>
+</tr>
+<tr>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">不成立</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="or"><a href="#or" class="headerlink" title="or"></a>or</h3><pre><code>条件1 or 条件2
+</code></pre><ul>
+<li><strong>或</strong>／<strong>或者</strong></li>
+<li>两个条件只要有一个满足，返回 <code>True</code></li>
+<li>两个条件都不满足，返回 <code>False</code></li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">条件 1</th>
+<th style="text-align:center">条件 2</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">成立</td>
+</tr>
+<tr>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">成立</td>
+</tr>
+<tr>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">成立</td>
+</tr>
+<tr>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">不成立</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="not"><a href="#not" class="headerlink" title="not"></a>not</h3><pre><code>not 条件
+</code></pre><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">条件</th>
+<th style="text-align:center">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">成立</td>
+<td style="text-align:center">不成立</td>
+</tr>
+<tr>
+<td style="text-align:center">不成立</td>
+<td style="text-align:center">成立</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:center">描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加</td>
+<td>10 + 20 = 30</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">减</td>
+<td>10 - 20 = -10</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">乘</td>
+<td>10 * 20 = 200</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">除</td>
+<td>10 / 20 = 0.5</td>
+</tr>
+<tr>
+<td style="text-align:center">//</td>
+<td style="text-align:center">取整除</td>
+<td>返回除法的整数部分（商） 9 // 2 输出结果 4</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">取余数</td>
+<td>返回除法的余数 9 % 2 = 1</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">幂</td>
+<td>又称次方、乘方，2 ** 3 = 8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>在 Python 中 <code>*</code> 运算符还可以用于字符串，计算结果就是字符串重复指定次数的结果</li>
+</ul>
+<h2 id="比较（关系）运算符"><a href="#比较（关系）运算符" class="headerlink" title="比较（关系）运算符"></a>比较（关系）运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>检查两个操作数的值是否 <strong>相等</strong>，如果是，则条件成立，返回 True</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>检查两个操作数的值是否 <strong>不相等</strong>，如果是，则条件成立，返回 True</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>检查左操作数的值是否 <strong>大于</strong> 右操作数的值，如果是，则条件成立，返回 True</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>检查左操作数的值是否 <strong>小于</strong> 右操作数的值，如果是，则条件成立，返回 True</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>检查左操作数的值是否 <strong>大于或等于</strong> 右操作数的值，如果是，则条件成立，返回 True</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>检查左操作数的值是否 <strong>小于或等于</strong> 右操作数的值，如果是，则条件成立，返回 True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>逻辑表达式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>and</td>
+<td>x and y</td>
+<td>只有 x 和 y 的值都为 True，才会返回 True<br>否则只要 x 或者 y 有一个值为 False，就返回 False</td>
+</tr>
+<tr>
+<td>or</td>
+<td>x or y</td>
+<td>只要 x 或者 y 有一个值为 True，就返回 True<br>只有 x 和 y 的值都为 False，才会返回 False</td>
+</tr>
+<tr>
+<td>not</td>
+<td>not x</td>
+<td>如果 x 为 True，返回 False<br>如果 x 为 False，返回 True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><ul>
+<li>在 Python 中，使用 <code>=</code> 可以给变量赋值</li>
+<li>在算术运算时，为了简化代码的编写，<code>Python</code> 还提供了一系列的 与 <strong>算术运算符</strong> 对应的 <strong>赋值运算符</strong></li>
+<li>注意：<strong>赋值运算符中间不能使用空格</strong></li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>简单的赋值运算符</td>
+<td>c = a + b 将 a + b 的运算结果赋值为 c</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>加法赋值运算符</td>
+<td>c += a 等效于 c = c + a</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>减法赋值运算符</td>
+<td>c -= a 等效于 c = c - a</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>乘法赋值运算符</td>
+<td>c <em>= a 等效于 c = c </em> a</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>除法赋值运算符</td>
+<td>c /= a 等效于 c = c / a</td>
+</tr>
+<tr>
+<td>//=</td>
+<td>取整除赋值运算符</td>
+<td>c //= a 等效于 c = c // a</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>取 <strong>模</strong> (余数)赋值运算符</td>
+<td>c %= a 等效于 c = c % a</td>
+</tr>
+<tr>
+<td>**=</td>
+<td>幂赋值运算符</td>
+<td>$c <strong>= a$ 等效于 $c = c </strong> a$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h2><p>以下表格的算数优先级由高到最低顺序排列</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**</td>
+<td>幂 (最高优先级)</td>
+</tr>
+<tr>
+<td>* / % //</td>
+<td>乘、除、取余数、取整除</td>
+</tr>
+<tr>
+<td>+ -</td>
+<td>加法、减法</td>
+</tr>
+<tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>比较运算符</td>
+</tr>
+<tr>
+<td>== !=</td>
+<td>等于运算符</td>
+</tr>
+<tr>
+<td>= %= /= //= -= += <em>= *</em>=</td>
+<td>赋值运算符</td>
+</tr>
+<tr>
+<td>not or and</td>
+<td>逻辑运算符</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/04/11/%E6%A0%B8%E7%94%B5%E7%AB%99/0.%E4%B9%A0%E9%A2%98/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B0-21/">
+              <a href="/2021/04/25/Python/%E8%AF%AD%E6%B3%95/%E5%BE%AA%E7%8E%AF/">
                   <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  задача-21
+                  循环
               </a>
             
         </div>
         <div class="item right">
             
-              <a href="/2021/04/06/%E4%BF%84%E8%AF%AD/%E5%89%8D%E7%BD%AE%E8%AF%8D/%E8%A1%A8%E7%A4%BA%E7%A9%BA%E9%97%B4%E5%85%B3%E7%B3%BB%E7%9A%84%E5%89%8D%E7%BD%AE%E8%AF%8D/">
-                表示空间关系的前置词
+              <a href="/2021/04/23/%E5%BF%83%E7%90%86%E5%AD%A6/%E4%BA%BA%E6%A0%BC%E5%BF%83%E7%90%86%E5%AD%A6/3.%E6%96%B0%E7%B2%BE%E7%A5%9E%E5%88%86%E6%9E%90%E5%AD%A6%E6%B4%BE/3.4.%20%E8%89%BE%E9%87%8C%E5%85%8B%E6%A3%AE%E4%BA%BA%E6%A0%BC%E7%90%86%E8%AE%BA/">
+                3.新精神分析学派
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

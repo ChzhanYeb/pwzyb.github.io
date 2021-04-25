@@ -246,8 +246,26 @@ var _hmt = _hmt || [];
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/04/25/Python/%E8%AF%AD%E6%B3%95/%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5%E5%8F%8A%E8%BF%90%E7%AE%97%E7%AC%A6/">
+										判断语句及运算符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/04/20/Python/%E8%AF%AD%E6%B3%95/%E5%8F%98%E9%87%8F/">
 										变量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/25/Python/%E8%AF%AD%E6%B3%95/%E5%BE%AA%E7%8E%AF/">
+										循环
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -756,6 +774,56 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/03/23/Fortran/3.%E7%B1%BB%E5%9E%8B/">
+				<h2 class="index-title">
+					3.类型
+				</h2>
+				<div class="index-brief">
+					类型说明语句一般形式为：
+类型说明[(种别说明)][,属性说明表] :: 变量名表[=初值]
+在某些场合下，种别说明与属性说明可以省略，此时它的一般形式是最基本形式：
+类型说明:: 变量名表
+类型说明：INTEGERprogram main
+    integer         a    ! 默认
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-23</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/03/23/Fortran/2.%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E5%9F%BA%E7%A1%80/">
+				<h2 class="index-title">
+					2.输入输出基础
+				</h2>
+				<div class="index-brief">
+					相关语句
+数据传输语句
+READ，ACCEPT，WRITE，PRINT，REWRITE
+
+
+文件连接、查询和定位语句
+BACKSPACE，CLOSE，DELETE，ENDFILE，INQUIRE，OPEN，REWIND，UNLOCK
+
+
+内在函数 EOF 可以用来判断在文件当前位置之后是否还有剩余数
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-23</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/03/21/Fortran/1.%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					1.基础知识
@@ -852,5 +920,20 @@ A-Za-z
 	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
 </script>
 	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
