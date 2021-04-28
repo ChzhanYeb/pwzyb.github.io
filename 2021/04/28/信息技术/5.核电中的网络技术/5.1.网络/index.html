@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		网络 | 
+		5.1.网络 | 
 	 
 	尼古拉斯冰的笔记
 	</title>
@@ -366,6 +366,15 @@ var _hmt = _hmt || [];
 								<li class="file active">
 									<a href="/2021/04/28/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/5.%E6%A0%B8%E7%94%B5%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/5.1.%E7%BD%91%E7%BB%9C/">
 										5.1.网络
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/04/28/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/5.%E6%A0%B8%E7%94%B5%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/5.2.TCP-IP%E5%8D%8F%E8%AE%AE%E6%A0%88/">
+										5.2.TCP-IP协议栈
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -858,13 +867,27 @@ var _hmt = _hmt || [];
 <p>​        用于在自治系统中形成网络和子网的路由器称为内部网关（interior gateway - IG），将自治系统连接到其他自治系统的路由器称为外部网关（exterior gatewayexterior gateway - EG）。</p>
 <p>​        对于分层组织来说，必须将Internet划分为自治系统，这在扩展时会提供一定程度的灵活性。 在一个自治系统中更改路由协议不会影响其他自治系统的操作。 同样，基于自治系统的Internet建设仅有助于在外部网关上积累必要的信息。 内部网关可以使用足够详细的拓扑互连信息来进行内部路由选择最佳路由。 将这些信息存储在自治系统的外部路由器上将导致其数据库过度增长，这将使其工作成问题。 因此，详细信息保留在自治系统中，外部网关将这些信息整体呈现给整个Internet。 它们提供有关自治系统的最少信息。</p>
 <p>​        单个用户和客户公司可以使用Internet服务提供商（ISP）访问Internet资源。 客户端和ISP之间的连接是通过卫星，无线网络，ADSL（Asymmetric Digital Subscriber Line — асимметричная цифровая абонентская линия — 非对称数字用户线），有线电视基础设施，等等。 互联网的一般结构如图1所示。 </p>
-<p>​        </p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/04/28/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/5.%E6%A0%B8%E7%94%B5%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/5.1.%E7%BD%91%E7%BB%9C//1.png">
+</div>
+
+<center>图1.基于LAN的Internet的通用结构。 自治系统（AS）和内部（IG）和外部（EG）路由器</center>
+
+<p>​        从Internet的现有结构可以看出，没有单一的管理中心。 同时，需要一些管理和协调机构来同意统一的技术政策，制定新的标准并分配IP地址等。 为此，世界上有两个组织：ICANN（Internet Corporation for Assigned Names and Numbers — 互联网名称和数字地址分配机构）和ISOC（Internet Society — 互联网协会）。</p>
+<p>​        ISOC起源于ICANN，早于1992年。 它是一个国际性的非营利组织，其主要目标是：开发和安装Internet标准，培训和使用政策的定义。 在这些目标中，第一个显然是最重要的。</p>
+<p>​        负责它的是Internet工程任务组（IETF），它开发并实现Internet标准，尤其是TCP / IP协议栈和其他Internet协议。 该组织使用开放标准原则，因此不需要正式参与。 所有员工都是志愿者。 同时，在一定程度上，他们的工作由赞助商或主要工作地点资助。 在工作过程中，IETF委员会发布了所谓的RFC（征求意见稿）。 这些文档提供了许多方面的技术规格和精确的解释。 某些RFC正在提升为Internet标准。  Internet的官方文档可以在[10,11]中找到。</p>
+<p>​        ICANN成立于1998年，其任务是管理IP地址空间，向区域Internet注册服务商分配地址块，分配传输协议端口，管理DNS名称的上层，其中包括主要DNS根服务器和其他类似任务。 尽管ICANN由国际董事会管理，但美国政府在批准对根DNS的任何更改（其基础）方面继续发挥领导作用。</p>
 
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
+            
+              <a href="/2021/04/28/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/5.%E6%A0%B8%E7%94%B5%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/5.2.TCP-IP%E5%8D%8F%E8%AE%AE%E6%A0%88/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  5.2.TCP-IP协议栈
+              </a>
             
         </div>
         <div class="item right">
