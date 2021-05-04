@@ -933,8 +933,102 @@ var _hmt = _hmt || [];
 <li><p>自然语言</p>
 </li>
 <li><p>流程图</p>
-<p><img src="/2021/05/04/C/2/001.Personal Website\source\_posts\C\2.算法\流程图符号.png" alt="image-20210504225335775"></p>
+<p><div align="center"></div></p>
+<pre><code>&lt;img src=&quot;https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/流程图符号.png&quot;&gt;&lt;/img&gt;
+</code></pre><p>&lt;/div&gt;</p>
+<center>流程图符号 </center>
+
 </li>
+</ul>
+<h3 id="三种基本结构和改进的流程图"><a href="#三种基本结构和改进的流程图" class="headerlink" title="三种基本结构和改进的流程图"></a>三种基本结构和改进的流程图</h3><ul>
+<li><p>顺序结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/顺序结构.png">
+</div>
+</li>
+<li><p>选择结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/选择结构-1.jpg">
+</div>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/选择结构-2.jpg">
+</div>
+</li>
+<li><p>循环结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/循环结构-1.jpg">
+</div>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/循环结构-2.jpg">
+</div>
+
+</li>
+</ul>
+<p><strong>三个结构的共同特点</strong></p>
+<ul>
+<li>一个出口</li>
+<li>一个入口</li>
+<li>每个部分都有机会被执行</li>
+<li>不存在“”</li>
+</ul>
+<h3 id="N-S流程图"><a href="#N-S流程图" class="headerlink" title="N-S流程图"></a>N-S流程图</h3><p>1973年美国学者提出了一种新型流程图：N-S流程图。</p>
+<ul>
+<li><p>顺序结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/顺序结构-NS.png">
+</div>
+</li>
+<li><p>选择结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/选择结构-NS.png">
+</div>
+</li>
+<li><p>循环结构</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/循环结构-NS-1.jpg">
+</div>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/04/C/2.%E7%AE%97%E6%B3%95/循环结构-NS-2.jpg">
+</div>
+
+</li>
+</ul>
+<h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><p>伪代码使用介于自然语言和计算机语言之间的文字和符号来描述算法。</p>
+<h3 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h3><p>以C为例</p>
+<pre><code class="lang-C">// 例1 求1*2*3*4*5
+main()
+&#123;
+    int i,t;
+    t=1;
+    i=2;
+    while(i&lt;=5)
+    &#123;
+        t*=1;
+        i+=1;
+    &#125;
+    printf(&quot;%s&quot;,t);
+&#125;
+
+// 例2 求级数的值
+main()
+&#123;
+    int sigh=1;
+    float deno=2.0,sum=1.0,term;
+    while(deno&lt;=100)
+    &#123;
+        sigh=-sigh;
+        term=sigh/deno;
+        sum+=term;
+        deno+=1;
+    &#125;
+    printf(&quot;%f&quot;,sum);
+&#125;
+</code></pre>
+<h2 id="结构化程序设计方法"><a href="#结构化程序设计方法" class="headerlink" title="结构化程序设计方法"></a>结构化程序设计方法</h2><ul>
+<li>自顶向下；</li>
+<li>逐步细化；</li>
+<li>模块化设计；</li>
+<li>结构化编码。</li>
 </ul>
 
 </div>
