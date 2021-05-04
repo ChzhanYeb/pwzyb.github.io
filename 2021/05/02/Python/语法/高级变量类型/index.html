@@ -122,6 +122,26 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
+										C
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/05/04/C/2.%E7%AE%97%E6%B3%95/">
+										2.算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
 										Fortran
 									</a>
 									
@@ -1185,12 +1205,413 @@ xiaoming.get         xiaoming.popitem
               &quot;phone&quot;: &quot;10086&quot;&#125;
              ]
 </code></pre>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h2><ul>
+<li><strong>字符串</strong> 就是 <strong>一串字符</strong>，是编程语言中表示文本的数据类型</li>
+<li>在 Python 中可以使用 <strong>一对双引号</strong> <code>&quot;</code> 或者 <strong>一对单引号</strong> <code>&#39;</code> 定义一个字符串<ul>
+<li>虽然可以使用 <code>\&quot;</code> 或者 <code>\&#39;</code> 做字符串的转义，但是在实际开发中：<ul>
+<li>如果字符串内部需要使用 <code>&quot;</code>，可以使用 <code>&#39;</code> 定义字符串</li>
+<li>如果字符串内部需要使用 <code>&#39;</code>，可以使用 <code>&quot;</code> 定义字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>可以使用 <strong>索引</strong> 获取一个字符串中 <strong>指定位置的字符</strong>，索引计数从 <strong>0</strong> 开始</li>
+<li>也可以使用 <code>for</code> <strong>循环遍历</strong> 字符串中每一个字符</li>
+</ul>
+<blockquote>
+<p>大多数编程语言都是用 <code>&quot;</code> 来定义字符串</p>
+</blockquote>
+<pre><code class="lang-python">string = &quot;Hello Python&quot;
+
+for c in string:
+    print(c)
+</code></pre>
+<p><div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/05/02/Python/%E8%AF%AD%E6%B3%95/%E9%AB%98%E7%BA%A7%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B//005_字符串示意图.png">
+</div></p>
+<center>图3.字符串示意图</center>
+
+<h2 id="常用操作-1"><a href="#常用操作-1" class="headerlink" title="常用操作"></a>常用操作</h2><h4 id="1-判断类型-9"><a href="#1-判断类型-9" class="headerlink" title="1) 判断类型 - 9"></a>1) 判断类型 - 9</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.isspace()</td>
+<td>如果 string 中只包含空格，则返回 True</td>
+</tr>
+<tr>
+<td>string.isalnum()</td>
+<td>如果 string 至少有一个字符并且所有字符都是字母或数字则返回 True</td>
+</tr>
+<tr>
+<td>string.isalpha()</td>
+<td>如果 string 至少有一个字符并且所有字符都是字母则返回 True</td>
+</tr>
+<tr>
+<td>string.isdecimal()</td>
+<td>如果 string 只包含数字则返回 True，<code>全角数字</code></td>
+</tr>
+<tr>
+<td>string.isdigit()</td>
+<td>如果 string 只包含数字则返回 True，<code>全角数字</code>、<code>⑴</code>、<code>\u00b2</code></td>
+</tr>
+<tr>
+<td>string.isnumeric()</td>
+<td>如果 string 只包含数字则返回 True，<code>全角数字</code>，<code>汉字数字</code></td>
+</tr>
+<tr>
+<td>string.istitle()</td>
+<td>如果 string 是标题化的(每个单词的首字母大写)则返回 True</td>
+</tr>
+<tr>
+<td>string.islower()</td>
+<td>如果 string 中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是小写，则返回 True</td>
+</tr>
+<tr>
+<td>string.isupper()</td>
+<td>如果 string 中包含至少一个区分大小写的字符，并且所有这些(区分大小写的)字符都是大写，则返回 True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="2-查找和替换-7"><a href="#2-查找和替换-7" class="headerlink" title="2) 查找和替换 - 7"></a>2) 查找和替换 - 7</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.startswith(str)</td>
+<td>检查字符串是否是以 str 开头，是则返回 True</td>
+</tr>
+<tr>
+<td>string.endswith(str)</td>
+<td>检查字符串是否是以 str 结束，是则返回 True</td>
+</tr>
+<tr>
+<td>string.find(str, start=0, end=len(string))</td>
+<td>检测 str 是否包含在 string 中，如果 start 和 end 指定范围，则检查是否包含在指定范围内，如果是返回开始的索引值，否则返回 <code>-1</code></td>
+</tr>
+<tr>
+<td>string.rfind(str, start=0, end=len(string))</td>
+<td>类似于 find()，不过是从右边开始查找</td>
+</tr>
+<tr>
+<td>string.index(str, start=0, end=len(string))</td>
+<td>跟 find() 方法类似，不过如果 str 不在 string 会报错</td>
+</tr>
+<tr>
+<td>string.rindex(str, start=0, end=len(string))</td>
+<td>类似于 index()，不过是从右边开始</td>
+</tr>
+<tr>
+<td>string.replace(old_str, new_str, num=string.count(old))</td>
+<td>把 string 中的 old_str 替换成 new_str，如果 num 指定，则替换不超过 num 次</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="3-大小写转换-5"><a href="#3-大小写转换-5" class="headerlink" title="3) 大小写转换 - 5"></a>3) 大小写转换 - 5</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.capitalize()</td>
+<td>把字符串的第一个字符大写</td>
+</tr>
+<tr>
+<td>string.title()</td>
+<td>把字符串的每个单词首字母大写</td>
+</tr>
+<tr>
+<td>string.lower()</td>
+<td>转换 string 中所有大写字符为小写</td>
+</tr>
+<tr>
+<td>string.upper()</td>
+<td>转换 string 中的小写字母为大写</td>
+</tr>
+<tr>
+<td>string.swapcase()</td>
+<td>翻转 string 中的大小写</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="4-文本对齐-3"><a href="#4-文本对齐-3" class="headerlink" title="4) 文本对齐 - 3"></a>4) 文本对齐 - 3</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.ljust(width)</td>
+<td>返回一个原字符串左对齐，并使用空格填充至长度 width 的新字符串</td>
+</tr>
+<tr>
+<td>string.rjust(width)</td>
+<td>返回一个原字符串右对齐，并使用空格填充至长度 width 的新字符串</td>
+</tr>
+<tr>
+<td>string.center(width)</td>
+<td>返回一个原字符串居中，并使用空格填充至长度 width 的新字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="5-去除空白字符-3"><a href="#5-去除空白字符-3" class="headerlink" title="5) 去除空白字符 - 3"></a>5) 去除空白字符 - 3</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.lstrip()</td>
+<td>截掉 string 左边（开始）的空白字符</td>
+</tr>
+<tr>
+<td>string.rstrip()</td>
+<td>截掉 string 右边（末尾）的空白字符</td>
+</tr>
+<tr>
+<td>string.strip()</td>
+<td>截掉 string 左右两边的空白字符</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="6-拆分和连接-5"><a href="#6-拆分和连接-5" class="headerlink" title="6) 拆分和连接 - 5"></a>6) 拆分和连接 - 5</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string.partition(str)</td>
+<td>把字符串 string 分成一个 3 元素的元组 (str前面, str, str后面)</td>
+</tr>
+<tr>
+<td>string.rpartition(str)</td>
+<td>类似于 partition() 方法，不过是从右边开始查找</td>
+</tr>
+<tr>
+<td>string.split(str=””, num)</td>
+<td>以 str 为分隔符拆分 string，如果 num 有指定值，则仅分隔 num + 1 个子字符串，str 默认包含 ‘\r’, ‘\t’, ‘\n’ 和空格</td>
+</tr>
+<tr>
+<td>string.splitlines()</td>
+<td>按照行(‘\r’, ‘\n’, ‘\r\n’)分隔，返回一个包含各行作为元素的列表</td>
+</tr>
+<tr>
+<td>string.join(seq)</td>
+<td>以 string 作为分隔符，将 seq 中所有的元素（的字符串表示）合并为一个新的字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong>：</p>
+<ol>
+<li>指定的区间属于 <strong>左闭右开</strong> 型 <code>[开始索引,  结束索引)</code> =&gt; <code>开始索引 &gt;= 范围 &lt; 结束索引</code><ul>
+<li>从 <code>起始</code> 位开始，到 <strong><code>结束</code>位的前一位</strong> 结束（<strong>不包含结束位本身</strong>)</li>
+</ul>
+</li>
+<li>从头开始，<strong>开始索引</strong> <strong>数字可以省略，冒号不能省略</strong></li>
+<li>到末尾结束，<strong>结束索引</strong> <strong>数字可以省略，冒号不能省略</strong></li>
+<li>步长默认为 <code>1</code>，如果连续切片，<strong>数字和冒号都可以省略</strong></li>
+</ol>
+<h4 id="索引的顺序和倒序"><a href="#索引的顺序和倒序" class="headerlink" title="索引的顺序和倒序"></a>索引的顺序和倒序</h4><ul>
+<li>在 Python 中不仅支持 <strong>顺序索引</strong>，同时还支持 <strong>倒序索引</strong></li>
+<li>所谓倒序索引就是 <strong>从右向左</strong> 计算索引<ul>
+<li>最右边的索引值是 <strong>-1</strong>，依次递减</li>
+</ul>
+</li>
+</ul>
+<h1 id="公共方法"><a href="#公共方法" class="headerlink" title="公共方法"></a>公共方法</h1><h2 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len(item)</td>
+<td>计算容器中元素个数</td>
+<td></td>
+</tr>
+<tr>
+<td>del(item)</td>
+<td>删除变量</td>
+<td>del 有两种方式</td>
+</tr>
+<tr>
+<td>max(item)</td>
+<td>返回容器中元素最大值</td>
+<td>如果是字典，只针对 key 比较</td>
+</tr>
+<tr>
+<td>min(item)</td>
+<td>返回容器中元素最小值</td>
+<td>如果是字典，只针对 key 比较</td>
+</tr>
+<tr>
+<td>cmp(item1, item2)</td>
+<td>比较两个值，-1 小于/0 相等/1 大于</td>
+<td>Python 3.x 取消了 cmp 函数</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong></p>
+<ul>
+<li><strong>字符串</strong> 比较符合以下规则： “0” &lt; “A” &lt; “a”</li>
+</ul>
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">描述</th>
+<th>Python 表达式</th>
+<th>结果</th>
+<th>支持的数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">切片</td>
+<td>“0123456789”[::-2]</td>
+<td>“97531”</td>
+<td>字符串、列表、元组</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>切片</strong> 使用 <strong>索引值</strong> 来限定范围，从一个大的 <strong>字符串</strong> 中 <strong>切出</strong> 小的 <strong>字符串</strong></li>
+<li><strong>列表</strong> 和 <strong>元组</strong> 都是 <strong>有序</strong> 的集合，都能够 <strong>通过索引值</strong> 获取到对应的数据</li>
+<li><strong>字典</strong> 是一个 <strong>无序</strong> 的集合，是使用 <strong>键值对</strong> 保存数据</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th>Python 表达式</th>
+<th>结果</th>
+<th>描述</th>
+<th>支持的数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td>[1, 2] + [3, 4]</td>
+<td>[1, 2, 3, 4]</td>
+<td>合并</td>
+<td>字符串、列表、元组</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>[“Hi!”] * 4</td>
+<td>[‘Hi!’, ‘Hi!’, ‘Hi!’, ‘Hi!’]</td>
+<td>重复</td>
+<td>字符串、列表、元组</td>
+</tr>
+<tr>
+<td style="text-align:center">in</td>
+<td>3 in (1, 2, 3)</td>
+<td>True</td>
+<td>元素是否存在</td>
+<td>字符串、列表、元组、字典</td>
+</tr>
+<tr>
+<td style="text-align:center">not in</td>
+<td>4 not in (1, 2, 3)</td>
+<td>True</td>
+<td>元素是否不存在</td>
+<td>字符串、列表、元组、字典</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt; &gt;= == &lt; &lt;=</td>
+<td>(1, 2, 3) &lt; (2, 2, 3)</td>
+<td>True</td>
+<td>元素比较</td>
+<td>字符串、列表、元组</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意</strong></p>
+<ul>
+<li><code>in</code> 在对 <strong>字典</strong> 操作时，判断的是 <strong>字典的键</strong></li>
+<li><code>in</code> 和 <code>not in</code> 被称为 <strong>成员运算符</strong></li>
+</ul>
+<h3 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h3><p>成员运算符用于 <strong>测试</strong> 序列中是否包含指定的 <strong>成员</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>in</td>
+<td>如果在指定的序列中找到值返回 True，否则返回 False</td>
+<td><code>3 in (1, 2, 3)</code> 返回 <code>True</code></td>
+</tr>
+<tr>
+<td>not in</td>
+<td>如果在指定的序列中没有找到值返回 True，否则返回 False</td>
+<td><code>3 not in (1, 2, 3)</code> 返回 <code>False</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>注意：在对 <strong>字典</strong> 操作时，判断的是 <strong>字典的键</strong></p>
+<h2 id="完整的-for-循环语法"><a href="#完整的-for-循环语法" class="headerlink" title="完整的 for 循环语法"></a>完整的 for 循环语法</h2><pre><code class="lang-python">for 变量 in 集合:
+
+    #循环体代码
+else:
+    #没有通过 break 退出循环，循环结束后，会执行的代码
+</code></pre>
 
 </div>
 
 
     <div class="post-guide">
         <div class="item left">
+            
+              <a href="/2021/05/04/C/2.%E7%AE%97%E6%B3%95/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
             
         </div>
         <div class="item right">
