@@ -1052,23 +1052,23 @@ B_{n}=\frac{(2 n-1) \pi}{a}, \quad n=1,2,3, \ldots</script><p>最终，得</p>
 <p>如果 $k_1&lt;1$ ，中子通量会随时问的增加变得越来越小，反应堆处于次临界状态。</p>
 <p>如果 $k_1&gt;1$ ，中子通量会随时问的增加变得越来越大，反应堆处于超临界状态（$k_n$ 的后几次项可能小于零，所以一开始会对前几个k有所抵消，但杯水车薪，中子通量还是会越来越大）</p>
 <p>如果 $k_1=1$ ，中子通量会随时间的增加会趋于稳定，反应堆处于临界状态。</p>
-<p>反应堆临界条件为</p>
+<h2 id="反应堆临界条件"><a href="#反应堆临界条件" class="headerlink" title="反应堆临界条件"></a>反应堆临界条件</h2><p>单群理论临界方程：</p>
 <script type="math/tex; mode=display">
 k_{1}=\frac{k_{\infty}}{1+L^{2} B_{1}^{2}}=1</script><script type="math/tex; mode=display">
 B_{1}^{2}=\left(\frac{\pi}{a}\right)^{2}</script><p>一般把最小特征值记作 $B_{g}^{2}$ ，并把它称为反应堆的几何曲率。它与裸堆的几何形状有关。</p>
 <script type="math/tex; mode=display">
-\frac{k_{\infty}}{1+L^{2} B_{g}^{2}}=1</script><script type="math/tex; mode=display">
-\nabla^{2} \varphi(\vec{r})+B_{g}^{2} \varphi(\vec{r})=0</script><p>$k_1$ 的物理意义</p>
+\frac{k_{\infty}}{1+L^{2} B_{g}^{2}}=1</script><p>当反应堆处于临界状态时，稳态反应堆的中子通量密度空间分布满足波动方程：</p>
+<script type="math/tex; mode=display">
+\nabla^{2} \varphi(\vec{r})+B_{g}^{2} \varphi(\vec{r})=0</script><p>有效增殖系数$k_1$ 的物理意义</p>
 <script type="math/tex; mode=display">
 P_{L}=\frac{\text { 中子 吸 收 率 }}{\text { 中子吸 收 率 }+\text { 中子 污 漏 率 }}=\\
 =\frac{\Sigma_{a} \int_{V} \phi d V}{\sum_{a} \int_{V} \phi d V+D B_{g}^{2} \int_{V} \phi d V}=\\
 =\frac{k_{\infty}}{1+L^{2} B_{g}^{2}}</script><script type="math/tex; mode=display">
-k_1=k_{e f f}=\frac{k_{\infty}}{1+L^{2} B_{g}^{2}}</script><p>其它几何形状的裸堆的几何曲率和中子通量密度分布</p>
-<ul>
+k_1=k_{e f f}=\frac{k_{\infty}}{1+L^{2} B_{g}^{2}}</script><h2 id="其它几何形状的裸堆的几何曲率和中子通量密度分布"><a href="#其它几何形状的裸堆的几何曲率和中子通量密度分布" class="headerlink" title="其它几何形状的裸堆的几何曲率和中子通量密度分布"></a>其它几何形状的裸堆的几何曲率和中子通量密度分布</h2><ul>
 <li><p>球形反应堆</p>
 <script type="math/tex; mode=display">
 B_{1}^{2}=\left(\frac{\pi}{R}\right)^{2}\\
-\phi(r)=A \frac{\sin \left(\frac{\pi}{R}\right) r}{r}</script></li>
+\phi(r)=A \frac{\sin \left(\frac{\pi}{R}r\right) }{r}</script></li>
 <li><p>有限高圆柱形反应堆</p>
 <div align="center">
     <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/有限高圆柱形反应堆.png">
@@ -1076,13 +1076,180 @@ B_{1}^{2}=\left(\frac{\pi}{R}\right)^{2}\\
 
 <center>图6.有限高圆柱形反应堆</center> 
 
+</li>
+</ul>
 <p>边界条件</p>
 <p>​        在 $R$ 处和 $H/2$ 处为零</p>
 <script type="math/tex; mode=display">
-B_{g}^{2}=B_{r}^{2}+B_{z}^{2}=\left(\frac{2.405}{R}\right)^{2}+\left(\frac{\pi}{H}\right)^{2}</script><script type="math/tex; mode=display">
-\phi(r, z)=F J_{0}\left(B_{r} r\right) \cos \left(B_{z}, z\right)</script></li>
+B_{g}^{2}=B_{r}^{2}+B_{z}^{2}=\left(\frac{2.405}{R}\right)^{2}+\left(\frac{\pi}{H}\right)^{2}</script><p>其中，$B_{r}^{2}$ 被称为<strong>径向几何曲率</strong>，$B_{z}^{2}$ 被称为<strong>轴向几何曲率</strong>。</p>
+<script type="math/tex; mode=display">
+\phi(r, z)=C J_{0}\left(B_{r} r\right) \cos \left(B_{z}, z\right)</script><p>其中，常数C是由 中子通量密度的归一条件 或 反应堆的输出功率 来确定的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>几何形状</th>
+<th>几何曲率</th>
+<th>热中子通量密度分布</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>球形（半径R）</td>
+<td>$B_{g}^{2}=\left(\frac{\pi}{R}\right)^{2}$</td>
+<td>$\frac{\sin \left(\frac{\pi}{R}r\right) }{r}$</td>
+</tr>
+<tr>
+<td>直角长方体（边长：a,b,c）</td>
+<td>$B_{g}^{2}=B_{x}^{2}+B_{y}^{2}+B_{z}^{2}=\\=(\frac{\pi}{a})^{2}+(\frac{\pi}{b})^{2}+(\frac{\pi}{c})^{2}$</td>
+<td>$cos(\frac{\pi}{a}x)cos(\frac{\pi}{a}y)cos(\frac{\pi}{a}z)$</td>
+</tr>
+<tr>
+<td>圆柱体（半径R，高H）</td>
+<td>$B_{g}^{2}=B_{r}^{2}+B_{z}^{2}=\\=\left(\frac{2.405}{R}\right)^{2}+\left(\frac{\pi}{H}\right)^{2}$</td>
+<td>$J_{0}\left(B_{r} r\right) \cos \left(B_{z}, z\right)$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>堆芯功率：</p>
+<script type="math/tex; mode=display">
+P=E_{\mathrm{f}} \int_{V} \sum_{f} \phi(\boldsymbol{r}) \mathrm{d} V</script><p>​        其中，P表示反应堆的功率；V表示芯部的体积；$E_f$表示每次裂变产生的能量。</p>
+<ul>
+<li><p>对于圆柱形裸堆，$V=πR^2H$</p>
+<script type="math/tex; mode=display">
+P=E_{\mathrm{f}} \Sigma_{\mathrm{f}} C \int_{0}^{R} \int_{0}^{\frac{H}{2}} 2 \mathrm{J}_{0}\left(\frac{2.405 r}{R}\right) \cos \left(\frac{\pi Z}{H}\right) 2 \pi r \mathrm{~d} r \mathrm{d} z=\frac{2.07 V E_{\mathrm{f}} \Sigma_{\mathrm{f}} C}{2.405 \pi}</script><script type="math/tex; mode=display">
+C=\frac{3.64 P}{V E_{f} \Sigma_{f}}</script></li>
+<li><p>对于球形裸堆，$V=4πR^3/3$</p>
+<script type="math/tex; mode=display">
+C=\frac{3.29 P}{V E_{\mathrm{f}} \Sigma_{\mathrm{f}}}</script></li>
 </ul>
-<h3 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h3><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
+<h2 id="反应堆曲率-和-临界计算任务"><a href="#反应堆曲率-和-临界计算任务" class="headerlink" title="反应堆曲率 和 临界计算任务"></a>反应堆曲率 和 临界计算任务</h2><h3 id="反应堆曲率："><a href="#反应堆曲率：" class="headerlink" title="反应堆曲率："></a>反应堆曲率：</h3><p>已知$B_{g}^{2}$在波动方程的最小特征值，即几何曲率。</p>
+<ul>
+<li><p>一方面，对于裸堆，几何曲率只与反应堆的几何形状核尺寸大小有关。</p>
+</li>
+<li><p>另一方面，由于$k_∞，L^2$等参数仅与反应堆芯部材料特性相关。因此，对于一定材料成分的反应堆，便有一个确定的$B^2_{m}$满足临界方程，称为材料曲率，公式为</p>
+<script type="math/tex; mode=display">
+\mathrm{B}_{\mathrm{m}}^{2}=\frac{k_{\infty}-1}{L^{2}}</script></li>
+</ul>
+<p>由此，反应堆临界条件变为：材料曲率等于几何曲率</p>
+<script type="math/tex; mode=display">
+B _ { m } ^ { 2 } = B _ { g } ^ { 2 }</script><p>若 材料 &gt; 几何，则 k &gt; 1，反应堆处于超临界状态；</p>
+<p>若 材料 &lt; 几何，则 k &lt; 1， 反应堆处于次临界状态。</p>
+<h3 id="临界计算问题："><a href="#临界计算问题：" class="headerlink" title="临界计算问题："></a>临界计算问题：</h3><ul>
+<li><p><strong>第一类问题</strong>：给定材料成分，确定临界尺寸。</p>
+</li>
+<li><p><strong>第二类问题</strong>：给定形状和尺寸，确定临界时反应堆材料成分。</p>
+</li>
+<li><p><strong>第三类问题</strong>：给定材料成分（如，燃料-慢化剂）和几何尺寸（由工程或热工所需确定），求反应堆增殖系数或反应性</p>
+<script type="math/tex; mode=display">
+k_{\mathrm{eff}}=\frac{k_{\infty}}{1+L^{2} B_{\mathrm{g}}^{2}} \\
+\rho=\frac{k-1}{k}</script></li>
+</ul>
+<h2 id="单群理论修正"><a href="#单群理论修正" class="headerlink" title="单群理论修正"></a>单群理论修正</h2><p>对于热中子反应堆，由于在单群理论中将所有中子都视为热中子，没有考虑慢化过程对中子泄露的影响，因此直接使用临界条件和材料曲率会出现较大的误差。如果使用 徙动长度 代替 慢化长度，则能大大改善计算结果。</p>
+<p><strong>修正单群理论</strong> 如下：</p>
+<script type="math/tex; mode=display">
+k_{\mathrm{eff}}=\frac{k_{\infty}}{1+M^{2} B_{\mathrm{g}}^{2}}</script><script type="math/tex; mode=display">
+\mathrm{B}_{\mathrm{m}}^{2}=\frac{k_{\infty}-1}{M^{2}}</script><h1 id="有反射层反应堆的单群扩散理论"><a href="#有反射层反应堆的单群扩散理论" class="headerlink" title="有反射层反应堆的单群扩散理论"></a>有反射层反应堆的单群扩散理论</h1><h2 id="反射层作用"><a href="#反射层作用" class="headerlink" title="反射层作用"></a>反射层作用</h2><p>反射层是包围在反应堆堆芯外部用以反射从芯部泄露出来的中子材料。几乎所有反应堆均有不同厚度的反射层。它有一下几种作用：</p>
+<ul>
+<li>可以减少芯部中子的泄露，从而使堆芯的临界尺寸要比无反射层时的小，进而节省一部份材料。</li>
+<li>可以提高反应堆的平均输出功率。（芯部中子通量密度分布比裸堆的分布更加平坦）</li>
+</ul>
+<h3 id="反射材料的选择："><a href="#反射材料的选择：" class="headerlink" title="反射材料的选择："></a>反射材料的选择：</h3><ol>
+<li>有较大的散射截面，提高中子返回的机率。</li>
+<li>有较小的吸收截面，以减少对中子的吸收。</li>
+<li>有良好的慢化能力。</li>
+</ol>
+<p>因此，良好的慢化剂材料，通常也是良好的反射层材料。</p>
+<p>常见反射材料有：水，重水，石墨，铍 等</p>
+<h2 id="一侧带有反射层的反应堆"><a href="#一侧带有反射层的反应堆" class="headerlink" title="一侧带有反射层的反应堆"></a>一侧带有反射层的反应堆</h2><p><strong>芯部稳态单群扩散方程：</strong></p>
+<script type="math/tex; mode=display">
+D_{c} \nabla^{2} \phi_{c}(r)-\Sigma_{a c} \phi_{c}(r)+k_{\infty} \sum_{\mathrm{ac}} \phi_{c}(r)=0</script><p>其中，下标<code>c</code>和下标<code>r</code>分别表示芯部及反射层的参数。</p>
+<p>一般来说，对于同时任意给定的几何形状大小和材料特性的系统，它不一定处于稳态。但从物理上，可以引入一个特征参数<code>k</code>来进行调整使其达到临界。由此可写出稳态单群扩散方程</p>
+<script type="math/tex; mode=display">
+D_{\mathrm{c}} \nabla^{2} \phi_{\mathrm{c}}(\boldsymbol{r})-\Sigma_{\mathrm{ac}} \phi_{\mathrm{c}}(\boldsymbol{r})+\frac{k_{\infty}}{k} \Sigma_{\mathrm{ac}} \phi_{\mathrm{c}}(\boldsymbol{r})=0\\
+\nabla^{2} \phi_{\mathrm{c}}(\boldsymbol{r})+B_{\mathrm{c}}^{2} \phi_{\mathrm{c}}(\boldsymbol{r})=0</script><p>其中</p>
+<script type="math/tex; mode=display">
+B_{\mathrm{c}}^{2}=\frac{k_{\infty} / k-1}{L_{\mathrm{c}}^{2}}</script><p>$L_{\mathrm{c}}^{2}$ 是芯部的扩散长度。对于修正单群理论，</p>
+<script type="math/tex; mode=display">
+B_{\mathrm{c}}^{2}=\frac{k_{\infty} / k-1}{M^{2}}</script><p>从物理上可以看出，引入的k就是系统的有效增殖因数$k_{eff}$ 。</p>
+<p><strong>反射层的稳态单群扩散方程：</strong></p>
+<script type="math/tex; mode=display">
+\nabla^{2} \phi_{\mathrm{r}}(\boldsymbol{r})-k_{\mathrm{r}}^{2} \phi_{\mathrm{r}}(\boldsymbol{r})=0</script><p>其中，</p>
+<script type="math/tex; mode=display">
+k_{\mathrm{r}}^{2}=\frac{1}{L_{\mathrm{r}}^{2}}</script><p>$L_r$为反射层的扩散长度。</p>
+<p><strong>边界条件：</strong></p>
+<ol>
+<li><p>在芯部与反射层的叫界面上</p>
+<script type="math/tex; mode=display">
+\begin{aligned} \phi_{\mathrm{c}} &=\phi_{\mathrm{r}} \\ D_{\mathrm{c}} \phi_{\mathrm{c}}^{\prime} &=D_{\mathrm{r}} \phi_{\mathrm{r}}^{\prime} \end{aligned}</script></li>
+<li><p>在芯部或反射层的外推边界上中子通量密度为零。</p>
+</li>
+</ol>
+<h3 id="带有反射层的球形堆"><a href="#带有反射层的球形堆" class="headerlink" title="带有反射层的球形堆"></a>带有反射层的球形堆</h3><p>模型：芯部半径为R，带有厚度为T（包括外推距离在内）的反射层球形堆。坐标原点位于球心上 。</p>
+<p><strong>芯部方程解：</strong></p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{c}}(r)=A \frac{\sin \left(B_{\mathrm{c}} r\right)}{r}</script><p><strong>反射层方程解：</strong></p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{r}}(r)=C^{\prime} \frac{\sinh \left(k_{\mathrm{r}} r\right)}{r}+A^{\prime} \frac{\cosh \left(k_{\mathrm{r}} r\right)}{r}</script><p>这个解要满足在反射层的外推边界$r=R+T$处中子通量条件，由此</p>
+<script type="math/tex; mode=display">
+A^{\prime}=-C^{\prime} \tanh \left[k_{\mathrm{r}}(R+T)\right]</script><p>求得反射层方程解为</p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{r}}(r)=\frac{C \sinh \left[k_{\mathrm{r}}(R+T-r)\right]}{r}</script><p>其中，C为新的待定常数。</p>
+<p>由边界条件可得：</p>
+<script type="math/tex; mode=display">
+A \frac{\sin \left(B_{\mathrm{c}} R\right)}{R}=C \frac{\sinh \left(k_{\mathrm{r}} T\right)}{R}\\
+D_{\mathrm{c}} A\left[\frac{B_{\mathrm{c}} \cos \left(B_{\mathrm{c}} R\right)}{R}-\frac{\sin \left(B_{\mathrm{c}} R\right)}{R^{2}}\right]=D_{\mathrm{r}} \mathrm{C}\left[-\frac{k_{\mathrm{r}} \cosh \left(k_{\mathrm{r}} T\right)}{R}-\frac{1}{R^{2}} \sinh \left(k_{\mathrm{r}} T\right)\right]</script><p>两式相除得</p>
+<script type="math/tex; mode=display">
+D_{\mathrm{c}}\left[1-B_{\mathrm{c}} R \cot \left(B_{\mathrm{c}} R\right)\right]=D_{\mathrm{r}}\left[1+\frac{R}{L_{\mathrm{r}}} \operatorname{coth}\left(\frac{T}{L_{\mathrm{r}}}\right)\right]</script><p>上式为带有反射层的球形反应堆单群临界方程。</p>
+<p>在图7给出单群扩散理论计算得到得裸堆及带反射层得反应堆得中子通量密度分布图形。</p>
+<div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/裸堆与带有反射层反应堆的中子通量密度分布.png">
+</div>
+
+<center>图7.裸堆与带有反射层反应堆的中子通量密度分布</center> 
+
+<h3 id="侧面带有反射层的圆柱形反应堆"><a href="#侧面带有反射层的圆柱形反应堆" class="headerlink" title="侧面带有反射层的圆柱形反应堆"></a>侧面带有反射层的圆柱形反应堆</h3><p>模型：圆柱形反应堆，半径为R，高度为H，在侧面带有厚度为T的反射层（H,T 均包括外推距离在内）。</p>
+<p><strong>芯部扩散方程：</strong></p>
+<script type="math/tex; mode=display">
+\nabla^{2} \phi_{c}(r, z)+B_{c}^{2} \phi_{c}(r, z)=0</script><p><strong>反射层扩散方程：</strong></p>
+<script type="math/tex; mode=display">
+\nabla^{2} \phi_{\mathrm{r}}(r, z)-k_{\mathrm{r}}^{2} \phi_{\mathrm{r}}(r, z)=0</script><p>其中，$B_{c}^{2}$为反应堆曲率</p>
+<p><strong>边界条件：</strong></p>
+<ol>
+<li><p>在$\boldsymbol{z}=\pm \frac{H}{2}$处</p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{c}}\left(r, \pm \frac{H}{2}\right)=\phi_{\mathrm{r}}\left(r, \pm \frac{H}{2}\right)=0</script></li>
+<li><p>在$r=R+T$处</p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{r}}(R+T, z)=0</script></li>
+<li><p>在$r=R$处</p>
+<script type="math/tex; mode=display">
+\phi_{\mathrm{c}}=\phi_{\mathrm{r}} ; \quad D_{\mathrm{c}} \phi_{\mathrm{c}}^{\prime}=D_{\mathrm{r}} \phi_{\mathrm{r}}^{\prime}</script><p>其中，$\phi_{\mathrm{c}}^{\prime},\phi_{\mathrm{r}}^{\prime}$分别是$\phi_{\mathrm{c}},\phi_{\mathrm{r}}$在交界面的法线方向上的导数。</p>
+</li>
+</ol>
+<p>利用分离变量法求解，最终得</p>
+<script type="math/tex; mode=display">
+\frac{B_{\mathrm{r}} \mathrm{J}_{1}\left(B_{\mathrm{r}} R\right)}{\mathrm{J}_{0}\left(B_{\mathrm{r}} R\right)}=\frac{\overline{k_{\mathrm{r}}} \frac{D_{\mathrm{r}}}{D_{\mathrm{c}}}\left[\mathrm{K}_{1}\left(\bar{k}_{\mathrm{r}} R\right)+s \mathrm{I}_{1}\left(\bar{k}_{\mathrm{r}} R\right)\right]}{\mathrm{K}_{0}\left(\bar{k}_{\mathrm{r}} R\right)-s \mathrm{I}_{0}\left(\overline{k_{\mathrm{r}}} R\right)}</script><h2 id="反射层节省"><a href="#反射层节省" class="headerlink" title="反射层节省"></a>反射层节省</h2><p>在芯部包有反射层之后，芯部临界尺寸的减少量通常可以用反射层节省δ来表示。</p>
+<script type="math/tex; mode=display">
+\delta=R_{0}-R</script><p>其中，$R_0$表示裸堆的临界半径（包括外推距离），R表示围以反射层之后的临界半径。</p>
+<p>对于圆柱形反应堆，反应堆节省分别用径向和轴向来表示，即</p>
+<script type="math/tex; mode=display">
+\delta_{\mathrm{r}}=R_{0}-R, \quad \delta_{\mathrm{z}}=\left(\frac{H_{0}}{2}-\frac{H}{2}\right)</script><p>其中，$\delta_{\mathrm{r}}$称为径向反射层节省，$\delta_{\mathrm{z}}$表示轴向反射层节省。</p>
+<p>我们可以把由反射层反应堆的几何曲率用芯部外形尺寸增大2δ后的等效裸堆的几何曲率来表示。</p>
+<p>对于圆柱形反应堆</p>
+<script type="math/tex; mode=display">
+B_{\mathrm{c}}^{2}=B_{\mathrm{r}}^{2}+B_{z}^{2}\\
+=\left(\frac{2.405}{R+\delta_{\mathrm{r}}}\right)^{2}+\left(\frac{\pi}{H+2 \delta_{z}}\right)^{2}\\
+=\left(\frac{2.405}{R_{\text {eff }}}\right)^{2}+\left(\frac{\pi}{H_{\text {eff }}}\right)^{2}</script><div align="center">
+    <img src="https://www.chzhanyeb.cloud/2021/03/31/%E6%A0%B8%E5%8F%8D%E5%BA%94%E5%A0%86%E7%89%A9%E7%90%86/%E4%B8%AD%E5%AD%90%E6%89%A9%E6%95%A3%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97/等效裸堆示意图.png">
+</div>
+
+<center>图8.等效裸堆示意图</center>
+
+
+
+<h1 id="多群中子扩散方程计算"><a href="#多群中子扩散方程计算" class="headerlink" title="多群中子扩散方程计算"></a>多群中子扩散方程计算</h1><h3 id="反应堆功率计算"><a href="#反应堆功率计算" class="headerlink" title="反应堆功率计算"></a>反应堆功率计算</h3>
 </div>
 
 
